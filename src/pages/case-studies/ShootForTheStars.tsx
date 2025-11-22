@@ -23,13 +23,13 @@ import { Link } from "react-router-dom";
 // ========================================
 
 import heroImage from "@/assets/shoot-stars-hero.jpg";
-import homePageImage from "@/assets/shoot-stars-hero.jpg"; // REPLACE: upload shoot-stars-home.png
-import aboutImage from "@/assets/shoot-stars-hero.jpg"; // REPLACE: upload shoot-stars-about.png
-import configImage from "@/assets/shoot-stars-hero.jpg"; // REPLACE: upload shoot-stars-config.png
-import puzzle1Image from "@/assets/shoot-stars-hero.jpg"; // REPLACE: upload shoot-stars-puzzle1.png
-import puzzle2Image from "@/assets/shoot-stars-hero.jpg"; // REPLACE: upload shoot-stars-puzzle2.png
-import puzzle3Image from "@/assets/shoot-stars-hero.jpg"; // REPLACE: upload shoot-stars-puzzle3.png
-import resultsImage from "@/assets/shoot-stars-hero.jpg"; // REPLACE: upload shoot-stars-results.png
+import homePageImage from "@/assets/shoot-stars-home.png";
+import aboutImage from "@/assets/shoot-stars-about.png";
+import configImage from "@/assets/shoot-stars-config.png";
+import puzzle1Image from "@/assets/shoot-stars-puzzle1.png";
+import puzzle2Image from "@/assets/shoot-stars-puzzle2.png";
+import puzzle3Image from "@/assets/shoot-stars-puzzle3.png";
+import resultsImage from "@/assets/shoot-stars-results.png";
 
 export default function ShootForTheStars() {
   return (
