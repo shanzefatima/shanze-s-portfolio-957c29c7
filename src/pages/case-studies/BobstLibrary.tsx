@@ -73,26 +73,6 @@ export default function BobstLibrary() {
           </div>
         </section>
 
-        {/* 📸 IMAGE: Hero */}
-        <section className="px-6 mb-24">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="aspect-[16/9] overflow-hidden bg-muted border border-border"
-            >
-              <img 
-                src={heroImage}
-                alt="NYU Bobst Library Website"
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
-            <p className="text-sm text-muted-foreground text-center mt-4">
-              Redesigned library homepage
-            </p>
-          </div>
-        </section>
 
         <section className="px-6 mb-24 bg-muted/30 py-24">
           <div className="max-w-5xl mx-auto">
@@ -240,31 +220,31 @@ export default function BobstLibrary() {
             <h2 className="text-4xl font-black tracking-tight mb-12 text-center">Key Features</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div>
-                <div className="aspect-[4/3] overflow-hidden bg-muted border border-border mb-4">
+                <div className="overflow-hidden bg-muted border border-border mb-4 p-4">
                   <img 
                     src={dashboardImage}
                     alt="Dashboard Homepage"
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto object-contain"
                   />
                 </div>
                 <p className="text-sm text-muted-foreground text-center">Dashboard-style homepage</p>
               </div>
               <div>
-                <div className="aspect-[4/3] overflow-hidden bg-muted border border-border mb-4">
+                <div className="overflow-hidden bg-muted border border-border mb-4 p-4">
                   <img 
                     src={mobileImage}
                     alt="Mobile Experience"
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto object-contain"
                   />
                 </div>
                 <p className="text-sm text-muted-foreground text-center">Mobile-first design</p>
               </div>
               <div>
-                <div className="aspect-[4/3] overflow-hidden bg-muted border border-border mb-4">
+                <div className="overflow-hidden bg-muted border border-border mb-4 p-4">
                   <img 
                     src={searchImage}
                     alt="Enhanced Search"
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto object-contain"
                   />
                 </div>
                 <p className="text-sm text-muted-foreground text-center">Enhanced search</p>
