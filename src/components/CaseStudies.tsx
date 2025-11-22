@@ -2,6 +2,10 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import shootStarsHero from "@/assets/shoot-stars-hero.jpg";
+import hypermarketHero from "@/assets/hypermarket-hero.jpg";
+import snapchatHero from "@/assets/snapchat-hero.jpg";
+import bobstHero from "@/assets/bobst-hero.jpg";
 
 interface CaseStudy {
   id: string;
@@ -25,7 +29,7 @@ const caseStudies: CaseStudy[] = [
       "National pilot adoption by Helen Keller Services",
       "Featured at NYC Design Week 2024"
     ],
-    image: "/api/placeholder/800/600",
+    image: shootStarsHero,
     color: "hsl(var(--accent))"
   },
   {
@@ -39,7 +43,7 @@ const caseStudies: CaseStudy[] = [
       "Real-time order tracking system",
       "Smart product discovery algorithm"
     ],
-    image: "/api/placeholder/800/600",
+    image: hypermarketHero,
     color: "hsl(var(--accent))"
   },
   {
@@ -53,7 +57,7 @@ const caseStudies: CaseStudy[] = [
       "Guided onboarding system",
       "WCAG 2.1 AA compliance achieved"
     ],
-    image: "/api/placeholder/800/600",
+    image: snapchatHero,
     color: "hsl(var(--accent))"
   },
   {
@@ -67,7 +71,7 @@ const caseStudies: CaseStudy[] = [
       "$50K+ cost savings through optimization",
       "500+ daily active users served"
     ],
-    image: "/api/placeholder/800/600",
+    image: bobstHero,
     color: "hsl(var(--accent))"
   }
 ];
@@ -107,23 +111,27 @@ export const CaseStudies = () => {
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {/* Image */}
-                <motion.div
-                  className="relative aspect-[4/3] bg-muted overflow-hidden order-2 lg:order-1"
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ duration: 0.4 }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="absolute inset-0 flex items-center justify-center text-6xl font-black text-muted-foreground/10">
-                    {String(index + 1).padStart(2, '0')}
-                  </div>
+                <Link to={`/case-study/${study.id}`} className="block order-2 lg:order-1">
                   <motion.div
-                    className="absolute bottom-0 left-0 w-full h-1 bg-primary"
-                    initial={{ scaleX: 0 }}
-                    animate={{ scaleX: hoveredIndex === index ? 1 : 0 }}
-                    transition={{ duration: 0.3 }}
-                    style={{ originX: 0 }}
-                  />
-                </motion.div>
+                    className="relative aspect-[4/3] bg-muted overflow-hidden"
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    <img 
+                      src={study.image} 
+                      alt={study.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <motion.div
+                      className="absolute bottom-0 left-0 w-full h-1 bg-primary"
+                      initial={{ scaleX: 0 }}
+                      animate={{ scaleX: hoveredIndex === index ? 1 : 0 }}
+                      transition={{ duration: 0.3 }}
+                      style={{ originX: 0 }}
+                    />
+                  </motion.div>
+                </Link>
 
                 {/* Content */}
                 <div className="order-1 lg:order-2 space-y-6">
