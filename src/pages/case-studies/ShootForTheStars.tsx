@@ -53,7 +53,7 @@ export default function ShootForTheStars() {
             duration: 0.8
           }}>
               <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-6">
-                Accessibility · UX Research · Product Design
+                Accessibility + UX Research + Product Design
               </p>
               
               <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-8">
@@ -61,7 +61,7 @@ export default function ShootForTheStars() {
               </h1>
               
               <p className="text-2xl text-muted-foreground leading-relaxed mb-12">
-                Creating the first fully non-visual escape room that eliminates the need for sighted assistance
+                The first fully non-visual escape room designed for complete independence
               </p>
 
               <div className="grid grid-cols-2 md:grid-cols-3 gap-8 py-8 border-y border-border">
@@ -81,16 +81,13 @@ export default function ShootForTheStars() {
 
               <div className="mt-12 text-lg text-foreground/90 leading-relaxed">
                 <p className="mb-6">
-                  Worked with Helen Keller Services to design an escape room experience that could be played 
-                  entirely without sight. Led user research with 15 blind teenagers, prototyped 12 tactile 
-                  interfaces, and conducted 6 rounds of user testing.
+                  Partnered with Helen Keller Services to create an escape room playable entirely without sight. Led research with 15 blind teenagers, prototyped 12 tactile interfaces, conducted 6 test rounds.
                 </p>
                 <p>
-                  The project achieved{" "}
+                  Achieved{" "}
                   <span className="font-bold text-primary">100% visual independence</span>,{" "}
-                  <span className="font-bold text-primary">60% increase in player autonomy</span>, and 
-                  was adopted as a{" "}
-                  <span className="font-bold text-primary">national pilot program</span> by Helen Keller Services.
+                  <span className="font-bold text-primary">60% increase in autonomy</span>, adopted as{" "}
+                  <span className="font-bold text-primary">national pilot program</span>.
                 </p>
               </div>
             </motion.div>
@@ -126,99 +123,77 @@ export default function ShootForTheStars() {
           </div>
         </section>
 
-        {/* 📸 IMAGE 1: Prototype Home Page */}
-        <section className="px-6 mb-24">
-          <div className="max-w-6xl mx-auto">
-            <motion.div initial={{
-            opacity: 0,
-            y: 40
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true
-          }} className="aspect-[16/9] overflow-hidden bg-muted border border-border">
-              <img src={homePageImage} alt="Interactive prototype home screen with mission overview" className="w-full h-full object-cover" />
-            </motion.div>
-            <p className="text-sm text-muted-foreground text-center mt-4">
-              Interactive prototype: Mission overview screen with accessibility features
-            </p>
-          </div>
+        {/* Hero Image - Full Bleed */}
+        <section className="mb-24">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }} 
+            whileInView={{ opacity: 1, scale: 1 }} 
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="w-full h-[70vh] overflow-hidden bg-muted"
+          >
+            <img src={homePageImage} alt="Mission overview interface" className="w-full h-full object-cover" />
+          </motion.div>
         </section>
 
-        {/* 📸 IMAGE 2: About Project */}
-        <section className="px-6 mb-16">
-          <div className="max-w-6xl mx-auto">
-            <motion.div initial={{
-            opacity: 0,
-            y: 40
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true
-          }} className="aspect-[16/9] overflow-hidden bg-muted border border-border">
-              <img src={aboutImage} alt="Project background showing research foundation and design principles" className="w-full h-full object-cover" />
-            </motion.div>
-            <p className="text-sm text-muted-foreground text-center mt-4">
-              Research foundation and core design principles
-            </p>
-          </div>
-        </section>
-
-        {/* Background Section */}
-        <section className="px-6 mb-24 bg-muted/30 py-24">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-8">Background</h2>
-            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              Traditional escape rooms are built entirely around visual puzzles and cues, making them 
-              completely inaccessible to blind and low-vision players. Even "adapted" games still required 
-              sighted facilitators, reducing player agency and independence.
-            </p>
-            <div className="bg-background border-l-4 border-primary p-8">
-              <p className="text-lg italic text-muted-foreground">
-                "Problem: Blind teenagers had no way to play escape rooms independently. 
-                Existing accessible games still relied on sighted assistance."
-              </p>
+        {/* Problem Statement - Side by side with image */}
+        <section className="px-6 mb-32">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div>
+                <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-8">The Problem</h2>
+                <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                  Traditional escape rooms rely entirely on visual puzzles. Even "adapted" games required sighted facilitators, eliminating player independence.
+                </p>
+                <div className="bg-muted/30 border-l-4 border-primary p-6">
+                  <p className="text-lg font-semibold text-foreground">
+                    Blind teenagers had zero way to play escape rooms independently.
+                  </p>
+                </div>
+              </div>
+              <motion.div
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="aspect-square overflow-hidden bg-muted border border-border"
+              >
+                <img src={aboutImage} alt="Research insights" className="w-full h-full object-cover" />
+              </motion.div>
             </div>
           </div>
         </section>
 
         {/* Research Section */}
-        <section className="px-6 mb-24">
+        <section className="px-6 mb-32 bg-muted/20 py-24">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-12">Research & Discovery</h2>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-12">Research Insights</h2>
             
-            <div className="space-y-12">
-              <div className="border-l-2 border-primary pl-8">
-                <h3 className="text-2xl font-bold mb-4">User Research</h3>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  Conducted extensive interviews with 15 blind and low-vision teenagers, educators at 
-                  Helen Keller Services, and orientation & mobility specialists. Key insights revealed 
-                  that existing "accessible" games still relied on sighted guides, reducing player agency.
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="border-l-4 border-primary pl-8">
+                <h3 className="text-2xl font-bold mb-4">Key Finding</h3>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  Interviewed 15 blind teenagers and educators. Existing games relied on sighted guides, killing player agency.
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span>Players wanted complete independence without sighted assistance</span>
+                    <span>Players demanded independence, not assistance</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span>Audio feedback needed to be spatial, not just descriptive</span>
+                    <span>Audio must be spatial, not descriptive</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span>Tactile elements had to provide immediate, actionable information</span>
+                    <span>Tactile feedback needs instant clarity</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="border-l-2 border-primary pl-8">
-                <h3 className="text-2xl font-bold mb-4">Competitive Analysis</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Analyzed existing accessible gaming experiences and escape room formats. Found that 
-                  most "accessible" games were adapted rather than designed from the ground up for 
-                  non-visual interaction. This led to a design-first, accessibility-native approach.
+              <div className="border-l-4 border-primary pl-8">
+                <h3 className="text-2xl font-bold mb-4">Strategic Pivot</h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Most "accessible" games adapt visual designs. We rejected that model. Built from scratch for non-visual interaction first.
                 </p>
               </div>
             </div>
@@ -228,172 +203,175 @@ export default function ShootForTheStars() {
         {/* Process Section */}
         <section className="px-6 mb-24 bg-foreground text-background py-24">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-12">Design Process</h2>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-12">Process</h2>
             
             <div className="grid md:grid-cols-3 gap-8">
               <div>
                 <div className="text-6xl font-black text-primary mb-4">01</div>
-                <h3 className="text-xl font-bold mb-4">Spatial Audio Mapping</h3>
+                <h3 className="text-xl font-bold mb-4">Spatial Audio</h3>
                 <p className="text-background/70">
-                  Created 3D audio environments using binaural recording techniques to provide 
-                  directional cues. Tested with 8 participants to refine sound placement accuracy.
+                  Built 3D audio using binaural recording. Tested with 8 participants for placement accuracy.
                 </p>
               </div>
               <div>
                 <div className="text-6xl font-black text-primary mb-4">02</div>
-                <h3 className="text-xl font-bold mb-4">Tactile Interface Design</h3>
+                <h3 className="text-xl font-bold mb-4">Tactile Interfaces</h3>
                 <p className="text-background/70">
-                  Developed physical puzzle elements with distinct textures, shapes, and mechanisms. 
-                  Prototyped 12 different tactile interfaces before final selection.
+                  Created physical puzzles with distinct textures. Prototyped 12 versions before final pick.
                 </p>
               </div>
               <div>
                 <div className="text-6xl font-black text-primary mb-4">03</div>
-                <h3 className="text-xl font-bold mb-4">Iterative Testing</h3>
+                <h3 className="text-xl font-bold mb-4">Testing Rounds</h3>
                 <p className="text-background/70">
-                  Conducted 6 rounds of user testing with blindfolded sighted users and blind teenagers. 
-                  Each iteration reduced dependency on facilitator guidance.
+                  6 test rounds with blind teenagers. Each cut facilitator dependency.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Solution Section */}
-        <section className="px-6 mb-24">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-12">The Solution</h2>
+        {/* Solution with Config Image */}
+        <section className="px-6 mb-32">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-16 text-center">The Solution</h2>
             
-            <div className="space-y-16">
-              <div>
-                <h3 className="text-2xl font-bold mb-6">Audio-First Navigation System</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  Designed a spatial audio system where directional sounds guide players through the 
-                  environment. Background music changes intensity to indicate proximity to objectives, 
-                  while voice cues provide contextual hints without explicit instructions.
-                </p>
-                <div className="bg-muted/30 p-8 border border-border">
-                  <p className="text-sm italic text-muted-foreground">
-                    "The sound design made me feel like I could 'see' the room. I knew exactly where 
-                    everything was without anyone telling me." - Participant feedback
-                  </p>
-                </div>
-              </div>
+            {/* Config Image Full Width */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-20 overflow-hidden bg-muted border border-border"
+            >
+              <img src={configImage} alt="Configuration interface" className="w-full h-auto" />
+            </motion.div>
 
+            <div className="grid md:grid-cols-3 gap-12">
               <div>
-                <h3 className="text-2xl font-bold mb-6">Tactile Puzzle Mechanics</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  Created multi-sensory puzzles combining touch, sound, and movement. Each puzzle 
-                  provided immediate haptic and audio feedback, allowing players to understand cause 
-                  and effect without visual confirmation.
+                <h3 className="text-xl font-bold mb-4">Spatial Audio Navigation</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Directional sounds guide players. Music intensity signals proximity. Voice cues hint without instructions.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold mb-6">Independent Gameplay Framework</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  Eliminated need for sighted facilitators by embedding all guidance within the experience 
-                  itself. Players received hints through the environment, maintaining immersion and autonomy.
+                <h3 className="text-xl font-bold mb-4">Tactile Puzzle Mechanics</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Multi-sensory puzzles blend touch, sound, movement. Instant haptic + audio feedback for cause/effect clarity.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold mb-4">Zero Facilitator Design</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  All guidance embedded in the environment. Players get hints in-world, keeping immersion + autonomy intact.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* 📸 IMAGE 3: Configuration Page */}
-        <section className="px-6 mb-24">
-          <div className="max-w-6xl mx-auto">
-            <motion.div initial={{
-            opacity: 0,
-            y: 40
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true
-          }} className="aspect-[16/9] overflow-hidden bg-muted border border-border mb-4">
-              <img src={configImage} alt="Configuration screen with difficulty settings and accessibility features" className="w-full h-full object-contain" />
-            </motion.div>
-            <p className="text-sm text-muted-foreground text-center mb-24">
-              Player configuration: Difficulty selection and accessibility controls
-            </p>
+        {/* Puzzle Gallery - Large Format */}
+        <section className="px-6 mb-32 bg-foreground text-background py-24">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl font-black tracking-tight mb-16 text-center">Puzzle Interactions</h2>
+            
+            <div className="space-y-20">
+              {/* Puzzle 1 */}
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="grid md:grid-cols-2 gap-12 items-center"
+              >
+                <div className="aspect-square overflow-hidden bg-muted">
+                  <img src={puzzle1Image} alt="Morse Code puzzle interface" className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold mb-4">Morse Code Signal</h3>
+                  <p className="text-background/70 text-lg">Tactile interaction with rhythm-based feedback</p>
+                </div>
+              </motion.div>
 
-            <h2 className="text-4xl font-black tracking-tight mb-12 text-center">Puzzle Interactions</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div>
-                <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
-                  <img src={puzzle1Image} alt="Puzzle 1: Morse Code Signal" className="w-full h-full object-fill" />
+              {/* Puzzle 2 - Reversed layout */}
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="grid md:grid-cols-2 gap-12 items-center"
+              >
+                <div className="md:order-2 aspect-square overflow-hidden bg-muted">
+                  <img src={puzzle2Image} alt="Audio memory logs interface" className="w-full h-full object-cover" />
                 </div>
-                <p className="text-sm text-muted-foreground text-center">Puzzle 1: Morse Code Signal - Tactile interaction</p>
-              </div>
-              <div>
-                <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
-                  <img src={puzzle2Image} alt="Puzzle 2: Audio Memory Logs" className="w-full h-full object-cover" />
+                <div className="md:order-1">
+                  <h3 className="text-2xl font-bold mb-4">Audio Memory Logs</h3>
+                  <p className="text-background/70 text-lg">Spatial audio design with directional cues</p>
                 </div>
-                <p className="text-sm text-muted-foreground text-center">Puzzle 2: Audio Memory Logs - Spatial audio design</p>
-              </div>
-              <div>
-                <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
-                  <img src={puzzle3Image} alt="Puzzle 3: Magnetic Maze" className="w-full h-full object-cover" />
+              </motion.div>
+
+              {/* Puzzle 3 */}
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="grid md:grid-cols-2 gap-12 items-center"
+              >
+                <div className="aspect-square overflow-hidden bg-muted">
+                  <img src={puzzle3Image} alt="Magnetic maze interface" className="w-full h-full object-cover" />
                 </div>
-                <p className="text-sm text-muted-foreground text-center">Puzzle 3: Magnetic Maze - Navigation without sight</p>
-              </div>
+                <div>
+                  <h3 className="text-2xl font-bold mb-4">Magnetic Maze</h3>
+                  <p className="text-background/70 text-lg">Navigation challenge using haptic feedback only</p>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
 
-        {/* 📸 IMAGE 7: Results Screen */}
-        <section className="px-6 mb-16">
-          <div className="max-w-6xl mx-auto">
-            <motion.div initial={{
-            opacity: 0,
-            y: 40
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true
-          }} className="aspect-[16/9] overflow-hidden bg-muted border border-border mb-4">
-              <img alt="Mission success screen showing completion time and puzzle breakdown" className="w-full h-full object-scale-down" src="/lovable-uploads/0e12a65f-13ef-4047-be64-26ea22b2bd80.png" />
-            </motion.div>
-            <p className="text-sm text-muted-foreground text-center">
-              Success screen: Real-time feedback and performance metrics
-            </p>
-          </div>
+        {/* Results Screen - Full Width */}
+        <section className="mb-32">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="w-full h-[60vh] overflow-hidden bg-muted flex items-center justify-center"
+          >
+            <img alt="Success screen with metrics" className="w-full h-full object-contain" src="/lovable-uploads/0e12a65f-13ef-4047-be64-26ea22b2bd80.png" />
+          </motion.div>
         </section>
 
         {/* Results Section */}
         <section className="px-6 mb-24 bg-primary/5 py-24">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-12">Impact & Results</h2>
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-16 text-center">Impact</h2>
             
             <div className="grid md:grid-cols-2 gap-8 mb-16">
               <div className="bg-background p-8 border border-border">
                 <div className="text-5xl font-black text-primary mb-4">100%</div>
-                <p className="text-lg font-semibold mb-2">Visual Dependency Eliminated</p>
+                <p className="text-lg font-semibold mb-2">Visual Independence</p>
                 <p className="text-muted-foreground">
-                  Complete gameplay possible without any visual input or sighted assistance
+                  Gameplay works completely without sight or assistance
                 </p>
               </div>
               <div className="bg-background p-8 border border-border">
                 <div className="text-5xl font-black text-primary mb-4">60%</div>
-                <p className="text-lg font-semibold mb-2">Increase in Player Autonomy</p>
+                <p className="text-lg font-semibold mb-2">Autonomy Increase</p>
                 <p className="text-muted-foreground">
-                  Players completed puzzles independently compared to traditional adapted games
+                  Players solve independently vs. traditional games
                 </p>
               </div>
               <div className="bg-background p-8 border border-border">
                 <div className="text-5xl font-black text-primary mb-4">National</div>
-                <p className="text-lg font-semibold mb-2">Pilot Adoption</p>
+                <p className="text-lg font-semibold mb-2">Pilot Program</p>
                 <p className="text-muted-foreground">
-                  Helen Keller Services adopted as pilot program for accessibility innovation
+                  Adopted by Helen Keller Services nationwide
                 </p>
               </div>
               <div className="bg-background p-8 border border-border">
                 <div className="text-5xl font-black text-primary mb-4">Featured</div>
                 <p className="text-lg font-semibold mb-2">NYC Design Week 2024</p>
                 <p className="text-muted-foreground">
-                  Winner of Accessibility Innovation Award and featured installation
+                  Accessibility Innovation Award winner
                 </p>
               </div>
             </div>
@@ -401,10 +379,9 @@ export default function ShootForTheStars() {
             <div className="bg-foreground text-background p-12">
               <Quote className="w-12 h-12 text-primary mb-6" />
               <p className="text-2xl leading-relaxed mb-6">
-                "This is the first time I've played a game where I didn't feel like I needed help. 
-                I was just... playing. Like everyone else."
+                This is the first time I played a game where I did not feel like I needed help. I was just playing. Like everyone else.
               </p>
-              <p className="text-background/70">- Maya, 16, Beta Tester</p>
+              <p className="text-background/70">Maya, 16, Beta Tester</p>
             </div>
           </div>
         </section>
@@ -412,28 +389,25 @@ export default function ShootForTheStars() {
         {/* Learnings Section */}
         <section className="px-6 mb-24">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-12">Key Learnings</h2>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-12">Learnings</h2>
             
-            <div className="space-y-8">
-              <div className="border-l-2 border-primary pl-8">
-                <h3 className="text-xl font-bold mb-3">Design for the constraint, not around it</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Rather than adapting visual designs for accessibility, we built the experience 
-                  from non-visual principles first. This created a fundamentally better product.
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="border-l-4 border-primary pl-6">
+                <h3 className="text-xl font-bold mb-3">Design for Constraints</h3>
+                <p className="text-muted-foreground">
+                  Built from non-visual principles first, not adapted visuals. Better product.
                 </p>
               </div>
-              <div className="border-l-2 border-primary pl-8">
-                <h3 className="text-xl font-bold mb-3">Multi-sensory feedback is powerful</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Combining audio, tactile, and spatial cues created richer interactions than 
-                  visual-only experiences. This insight applies beyond accessibility contexts.
+              <div className="border-l-4 border-primary pl-6">
+                <h3 className="text-xl font-bold mb-3">Multi-Sensory Power</h3>
+                <p className="text-muted-foreground">
+                  Audio + tactile + spatial beats visual-only. Works beyond accessibility.
                 </p>
               </div>
-              <div className="border-l-2 border-primary pl-8">
-                <h3 className="text-xl font-bold mb-3">User testing cannot be replaced</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Assumptions about accessibility needs were consistently wrong. Direct engagement 
-                  with users at every stage was critical to success.
+              <div className="border-l-4 border-primary pl-6">
+                <h3 className="text-xl font-bold mb-3">Test Everything</h3>
+                <p className="text-muted-foreground">
+                  Assumptions about accessibility were wrong. User testing = critical.
                 </p>
               </div>
             </div>
