@@ -31,52 +31,81 @@ export default function ShootForTheStars() {
               </h1>
               
               <p className="text-2xl text-muted-foreground leading-relaxed mb-12">
-                Designing the first accessible escape room experience for blind and low-vision teenagers, 
-                eliminating 100% of visual dependency while increasing player autonomy by 60%.
+                Creating the first fully non-visual escape room that eliminates the need for sighted assistance
               </p>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 py-8 border-y border-border">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-8 py-8 border-y border-border">
                 <div>
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">Role</p>
-                  <p className="font-semibold">Lead Product Designer</p>
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">Timeline</p>
-                  <p className="font-semibold">6 Months</p>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">My Role</p>
+                  <p className="font-semibold">Lead UX Designer</p>
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">Team</p>
-                  <p className="font-semibold">4 Designers, 2 Engineers</p>
+                  <p className="font-semibold">4 Designers + 2 Engineers</p>
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">Year</p>
-                  <p className="font-semibold">2024</p>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">Duration</p>
+                  <p className="font-semibold">6 Months (2024)</p>
                 </div>
+              </div>
+
+              <div className="mt-12 text-lg text-foreground/90 leading-relaxed">
+                <p className="mb-6">
+                  Worked with Helen Keller Services to design an escape room experience that could be played 
+                  entirely without sight. Led user research with 15 blind teenagers, prototyped 12 tactile 
+                  interfaces, and conducted 6 rounds of user testing.
+                </p>
+                <p>
+                  The project achieved{" "}
+                  <span className="font-bold text-primary">100% visual independence</span>,{" "}
+                  <span className="font-bold text-primary">60% increase in player autonomy</span>, and 
+                  was adopted as a{" "}
+                  <span className="font-bold text-primary">national pilot program</span> by Helen Keller Services.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Key Metrics */}
+            <motion.div 
+              className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="text-center">
+                <div className="text-5xl font-black text-primary mb-2">100%</div>
+                <p className="text-sm text-muted-foreground">Visual Independence</p>
+              </div>
+              <div className="text-center">
+                <div className="text-5xl font-black text-primary mb-2">60%</div>
+                <p className="text-sm text-muted-foreground">Player Autonomy</p>
+              </div>
+              <div className="text-center">
+                <div className="text-5xl font-black text-primary mb-2">15</div>
+                <p className="text-sm text-muted-foreground">User Interviews</p>
+              </div>
+              <div className="text-center">
+                <div className="text-5xl font-black text-primary mb-2">6</div>
+                <p className="text-sm text-muted-foreground">Testing Rounds</p>
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* Problem Section */}
+        {/* Background Section */}
         <section className="px-6 mb-24 bg-muted/30 py-24">
           <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-16">
-              <div>
-                <h2 className="text-4xl font-black tracking-tight mb-6">The Problem</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Traditional escape rooms rely entirely on visual cues, making them completely inaccessible 
-                  to blind and low-vision players. There was no existing framework for creating fully 
-                  non-visual interactive entertainment experiences.
-                </p>
-              </div>
-              <div>
-                <h2 className="text-4xl font-black tracking-tight mb-6">The Goal</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Design an escape room that could be played entirely without sight, using audio cues, 
-                  tactile feedback, and spatial reasoning to create an engaging, challenging experience 
-                  that promotes independence and social interaction.
-                </p>
-              </div>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-8">Background</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+              Traditional escape rooms are built entirely around visual puzzles and cues, making them 
+              completely inaccessible to blind and low-vision players. Even "adapted" games still required 
+              sighted facilitators, reducing player agency and independence.
+            </p>
+            <div className="bg-background border-l-4 border-primary p-8">
+              <p className="text-lg italic text-muted-foreground">
+                "Problem: Blind teenagers had no way to play escape rooms independently. 
+                Existing accessible games still relied on sighted assistance."
+              </p>
             </div>
           </div>
         </section>

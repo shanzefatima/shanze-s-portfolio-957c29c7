@@ -51,11 +51,11 @@ export const Hero = () => {
           </motion.p>
           
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight mb-6">
-            Where Design
+            Product Designer
             <br />
-            <span className="text-primary">Meets Human</span>
+            <span className="text-primary">Specializing in</span>
             <br />
-            Experience
+            Accessible Design
           </h1>
 
           <motion.p
@@ -64,9 +64,8 @@ export const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            I design accessible, data-driven products that bridge technology and human needs. 
-            Combining Interactive Media Arts, CS, and accessibility expertise to create experiences 
-            that work for everyone.
+            Currently studying Interactive Media Arts and Computer Science at NYU. 
+            I combine design, engineering, and accessibility to build inclusive digital experiences.
           </motion.p>
 
           <motion.div
