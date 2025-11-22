@@ -12,12 +12,12 @@ import { Link } from "react-router-dom";
 // 3. Save - that's it! The image will appear automatically
 // ========================================
 
-import heroImage from "@/assets/placeholder.jpg";           // Main project screenshot
-import beforeImage from "@/assets/placeholder.jpg";         // Before redesign
-import afterImage from "@/assets/placeholder.jpg";          // After redesign
-import featureImage1 from "@/assets/placeholder.jpg";       // Feature screenshot 1
-import featureImage2 from "@/assets/placeholder.jpg";       // Feature screenshot 2
-import featureImage3 from "@/assets/placeholder.jpg";       // Feature screenshot 3
+import heroImage from "@/assets/snapchat-hero.jpg";           // Main project screenshot
+import beforeImage from "@/assets/snapchat-hero.jpg";         // Before redesign
+import afterImage from "@/assets/snapchat-hero.jpg";          // After redesign
+import featureImage1 from "@/assets/snapchat-hero.jpg";       // Feature screenshot 1
+import featureImage2 from "@/assets/snapchat-hero.jpg";       // Feature screenshot 2
+import featureImage3 from "@/assets/snapchat-hero.jpg";       // Feature screenshot 3
 
 export default function SnapchatRedesign() {
   return (

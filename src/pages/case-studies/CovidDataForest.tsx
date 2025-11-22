@@ -13,10 +13,10 @@ import covidForestHero from "@/assets/covid-forest-hero.jpg";
 // 3. Save!
 // ========================================
 
-import visualImage1 from "@/assets/placeholder.jpg";
-import visualImage2 from "@/assets/placeholder.jpg";
-import visualImage3 from "@/assets/placeholder.jpg";
-import processImage from "@/assets/placeholder.jpg";
+import visualImage1 from "@/assets/covid-forest-hero.jpg";
+import visualImage2 from "@/assets/covid-forest-hero.jpg";
+import visualImage3 from "@/assets/covid-forest-hero.jpg";
+import processImage from "@/assets/covid-forest-hero.jpg";
 
 const CovidDataForest = () => {
   return (

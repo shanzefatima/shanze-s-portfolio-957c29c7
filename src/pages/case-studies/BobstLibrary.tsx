@@ -12,12 +12,12 @@ import { Link } from "react-router-dom";
 // 3. Save!
 // ========================================
 
-import heroImage from "@/assets/placeholder.jpg";
-import beforeImage from "@/assets/placeholder.jpg";
-import afterImage from "@/assets/placeholder.jpg";
-import dashboardImage from "@/assets/placeholder.jpg";
-import mobileImage from "@/assets/placeholder.jpg";
-import searchImage from "@/assets/placeholder.jpg";
+import heroImage from "@/assets/bobst-hero.jpg";
+import beforeImage from "@/assets/bobst-hero.jpg";
+import afterImage from "@/assets/bobst-hero.jpg";
+import dashboardImage from "@/assets/bobst-hero.jpg";
+import mobileImage from "@/assets/bobst-hero.jpg";
+import searchImage from "@/assets/bobst-hero.jpg";
 
 export default function BobstLibrary() {
   return (

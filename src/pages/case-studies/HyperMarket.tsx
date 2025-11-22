@@ -12,12 +12,12 @@ import { Link } from "react-router-dom";
 // 3. Save - that's it!
 // ========================================
 
-import heroImage from "@/assets/placeholder.jpg";
-import beforeImage from "@/assets/placeholder.jpg";
-import afterImage from "@/assets/placeholder.jpg";
-import searchImage from "@/assets/placeholder.jpg";
-import checkoutImage from "@/assets/placeholder.jpg";
-import trackingImage from "@/assets/placeholder.jpg";
+import heroImage from "@/assets/hypermarket-hero.jpg";
+import beforeImage from "@/assets/hypermarket-hero.jpg";
+import afterImage from "@/assets/hypermarket-hero.jpg";
+import searchImage from "@/assets/hypermarket-hero.jpg";
+import checkoutImage from "@/assets/hypermarket-hero.jpg";
+import trackingImage from "@/assets/hypermarket-hero.jpg";
 
 export default function HyperMarket() {
   return (
