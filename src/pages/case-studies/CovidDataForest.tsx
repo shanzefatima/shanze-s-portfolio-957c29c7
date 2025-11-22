@@ -4,6 +4,20 @@ import { Link } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
 import covidForestHero from "@/assets/covid-forest-hero.jpg";
 
+// ========================================
+// 📸 IMAGE PLACEHOLDERS - EASY TO UPDATE!
+// ========================================
+// TO ADD YOUR IMAGES:
+// 1. Upload your image to src/assets/ folder
+// 2. Change "placeholder.jpg" to your filename
+// 3. Save!
+// ========================================
+
+import visualImage1 from "@/assets/placeholder.jpg";
+import visualImage2 from "@/assets/placeholder.jpg";
+import visualImage3 from "@/assets/placeholder.jpg";
+import processImage from "@/assets/placeholder.jpg";
+
 const CovidDataForest = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -315,6 +329,49 @@ const CovidDataForest = () => {
                     Click any tree for raw numbers, sources, and confidence intervals—education built into exploration
                   </p>
                 </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* 📸 IMAGE: Visualization Grid */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-24"
+          >
+            <h2 className="text-3xl md:text-4xl font-black mb-12 text-center">Visualization Details</h2>
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <div>
+                <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
+                  <img 
+                    src={visualImage1}
+                    alt="Interactive Timeline"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground text-center">Interactive timeline scrubbing</p>
+              </div>
+              <div>
+                <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
+                  <img 
+                    src={visualImage2}
+                    alt="Country Comparison"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground text-center">Country comparison mode</p>
+              </div>
+              <div>
+                <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
+                  <img 
+                    src={visualImage3}
+                    alt="Data Details"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground text-center">Detailed data tooltips</p>
               </div>
             </div>
           </motion.div>

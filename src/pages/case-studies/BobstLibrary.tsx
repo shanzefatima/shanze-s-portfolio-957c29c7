@@ -3,6 +3,22 @@ import { Navigation } from "@/components/Navigation";
 import { ArrowLeft, CheckCircle2, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 
+// ========================================
+// 📸 IMAGE PLACEHOLDERS - EASY TO UPDATE!
+// ========================================
+// TO ADD YOUR IMAGES:
+// 1. Upload your image to src/assets/ folder
+// 2. Change "placeholder.jpg" to your filename
+// 3. Save!
+// ========================================
+
+import heroImage from "@/assets/placeholder.jpg";
+import beforeImage from "@/assets/placeholder.jpg";
+import afterImage from "@/assets/placeholder.jpg";
+import dashboardImage from "@/assets/placeholder.jpg";
+import mobileImage from "@/assets/placeholder.jpg";
+import searchImage from "@/assets/placeholder.jpg";
+
 export default function BobstLibrary() {
   return (
     <div className="min-h-screen bg-background">
@@ -54,6 +70,27 @@ export default function BobstLibrary() {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* 📸 IMAGE: Hero */}
+        <section className="px-6 mb-24">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="aspect-[16/9] overflow-hidden bg-muted border border-border"
+            >
+              <img 
+                src={heroImage}
+                alt="NYU Bobst Library Website"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+            <p className="text-sm text-muted-foreground text-center mt-4">
+              Redesigned library homepage
+            </p>
           </div>
         </section>
 
@@ -192,6 +229,45 @@ export default function BobstLibrary() {
                   keyboard navigation, and screen reader optimization. Tested with assistive 
                   technology users from NYU's Moses Center.
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 📸 IMAGE: Features Grid */}
+        <section className="px-6 mb-24">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-black tracking-tight mb-12 text-center">Key Features</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <div className="aspect-[4/3] overflow-hidden bg-muted border border-border mb-4">
+                  <img 
+                    src={dashboardImage}
+                    alt="Dashboard Homepage"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground text-center">Dashboard-style homepage</p>
+              </div>
+              <div>
+                <div className="aspect-[4/3] overflow-hidden bg-muted border border-border mb-4">
+                  <img 
+                    src={mobileImage}
+                    alt="Mobile Experience"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground text-center">Mobile-first design</p>
+              </div>
+              <div>
+                <div className="aspect-[4/3] overflow-hidden bg-muted border border-border mb-4">
+                  <img 
+                    src={searchImage}
+                    alt="Enhanced Search"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground text-center">Enhanced search</p>
               </div>
             </div>
           </div>

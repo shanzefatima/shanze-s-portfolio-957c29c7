@@ -3,6 +3,22 @@ import { Navigation } from "@/components/Navigation";
 import { ArrowLeft, CheckCircle2, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 
+// ========================================
+// 📸 IMAGE PLACEHOLDERS - EASY TO UPDATE!
+// ========================================
+// TO ADD YOUR IMAGES:
+// 1. Upload your image to src/assets/ folder
+// 2. Change "placeholder.jpg" below to your actual filename
+// 3. Save - that's it!
+// ========================================
+
+import heroImage from "@/assets/placeholder.jpg";
+import beforeImage from "@/assets/placeholder.jpg";
+import afterImage from "@/assets/placeholder.jpg";
+import searchImage from "@/assets/placeholder.jpg";
+import checkoutImage from "@/assets/placeholder.jpg";
+import trackingImage from "@/assets/placeholder.jpg";
+
 export default function HyperMarket() {
   return (
     <div className="min-h-screen bg-background">
@@ -53,6 +69,27 @@ export default function HyperMarket() {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* 📸 IMAGE: Full-Width Hero */}
+        <section className="px-6 mb-24">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="aspect-[16/9] overflow-hidden bg-muted border border-border"
+            >
+              <img 
+                src={heroImage}
+                alt="HyperMarket Interface"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+            <p className="text-sm text-muted-foreground text-center mt-4">
+              Redesigned mobile shopping experience
+            </p>
           </div>
         </section>
 
@@ -148,6 +185,45 @@ export default function HyperMarket() {
                   Created live order tracking dashboard showing preparation, dispatch, and delivery 
                   stages. Added push notifications for status updates.
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 📸 IMAGE: Feature Grid */}
+        <section className="px-6 mb-24">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-black tracking-tight mb-12 text-center">Solution Highlights</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
+                  <img 
+                    src={searchImage}
+                    alt="Smart Search"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground text-center">Smart Search & Discovery</p>
+              </div>
+              <div>
+                <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
+                  <img 
+                    src={checkoutImage}
+                    alt="Simplified Checkout"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground text-center">Streamlined Checkout</p>
+              </div>
+              <div>
+                <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
+                  <img 
+                    src={trackingImage}
+                    alt="Order Tracking"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground text-center">Real-Time Tracking</p>
               </div>
             </div>
           </div>

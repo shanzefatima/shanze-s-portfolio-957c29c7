@@ -3,6 +3,22 @@ import { Navigation } from "@/components/Navigation";
 import { ArrowLeft, CheckCircle2, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 
+// ========================================
+// 📸 IMAGE PLACEHOLDERS - EASY TO UPDATE!
+// ========================================
+// TO ADD YOUR IMAGES:
+// 1. Upload your image to src/assets/ folder
+// 2. Change "placeholder.jpg" below to your actual filename
+// 3. Save - that's it! The image will appear automatically
+// ========================================
+
+import heroImage from "@/assets/placeholder.jpg";           // Main project screenshot
+import beforeImage from "@/assets/placeholder.jpg";         // Before redesign
+import afterImage from "@/assets/placeholder.jpg";          // After redesign
+import featureImage1 from "@/assets/placeholder.jpg";       // Feature screenshot 1
+import featureImage2 from "@/assets/placeholder.jpg";       // Feature screenshot 2
+import featureImage3 from "@/assets/placeholder.jpg";       // Feature screenshot 3
+
 export default function SnapchatRedesign() {
   return (
     <div className="min-h-screen bg-background">
@@ -54,6 +70,29 @@ export default function SnapchatRedesign() {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* ============================================ */}
+        {/* 📸 IMAGE PLACEHOLDER 1: Full-Width Hero Image */}
+        {/* ============================================ */}
+        <section className="px-6 mb-24">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="aspect-[16/9] overflow-hidden bg-muted border border-border"
+            >
+              <img 
+                src={heroImage}
+                alt="Snapchat Redesign Hero"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+            <p className="text-sm text-muted-foreground text-center mt-4">
+              Main redesign overview
+            </p>
           </div>
         </section>
 
@@ -154,6 +193,41 @@ export default function SnapchatRedesign() {
           </div>
         </section>
 
+        {/* ===================================================== */}
+        {/* 📸 IMAGE PLACEHOLDER 2: Before/After Comparison */}
+        {/* ===================================================== */}
+        <section className="px-6 mb-24 bg-muted/30 py-24">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-black tracking-tight mb-12 text-center">Visual Comparison</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <div className="aspect-[9/16] overflow-hidden bg-muted border border-border mb-4">
+                  <img 
+                    src={beforeImage}
+                    alt="Before redesign"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground text-center font-semibold">
+                  Before: Hidden gestures
+                </p>
+              </div>
+              <div>
+                <div className="aspect-[9/16] overflow-hidden bg-muted border border-border mb-4">
+                  <img 
+                    src={afterImage}
+                    alt="After redesign"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground text-center font-semibold">
+                  After: Clear navigation
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="px-6 mb-24">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-12">Key Design Features</h2>
@@ -181,6 +255,53 @@ export default function SnapchatRedesign() {
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                   Integrated help tooltips and hints that appear when users pause on unfamiliar 
                   elements. Quick reference guide accessible from any screen.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ============================================== */}
+        {/* 📸 IMAGE PLACEHOLDER 3: Feature Screenshots Grid */}
+        {/* ============================================== */}
+        <section className="px-6 mb-24">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-black tracking-tight mb-12 text-center">Feature Highlights</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <div className="aspect-[9/16] overflow-hidden bg-muted border border-border mb-4">
+                  <img 
+                    src={featureImage1}
+                    alt="Feature 1"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground text-center">
+                  Visible navigation
+                </p>
+              </div>
+              <div>
+                <div className="aspect-[9/16] overflow-hidden bg-muted border border-border mb-4">
+                  <img 
+                    src={featureImage2}
+                    alt="Feature 2"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground text-center">
+                  Guided onboarding
+                </p>
+              </div>
+              <div>
+                <div className="aspect-[9/16] overflow-hidden bg-muted border border-border mb-4">
+                  <img 
+                    src={featureImage3}
+                    alt="Feature 3"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground text-center">
+                  Accessibility features
                 </p>
               </div>
             </div>

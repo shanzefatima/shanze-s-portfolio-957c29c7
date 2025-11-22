@@ -3,6 +3,22 @@ import { Navigation } from "@/components/Navigation";
 import { ArrowLeft, Users, Target, CheckCircle2, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 
+// ========================================
+// 📸 IMAGE PLACEHOLDERS - EASY TO UPDATE!
+// ========================================
+// TO ADD YOUR IMAGES:
+// 1. Upload your image to src/assets/ folder
+// 2. Change "placeholder.jpg" to your filename
+// 3. Save!
+// ========================================
+
+import heroImage from "@/assets/placeholder.jpg";
+import researchImage from "@/assets/placeholder.jpg";
+import prototypeImage from "@/assets/placeholder.jpg";
+import audioImage from "@/assets/placeholder.jpg";
+import tactileImage from "@/assets/placeholder.jpg";
+import testingImage from "@/assets/placeholder.jpg";
+
 export default function ShootForTheStars() {
   return (
     <div className="min-h-screen bg-background">
@@ -89,6 +105,27 @@ export default function ShootForTheStars() {
                 <p className="text-sm text-muted-foreground">Testing Rounds</p>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* 📸 IMAGE: Hero */}
+        <section className="px-6 mb-24">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="aspect-[16/9] overflow-hidden bg-muted border border-border"
+            >
+              <img 
+                src={heroImage}
+                alt="Shoot for the Stars Escape Room"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+            <p className="text-sm text-muted-foreground text-center mt-4">
+              Non-visual escape room experience
+            </p>
           </div>
         </section>
 
@@ -221,6 +258,45 @@ export default function ShootForTheStars() {
                   Eliminated need for sighted facilitators by embedding all guidance within the experience 
                   itself. Players received hints through the environment, maintaining immersion and autonomy.
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 📸 IMAGE: Process Grid */}
+        <section className="px-6 mb-24">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-black tracking-tight mb-12 text-center">Design Process</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
+                  <img 
+                    src={audioImage}
+                    alt="Spatial Audio"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground text-center">Spatial audio mapping</p>
+              </div>
+              <div>
+                <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
+                  <img 
+                    src={tactileImage}
+                    alt="Tactile Puzzles"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground text-center">Tactile puzzle design</p>
+              </div>
+              <div>
+                <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
+                  <img 
+                    src={testingImage}
+                    alt="User Testing"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground text-center">Iterative testing</p>
               </div>
             </div>
           </div>
