@@ -123,31 +123,17 @@ export default function ShootForTheStars() {
           </div>
         </section>
 
-        {/* Hero Cover Image */}
+        {/* Hero Image - Full Bleed */}
         <section className="mb-24">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }} 
             whileInView={{ opacity: 1, scale: 1 }} 
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="w-full h-[60vh] overflow-hidden bg-muted"
+            className="w-full h-[70vh] overflow-hidden bg-muted"
           >
-            <img src={heroImage} alt="Shoot for the Stars - Accessible escape room constellation pathways" className="w-full h-full object-cover" />
+            <img src={homePageImage} alt="Mission overview interface" className="w-full h-full object-cover" />
           </motion.div>
-        </section>
-
-        {/* Interface Preview */}
-        <section className="px-6 mb-24">
-          <div className="max-w-4xl mx-auto">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }} 
-              whileInView={{ opacity: 1, y: 0 }} 
-              viewport={{ once: true }}
-              className="overflow-hidden bg-muted border border-border"
-            >
-              <img src={homePageImage} alt="Mission overview interface" className="w-full h-auto object-contain max-h-[500px]" />
-            </motion.div>
-          </div>
         </section>
 
         {/* Problem Statement - Side by side with image */}
