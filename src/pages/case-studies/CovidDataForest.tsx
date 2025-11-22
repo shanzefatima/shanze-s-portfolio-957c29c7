@@ -337,16 +337,6 @@ const CovidDataForest = () => {
               <div>
                 <div className="aspect-video overflow-hidden bg-muted border border-border mb-4">
                   <img
-                    src={prototypeImage}
-                    alt="Physical prototype of the COVID-19 Data Forest concept"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <p className="text-sm text-muted-foreground">Physical Prototype Exploration</p>
-              </div>
-              <div>
-                <div className="aspect-video overflow-hidden bg-muted border border-border mb-4">
-                  <img
                     src={interfaceImage}
                     alt="Digital interface of the COVID-19 Data Forest"
                     className="w-full h-full object-cover"
