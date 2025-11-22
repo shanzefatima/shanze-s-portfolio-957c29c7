@@ -108,10 +108,10 @@ export const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex justify-center items-center gap-8 mb-16"
+          className="flex flex-wrap justify-center items-center gap-6 md:gap-8 mb-16"
         >
           <a
-            href="https://www.linkedin.com/in/shanzefatimajaved"
+            href="https://www.linkedin.com/in/shanzefatimajaved/"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center gap-2 text-sm uppercase tracking-wider hover:text-primary transition-colors"
@@ -120,13 +120,31 @@ export const Contact = () => {
             <span>LinkedIn</span>
           </a>
           <a
-            href="https://www.shanzefatima.com"
+            href="https://dribbble.com/shanzefatima_/"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center gap-2 text-sm uppercase tracking-wider hover:text-primary transition-colors"
           >
             <Globe className="w-5 h-5" />
-            <span>Portfolio</span>
+            <span>Dribbble</span>
+          </a>
+          <a
+            href="https://medium.com/@sj3802"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-2 text-sm uppercase tracking-wider hover:text-primary transition-colors"
+          >
+            <Globe className="w-5 h-5" />
+            <span>Medium</span>
+          </a>
+          <a
+            href="https://shanzefatimajaved.blog"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-2 text-sm uppercase tracking-wider hover:text-primary transition-colors"
+          >
+            <Globe className="w-5 h-5" />
+            <span>Blog</span>
           </a>
           <a
             href={`mailto:${email}`}
