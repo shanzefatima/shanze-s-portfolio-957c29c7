@@ -30,10 +30,8 @@ import puzzle1Image from "@/assets/shoot-stars-puzzle1.png";
 import puzzle2Image from "@/assets/shoot-stars-puzzle2.png";
 import puzzle3Image from "@/assets/shoot-stars-puzzle3.png";
 import resultsImage from "@/assets/shoot-stars-results.png";
-
 export default function ShootForTheStars() {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       <article className="pt-32 pb-24">
@@ -45,11 +43,15 @@ export default function ShootForTheStars() {
               Back to Portfolio
             </Link>
 
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 40
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8
+          }}>
               <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-6">
                 Accessibility · UX Research · Product Design
               </p>
@@ -94,12 +96,16 @@ export default function ShootForTheStars() {
             </motion.div>
 
             {/* Key Metrics */}
-            <motion.div 
-              className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
+            <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16" initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            delay: 0.2
+          }}>
               <div className="text-center">
                 <div className="text-5xl font-black text-primary mb-2">100%</div>
                 <p className="text-sm text-muted-foreground">Visual Independence</p>
@@ -123,17 +129,16 @@ export default function ShootForTheStars() {
         {/* 📸 IMAGE 1: Prototype Home Page */}
         <section className="px-6 mb-24">
           <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="aspect-[16/9] overflow-hidden bg-muted border border-border"
-            >
-              <img 
-                src={homePageImage}
-                alt="Interactive prototype home screen with mission overview"
-                className="w-full h-full object-cover"
-              />
+            <motion.div initial={{
+            opacity: 0,
+            y: 40
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} className="aspect-[16/9] overflow-hidden bg-muted border border-border">
+              <img src={homePageImage} alt="Interactive prototype home screen with mission overview" className="w-full h-full object-cover" />
             </motion.div>
             <p className="text-sm text-muted-foreground text-center mt-4">
               Interactive prototype: Mission overview screen with accessibility features
@@ -144,17 +149,16 @@ export default function ShootForTheStars() {
         {/* 📸 IMAGE 2: About Project */}
         <section className="px-6 mb-16">
           <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="aspect-[16/9] overflow-hidden bg-muted border border-border"
-            >
-              <img 
-                src={aboutImage}
-                alt="Project background showing research foundation and design principles"
-                className="w-full h-full object-cover"
-              />
+            <motion.div initial={{
+            opacity: 0,
+            y: 40
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} className="aspect-[16/9] overflow-hidden bg-muted border border-border">
+              <img src={aboutImage} alt="Project background showing research foundation and design principles" className="w-full h-full object-cover" />
             </motion.div>
             <p className="text-sm text-muted-foreground text-center mt-4">
               Research foundation and core design principles
@@ -299,17 +303,16 @@ export default function ShootForTheStars() {
         {/* 📸 IMAGE 3: Configuration Page */}
         <section className="px-6 mb-24">
           <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="aspect-[16/9] overflow-hidden bg-muted border border-border mb-4"
-            >
-              <img 
-                src={configImage}
-                alt="Configuration screen with difficulty settings and accessibility features"
-                className="w-full h-full object-cover"
-              />
+            <motion.div initial={{
+            opacity: 0,
+            y: 40
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} className="aspect-[16/9] overflow-hidden bg-muted border border-border mb-4">
+              <img src={configImage} alt="Configuration screen with difficulty settings and accessibility features" className="w-full h-full object-contain" />
             </motion.div>
             <p className="text-sm text-muted-foreground text-center mb-24">
               Player configuration: Difficulty selection and accessibility controls
@@ -319,31 +322,19 @@ export default function ShootForTheStars() {
             <div className="grid md:grid-cols-3 gap-8">
               <div>
                 <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
-                  <img 
-                    src={puzzle1Image}
-                    alt="Puzzle 1: Morse Code Signal"
-                    className="w-full h-full object-cover"
-                  />
+                  <img src={puzzle1Image} alt="Puzzle 1: Morse Code Signal" className="w-full h-full object-fill" />
                 </div>
                 <p className="text-sm text-muted-foreground text-center">Puzzle 1: Morse Code Signal - Tactile interaction</p>
               </div>
               <div>
                 <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
-                  <img 
-                    src={puzzle2Image}
-                    alt="Puzzle 2: Audio Memory Logs"
-                    className="w-full h-full object-cover"
-                  />
+                  <img src={puzzle2Image} alt="Puzzle 2: Audio Memory Logs" className="w-full h-full object-cover" />
                 </div>
                 <p className="text-sm text-muted-foreground text-center">Puzzle 2: Audio Memory Logs - Spatial audio design</p>
               </div>
               <div>
                 <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
-                  <img 
-                    src={puzzle3Image}
-                    alt="Puzzle 3: Magnetic Maze"
-                    className="w-full h-full object-cover"
-                  />
+                  <img src={puzzle3Image} alt="Puzzle 3: Magnetic Maze" className="w-full h-full object-cover" />
                 </div>
                 <p className="text-sm text-muted-foreground text-center">Puzzle 3: Magnetic Maze - Navigation without sight</p>
               </div>
@@ -354,17 +345,16 @@ export default function ShootForTheStars() {
         {/* 📸 IMAGE 7: Results Screen */}
         <section className="px-6 mb-16">
           <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="aspect-[16/9] overflow-hidden bg-muted border border-border mb-4"
-            >
-              <img 
-                src={resultsImage}
-                alt="Mission success screen showing completion time and puzzle breakdown"
-                className="w-full h-full object-cover"
-              />
+            <motion.div initial={{
+            opacity: 0,
+            y: 40
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} className="aspect-[16/9] overflow-hidden bg-muted border border-border mb-4">
+              <img alt="Mission success screen showing completion time and puzzle breakdown" className="w-full h-full object-scale-down" src="/lovable-uploads/0e12a65f-13ef-4047-be64-26ea22b2bd80.png" />
             </motion.div>
             <p className="text-sm text-muted-foreground text-center">
               Success screen: Real-time feedback and performance metrics
@@ -454,11 +444,11 @@ export default function ShootForTheStars() {
         <section className="px-6">
           <div className="max-w-5xl mx-auto text-center">
             <Link to="/">
-              <motion.button
-                className="group inline-flex items-center gap-2 px-8 py-4 bg-primary text-background text-sm uppercase tracking-widest font-bold"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
+              <motion.button className="group inline-flex items-center gap-2 px-8 py-4 bg-primary text-background text-sm uppercase tracking-widest font-bold" whileHover={{
+              scale: 1.05
+            }} whileTap={{
+              scale: 0.95
+            }}>
                 <ArrowLeft className="w-4 h-4" />
                 View More Projects
               </motion.button>
@@ -466,6 +456,5 @@ export default function ShootForTheStars() {
           </div>
         </section>
       </article>
-    </div>
-  );
+    </div>;
 }
