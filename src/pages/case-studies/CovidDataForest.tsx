@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
-import covidForestHero from "@/assets/covid-forest-hero.jpg";
 
 // ========================================
 // 📸 IMAGE PLACEHOLDERS - EASY TO UPDATE!
@@ -22,11 +21,11 @@ const CovidDataForest = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       <article className="pt-32 pb-20">
         {/* Back Button */}
         <div className="max-w-6xl mx-auto px-6 mb-12">
-          <Link 
+          <Link
             to="/#work"
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
@@ -37,19 +36,14 @@ const CovidDataForest = () => {
 
         {/* Hero Section */}
         <div className="max-w-6xl mx-auto px-6 mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-6">
               Data Visualization · Research · Interactive Design
             </p>
-            <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-8">
-              The COVID-19 Data Forest
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-8">The COVID-19 Data Forest</h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mb-12">
-              An interactive data visualization exploring the pandemic's impact across South Asia through the metaphor of a digital forest
+              An interactive data visualization exploring the pandemic's impact across South Asia through the metaphor
+              of a digital forest
             </p>
 
             {/* Project Meta */}
@@ -71,13 +65,15 @@ const CovidDataForest = () => {
             {/* Physical Prototype */}
             <div className="mb-16">
               <div className="aspect-video overflow-hidden bg-muted border border-border">
-                <img 
+                <img
                   src={prototypeImage}
                   alt="Physical prototype exploring the COVID-19 Data Forest concept"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <p className="text-sm text-muted-foreground mt-4 text-center">Early physical prototype exploring the forest visualization metaphor</p>
+              <p className="text-sm text-muted-foreground mt-4 text-center">
+                Early physical prototype exploring the forest visualization metaphor
+              </p>
             </div>
           </motion.div>
 
@@ -88,8 +84,8 @@ const CovidDataForest = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="aspect-[16/9] bg-muted overflow-hidden mb-20"
           >
-            <img 
-              src={covidForestHero} 
+            <img
+              src={covidForestHero}
               alt="COVID-19 Data Forest Visualization"
               className="w-full h-full object-cover"
             />
@@ -106,10 +102,14 @@ const CovidDataForest = () => {
             <h2 className="text-3xl md:text-4xl font-black mb-6">Overview</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-foreground/80 mb-4">
-                The COVID-19 Data Forest reimagines pandemic data as an interactive digital ecosystem, where each "tree" represents a country's journey through the pandemic. This project transforms raw statistical data into an intuitive, explorable visualization that reveals patterns, trends, and correlations across South Asian nations.
+                The COVID-19 Data Forest reimagines pandemic data as an interactive digital ecosystem, where each "tree"
+                represents a country's journey through the pandemic. This project transforms raw statistical data into
+                an intuitive, explorable visualization that reveals patterns, trends, and correlations across South
+                Asian nations.
               </p>
               <p className="text-lg text-foreground/80">
-                By combining data science with metaphorical design, the visualization makes complex epidemiological data accessible to general audiences while maintaining depth for researchers and policymakers.
+                By combining data science with metaphorical design, the visualization makes complex epidemiological data
+                accessible to general audiences while maintaining depth for researchers and policymakers.
               </p>
             </div>
           </motion.div>
@@ -127,19 +127,25 @@ const CovidDataForest = () => {
               <div className="p-8 bg-muted/30 border-l-4 border-primary">
                 <h3 className="text-xl font-bold mb-3">Data Overload</h3>
                 <p className="text-foreground/80">
-                  During the pandemic, people were bombarded with numbers—daily cases, death rates, recovery statistics. Traditional charts and tables made it difficult to understand the bigger picture and compare regional impacts effectively.
+                  During the pandemic, people were bombarded with numbers—daily cases, death rates, recovery statistics.
+                  Traditional charts and tables made it difficult to understand the bigger picture and compare regional
+                  impacts effectively.
                 </p>
               </div>
               <div className="p-8 bg-muted/30 border-l-4 border-primary">
                 <h3 className="text-xl font-bold mb-3">Regional Context Missing</h3>
                 <p className="text-foreground/80">
-                  Most visualizations focused on global or individual country data, missing the nuanced regional story of how the pandemic affected South Asia's interconnected nations differently based on population density, healthcare infrastructure, and policy responses.
+                  Most visualizations focused on global or individual country data, missing the nuanced regional story
+                  of how the pandemic affected South Asia's interconnected nations differently based on population
+                  density, healthcare infrastructure, and policy responses.
                 </p>
               </div>
               <div className="p-8 bg-muted/30 border-l-4 border-primary">
                 <h3 className="text-xl font-bold mb-3">Engagement Gap</h3>
                 <p className="text-foreground/80">
-                  Static dashboards failed to engage audiences emotionally or help them retain information. There was a need for an exploratory, memorable experience that would help people understand the pandemic's true scope and impact.
+                  Static dashboards failed to engage audiences emotionally or help them retain information. There was a
+                  need for an exploratory, memorable experience that would help people understand the pandemic's true
+                  scope and impact.
                 </p>
               </div>
             </div>
@@ -253,28 +259,32 @@ const CovidDataForest = () => {
                   <div className="text-4xl font-black text-primary mb-4">01</div>
                   <h3 className="text-xl font-bold mb-3">Data Cleaning & Structuring</h3>
                   <p className="text-foreground/80">
-                    Normalized datasets from multiple sources, filled gaps using interpolation, and structured data for time-series animation. Created a unified schema for 8 countries covering 500K+ data points.
+                    Normalized datasets from multiple sources, filled gaps using interpolation, and structured data for
+                    time-series animation. Created a unified schema for 8 countries covering 500K+ data points.
                   </p>
                 </div>
                 <div className="p-8 bg-muted/30 border border-border">
                   <div className="text-4xl font-black text-primary mb-4">02</div>
                   <h3 className="text-xl font-bold mb-3">Visual Encoding</h3>
                   <p className="text-foreground/80">
-                    Developed the tree metaphor system, testing multiple encoding schemes. Iterated on color palettes for accessibility and emotional resonance while maintaining data accuracy.
+                    Developed the tree metaphor system, testing multiple encoding schemes. Iterated on color palettes
+                    for accessibility and emotional resonance while maintaining data accuracy.
                   </p>
                 </div>
                 <div className="p-8 bg-muted/30 border border-border">
                   <div className="text-4xl font-black text-primary mb-4">03</div>
                   <h3 className="text-xl font-bold mb-3">Technical Implementation</h3>
                   <p className="text-foreground/80">
-                    Built with D3.js for data processing and Three.js for 3D rendering. Optimized for performance with level-of-detail rendering and progressive data loading.
+                    Built with D3.js for data processing and Three.js for 3D rendering. Optimized for performance with
+                    level-of-detail rendering and progressive data loading.
                   </p>
                 </div>
                 <div className="p-8 bg-muted/30 border border-border">
                   <div className="text-4xl font-black text-primary mb-4">04</div>
                   <h3 className="text-xl font-bold mb-3">Interaction Design</h3>
                   <p className="text-foreground/80">
-                    Created intuitive camera controls, country comparison mode, timeline scrubbing, and detailed tooltips. Added narrative walkthroughs for key pandemic moments.
+                    Created intuitive camera controls, country comparison mode, timeline scrubbing, and detailed
+                    tooltips. Added narrative walkthroughs for key pandemic moments.
                   </p>
                 </div>
               </div>
@@ -292,9 +302,11 @@ const CovidDataForest = () => {
             <h2 className="text-3xl md:text-4xl font-black mb-6">The Solution</h2>
             <div className="space-y-6">
               <p className="text-lg text-foreground/80">
-                The COVID-19 Data Forest is an immersive web experience where users can explore the pandemic's timeline as a growing digital ecosystem. Each country is represented as a distinct "grove" of data trees that evolve in real-time as users scrub through the timeline.
+                The COVID-19 Data Forest is an immersive web experience where users can explore the pandemic's timeline
+                as a growing digital ecosystem. Each country is represented as a distinct "grove" of data trees that
+                evolve in real-time as users scrub through the timeline.
               </p>
-              
+
               <h3 className="text-xl font-bold mt-8 mb-4">Key Features</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="p-6 border border-border">
@@ -337,7 +349,7 @@ const CovidDataForest = () => {
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div>
                 <div className="aspect-video overflow-hidden bg-muted border border-border mb-4">
-                  <img 
+                  <img
                     src={prototypeImage}
                     alt="Physical prototype of the COVID-19 Data Forest concept"
                     className="w-full h-full object-cover"
@@ -347,7 +359,7 @@ const CovidDataForest = () => {
               </div>
               <div>
                 <div className="aspect-video overflow-hidden bg-muted border border-border mb-4">
-                  <img 
+                  <img
                     src={interfaceImage}
                     alt="Digital interface of the COVID-19 Data Forest"
                     className="w-full h-full object-cover"
@@ -357,7 +369,7 @@ const CovidDataForest = () => {
               </div>
               <div>
                 <div className="aspect-video overflow-hidden bg-muted border border-border mb-4">
-                  <img 
+                  <img
                     src={countryDataImage}
                     alt="Country-specific data visualization"
                     className="w-full h-full object-cover"
@@ -367,7 +379,7 @@ const CovidDataForest = () => {
               </div>
               <div>
                 <div className="aspect-video overflow-hidden bg-muted border border-border mb-4">
-                  <img 
+                  <img
                     src={comparisonImage}
                     alt="Comparative analysis between countries"
                     className="w-full h-full object-cover"
@@ -408,7 +420,8 @@ const CovidDataForest = () => {
                 <li className="flex items-start gap-3">
                   <div className="w-1 h-1 mt-2 bg-primary rounded-full flex-shrink-0" />
                   <p className="text-foreground/80">
-                    Shared by public health researchers as an educational tool for understanding regional pandemic dynamics
+                    Shared by public health researchers as an educational tool for understanding regional pandemic
+                    dynamics
                   </p>
                 </li>
                 <li className="flex items-start gap-3">
@@ -440,25 +453,30 @@ const CovidDataForest = () => {
               <div className="p-6 bg-muted/30 border-l-4 border-primary">
                 <h3 className="text-lg font-bold mb-2">Metaphors Must Serve Data</h3>
                 <p className="text-foreground/80">
-                  The forest metaphor worked because it had clear, intuitive mappings to data dimensions. Early iterations with more abstract metaphors confused users. Beauty should enhance, not obscure, information.
+                  The forest metaphor worked because it had clear, intuitive mappings to data dimensions. Early
+                  iterations with more abstract metaphors confused users. Beauty should enhance, not obscure,
+                  information.
                 </p>
               </div>
               <div className="p-6 bg-muted/30 border-l-4 border-primary">
                 <h3 className="text-lg font-bold mb-2">Performance Is Part of UX</h3>
                 <p className="text-foreground/80">
-                  Initial renders were too heavy for most devices. Implementing level-of-detail systems and progressive loading turned a sluggish experience into a smooth one—essential for maintaining engagement.
+                  Initial renders were too heavy for most devices. Implementing level-of-detail systems and progressive
+                  loading turned a sluggish experience into a smooth one—essential for maintaining engagement.
                 </p>
               </div>
               <div className="p-6 bg-muted/30 border-l-4 border-primary">
                 <h3 className="text-lg font-bold mb-2">Context Shapes Interpretation</h3>
                 <p className="text-foreground/80">
-                  Adding policy markers and healthcare infrastructure context transformed the visualization from "here's what happened" to "here's why it happened"—far more valuable for decision-makers.
+                  Adding policy markers and healthcare infrastructure context transformed the visualization from "here's
+                  what happened" to "here's why it happened"—far more valuable for decision-makers.
                 </p>
               </div>
               <div className="p-6 bg-muted/30 border-l-4 border-primary">
                 <h3 className="text-lg font-bold mb-2">Emotional Design in Crisis Data</h3>
                 <p className="text-foreground/80">
-                  Balancing empathy with objectivity was crucial. The visualization needed to honor the human cost while remaining analytical—a lesson in designing with sensitivity during tragedy.
+                  Balancing empathy with objectivity was crucial. The visualization needed to honor the human cost while
+                  remaining analytical—a lesson in designing with sensitivity during tragedy.
                 </p>
               </div>
             </div>
@@ -474,7 +492,9 @@ const CovidDataForest = () => {
             <div className="p-12 bg-muted/30 border border-border">
               <h2 className="text-2xl font-black mb-4">Future Development</h2>
               <p className="text-foreground/80 mb-6">
-                While the current version successfully visualizes the pandemic's South Asian impact, future iterations could expand to global data, incorporate socioeconomic correlations, and add predictive modeling for future health crises.
+                While the current version successfully visualizes the pandemic's South Asian impact, future iterations
+                could expand to global data, incorporate socioeconomic correlations, and add predictive modeling for
+                future health crises.
               </p>
               <div className="flex flex-wrap gap-3">
                 <span className="px-4 py-2 bg-background border border-border text-sm">Global Expansion</span>
@@ -488,7 +508,7 @@ const CovidDataForest = () => {
 
         {/* Navigation */}
         <div className="max-w-6xl mx-auto px-6 pt-20 border-t border-border">
-          <Link 
+          <Link
             to="/#work"
             className="inline-flex items-center gap-2 text-lg font-semibold hover:text-primary transition-colors group"
           >
