@@ -51,11 +51,11 @@ export const Hero = () => {
           </motion.p>
           
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight mb-6">
-            Product Designer
+            Where Design
             <br />
-            <span className="text-primary">for Inclusive</span>
+            <span className="text-primary">Meets Human</span>
             <br />
-            Experiences
+            Experience
           </h1>
 
           <motion.p

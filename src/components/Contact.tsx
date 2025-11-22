@@ -66,15 +66,11 @@ export const Contact = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight mb-12">
+          <h2 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight mb-16">
             LET'S BUILD
             <br />
             THE FUTURE
           </h2>
-          
-          <p className="text-xl text-background/70 max-w-2xl mx-auto mb-12">
-            Available for product design roles, UX research, and accessibility consulting
-          </p>
 
           <motion.button
             onClick={handleCopyEmail}
