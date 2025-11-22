@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import profilePhoto from "@/assets/profile-photo.png";
 
 export const About = () => {
   return (
@@ -15,14 +15,10 @@ export const About = () => {
             className="relative order-2 lg:order-1"
           >
             <div className="relative aspect-square max-w-md mx-auto overflow-hidden">
-              <img 
-                src={profilePhoto} 
-                alt="Shanze Fatima Javed"
-                className="w-full h-full object-cover"
-              />
+              <img src={profilePhoto} alt="Shanze Fatima Javed" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-transparent" />
             </div>
-            
+
             <motion.div
               className="absolute -bottom-8 -right-8 w-32 h-32 bg-primary/10 -z-10"
               initial={{ opacity: 0, x: 20, y: -20 }}
@@ -45,18 +41,18 @@ export const About = () => {
               <br />
               <span className="text-primary">Everyone</span>
             </h2>
-            
+
             <p>
-              Shanze holds a BSc from NYU in Interactive Media Arts and Computer Science. This rare combination 
-              allows her to bridge design, engineering, and product strategy in ways most designers can't—building 
-              not just interfaces, but entire ecosystems that are grounded in research and driven by measurable impact.
+              Shanze holds a BSc from NYU in Interactive Media Arts and Computer Science. This rare combination allows
+              her to bridge design, engineering, and product strategy in ways most designers can't—building not just
+              interfaces, but entire ecosystems that are grounded in research and driven by measurable impact.
             </p>
-            
+
             <p>
-              My approach is deeply data-driven and user-centered. I don't just design screens—I build entire 
-              ecosystems that solve real problems. From creating the first accessible escape room for blind teens 
-              to optimizing platforms that serve thousands daily, I combine research, prototyping, and cross-functional 
-              collaboration to deliver measurable impact.
+              My approach is deeply data-driven and user-centered. I don't just design screens—I build entire ecosystems
+              that solve real problems. From creating the first accessible escape room for blind teens to optimizing
+              platforms that serve thousands daily, I combine research, prototyping, and cross-functional collaboration
+              to deliver measurable impact.
             </p>
 
             <div className="pt-6 space-y-3">
