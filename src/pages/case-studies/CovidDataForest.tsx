@@ -77,19 +77,6 @@ const CovidDataForest = () => {
             </div>
           </motion.div>
 
-          {/* Hero Image */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="aspect-[16/9] bg-muted overflow-hidden mb-20"
-          >
-            <img
-              src={covidForestHero}
-              alt="COVID-19 Data Forest Visualization"
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
 
           {/* Overview */}
           <motion.div
