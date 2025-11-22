@@ -18,14 +18,14 @@ import { Link } from "react-router-dom";
 // ========================================
 
 import heroImage from "@/assets/snapchat-hero.jpg";
-const interactionComparisonImage = heroImage;
-const navigationRedesignImage = heroImage;
-const cameraScreenImage = heroImage;
-const messagesScreenImage = heroImage;
-const storiesScreenImage = heroImage;
-const mapScreenImage = heroImage;
-const profileScreenImage = heroImage;
-const onboardingFlowImage = heroImage;
+import interactionComparisonImage from "@/assets/snapchat-interaction-comparison.png";
+import navigationRedesignImage from "@/assets/snapchat-navigation-redesign.png";
+import cameraScreenImage from "@/assets/snapchat-camera-screen.png";
+import messagesScreenImage from "@/assets/snapchat-messages-screen.png";
+import storiesScreenImage from "@/assets/snapchat-stories-screen.png";
+import mapScreenImage from "@/assets/snapchat-map-screen.png";
+import profileScreenImage from "@/assets/snapchat-profile-screen.png";
+import onboardingFlowImage from "@/assets/snapchat-onboarding-flow.png";
 
 export default function SnapchatRedesign() {
   return (
