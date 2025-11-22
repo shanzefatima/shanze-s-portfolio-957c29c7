@@ -155,9 +155,9 @@ export default function ShootForTheStars() {
                 initial={{ opacity: 0, x: 40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="aspect-square overflow-hidden bg-muted border border-border"
+                className="overflow-hidden bg-muted border border-border"
               >
-                <img src={aboutImage} alt="Research insights" className="w-full h-full object-cover" />
+                <img src={aboutImage} alt="Research insights" className="w-full h-auto object-contain" />
               </motion.div>
             </div>
           </div>
@@ -329,15 +329,17 @@ export default function ShootForTheStars() {
         </section>
 
         {/* Results Screen - Full Width */}
-        <section className="mb-32">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="w-full h-[60vh] overflow-hidden bg-muted flex items-center justify-center"
-          >
-            <img alt="Success screen with metrics" className="w-full h-full object-contain" src="/lovable-uploads/0e12a65f-13ef-4047-be64-26ea22b2bd80.png" />
-          </motion.div>
+        <section className="px-6 mb-32">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="overflow-hidden bg-muted border border-border"
+            >
+              <img alt="Success screen with metrics" className="w-full h-auto object-contain" src="/lovable-uploads/0e12a65f-13ef-4047-be64-26ea22b2bd80.png" />
+            </motion.div>
+          </div>
         </section>
 
         {/* Results Section */}
