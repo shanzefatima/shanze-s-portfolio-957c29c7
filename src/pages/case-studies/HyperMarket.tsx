@@ -12,12 +12,13 @@ import { Link } from "react-router-dom";
 // 3. Save - that's it!
 // ========================================
 
-import heroImage from "@/assets/hypermarket-hero.jpg";
-import beforeImage from "@/assets/hypermarket-hero.jpg";
-import afterImage from "@/assets/hypermarket-hero.jpg";
-import searchImage from "@/assets/hypermarket-hero.jpg";
-import checkoutImage from "@/assets/hypermarket-hero.jpg";
-import trackingImage from "@/assets/hypermarket-hero.jpg";
+import heroImage from "@/assets/hypermarket-home-screen.png";
+import onboardingImage from "@/assets/hypermarket-onboarding.png";
+import searchImage from "@/assets/hypermarket-search-discovery.png";
+import categoriesImage from "@/assets/hypermarket-categories-offers.png";
+import cartTrackingImage from "@/assets/hypermarket-cart-tracking.png";
+import checkoutImage from "@/assets/hypermarket-checkout-payment.png";
+import profileImage from "@/assets/hypermarket-profile-wishlist.png";
 
 export default function HyperMarket() {
   return (
@@ -72,19 +73,19 @@ export default function HyperMarket() {
           </div>
         </section>
 
-        {/* 📸 IMAGE: Full-Width Hero */}
+        {/* 📸 IMAGE: Hero - Home Screen */}
         <section className="px-6 mb-24">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="aspect-[16/9] overflow-hidden bg-muted border border-border"
+              className="max-h-[500px] overflow-hidden bg-muted border border-border flex items-center justify-center"
             >
               <img 
                 src={heroImage}
-                alt="HyperMarket Interface"
-                className="w-full h-full object-cover"
+                alt="HyperMarket Home Screen"
+                className="h-full w-auto object-contain"
               />
             </motion.div>
             <p className="text-sm text-muted-foreground text-center mt-4">
@@ -190,41 +191,126 @@ export default function HyperMarket() {
           </div>
         </section>
 
+        {/* Onboarding Experience */}
+        <section className="px-6 mb-24">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl font-black tracking-tight mb-8">Onboarding Experience</h2>
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="max-h-[500px] overflow-hidden bg-muted border border-border flex items-center justify-center mb-6"
+              >
+                <img 
+                  src={onboardingImage}
+                  alt="Onboarding Flow"
+                  className="h-full w-auto object-contain"
+                />
+              </motion.div>
+              <p className="text-sm text-muted-foreground text-center">
+                Three-step onboarding highlighting key features
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* 📸 IMAGE: Feature Grid */}
         <section className="px-6 mb-24">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-black tracking-tight mb-12 text-center">Solution Highlights</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div>
-                <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
-                  <img 
-                    src={searchImage}
-                    alt="Smart Search"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <p className="text-sm text-muted-foreground text-center">Smart Search & Discovery</p>
-              </div>
-              <div>
-                <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
-                  <img 
-                    src={checkoutImage}
-                    alt="Simplified Checkout"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <p className="text-sm text-muted-foreground text-center">Streamlined Checkout</p>
-              </div>
-              <div>
-                <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
-                  <img 
-                    src={trackingImage}
-                    alt="Order Tracking"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <p className="text-sm text-muted-foreground text-center">Real-Time Tracking</p>
-              </div>
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl font-black tracking-tight mb-8">Search & Product Discovery</h2>
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="max-h-[500px] overflow-hidden bg-muted border border-border flex items-center justify-center mb-6"
+              >
+                <img 
+                  src={searchImage}
+                  alt="Smart Search & Discovery"
+                  className="h-full w-auto object-contain"
+                />
+              </motion.div>
+              <p className="text-sm text-muted-foreground text-center mb-12">
+                AI-powered search with predictive suggestions and visual product cards
+              </p>
+            </div>
+
+            <h2 className="text-3xl font-black tracking-tight mb-8 mt-16">Categories & Special Offers</h2>
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="max-h-[500px] overflow-hidden bg-muted border border-border flex items-center justify-center mb-6"
+              >
+                <img 
+                  src={categoriesImage}
+                  alt="Categories and Offers"
+                  className="h-full w-auto object-contain"
+                />
+              </motion.div>
+              <p className="text-sm text-muted-foreground text-center mb-12">
+                Clear categorization and promotional offers
+              </p>
+            </div>
+
+            <h2 className="text-3xl font-black tracking-tight mb-8 mt-16">Cart & Order Tracking</h2>
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="max-h-[500px] overflow-hidden bg-muted border border-border flex items-center justify-center mb-6"
+              >
+                <img 
+                  src={cartTrackingImage}
+                  alt="Cart and Tracking"
+                  className="h-full w-auto object-contain"
+                />
+              </motion.div>
+              <p className="text-sm text-muted-foreground text-center mb-12">
+                Real-time order tracking with driver details
+              </p>
+            </div>
+
+            <h2 className="text-3xl font-black tracking-tight mb-8 mt-16">Checkout & Payment</h2>
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="max-h-[500px] overflow-hidden bg-muted border border-border flex items-center justify-center mb-6"
+              >
+                <img 
+                  src={checkoutImage}
+                  alt="Checkout and Payment"
+                  className="h-full w-auto object-contain"
+                />
+              </motion.div>
+              <p className="text-sm text-muted-foreground text-center mb-12">
+                Simplified 3-step checkout with one-tap payment
+              </p>
+            </div>
+
+            <h2 className="text-3xl font-black tracking-tight mb-8 mt-16">Profile & Wishlist</h2>
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="max-h-[500px] overflow-hidden bg-muted border border-border flex items-center justify-center mb-6"
+              >
+                <img 
+                  src={profileImage}
+                  alt="Profile and Wishlist"
+                  className="h-full w-auto object-contain"
+                />
+              </motion.div>
+              <p className="text-sm text-muted-foreground text-center">
+                User profile with order history and wishlist management
+              </p>
             </div>
           </div>
         </section>
