@@ -7,17 +7,17 @@ import { Link } from "react-router-dom";
 // 📸 IMAGE PLACEHOLDERS - EASY TO UPDATE!
 // ========================================
 // TO ADD YOUR IMAGES:
-// 1. Upload your image to src/assets/ folder
-// 2. Change "placeholder.jpg" to your filename
-// 3. Save!
+// 1. Upload these 3 images to src/assets/ folder:
+//    - bobst-desktop-home.png (desktop homepage with search & quick actions)
+//    - bobst-mobile-screens.png (mobile views: home & search results)
+//    - bobst-desktop-search.png (desktop search results with filters)
+// 2. Save - the imports below will automatically work!
 // ========================================
 
 import heroImage from "@/assets/bobst-hero.jpg";
-import beforeImage from "@/assets/bobst-hero.jpg";
-import afterImage from "@/assets/bobst-hero.jpg";
-import dashboardImage from "@/assets/bobst-hero.jpg";
-import mobileImage from "@/assets/bobst-hero.jpg";
-import searchImage from "@/assets/bobst-hero.jpg";
+import dashboardImage from "@/assets/bobst-desktop-home.png";
+import mobileImage from "@/assets/bobst-mobile-screens.png";
+import searchImage from "@/assets/bobst-desktop-search.png";
 
 export default function BobstLibrary() {
   return (
