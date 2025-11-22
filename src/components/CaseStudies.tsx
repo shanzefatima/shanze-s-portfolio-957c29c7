@@ -6,6 +6,7 @@ import shootStarsHero from "@/assets/shoot-stars-hero.jpg";
 import hypermarketHero from "@/assets/hypermarket-hero.jpg";
 import snapchatHero from "@/assets/snapchat-hero.jpg";
 import bobstHero from "@/assets/bobst-hero.jpg";
+import covidForestHero from "@/assets/covid-forest-hero.jpg";
 
 interface CaseStudy {
   id: string;
@@ -72,6 +73,20 @@ const caseStudies: CaseStudy[] = [
       "500+ daily active users served"
     ],
     image: bobstHero,
+    color: "hsl(var(--accent))"
+  },
+  {
+    id: "covid-data-forest",
+    title: "The COVID-19 Data Forest",
+    subtitle: "Visualizing the Pandemic's Impact Across South Asia",
+    category: "Data Visualization · Research · Interactive Design",
+    impact: [
+      "Interactive 3D visualization of 500K+ data points",
+      "Comparative analysis across 8 South Asian countries",
+      "Real-time tracking of cases, deaths, and recoveries",
+      "Featured in data journalism communities"
+    ],
+    image: covidForestHero,
     color: "hsl(var(--accent))"
   }
 ];
