@@ -13,10 +13,10 @@ import covidForestHero from "@/assets/covid-forest-hero.jpg";
 // 3. Save!
 // ========================================
 
-import visualImage1 from "@/assets/covid-forest-hero.jpg";
-import visualImage2 from "@/assets/covid-forest-hero.jpg";
-import visualImage3 from "@/assets/covid-forest-hero.jpg";
-import processImage from "@/assets/covid-forest-hero.jpg";
+import prototypeImage from "@/assets/covid-forest-prototype.png";
+import interfaceImage from "@/assets/covid-forest-interface.png";
+import countryDataImage from "@/assets/covid-forest-country-data.png";
+import comparisonImage from "@/assets/covid-forest-comparison.png";
 
 const CovidDataForest = () => {
   return (
@@ -289,6 +289,30 @@ const CovidDataForest = () => {
             </div>
           </motion.div>
 
+          {/* From Prototype to Product */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-24"
+          >
+            <h2 className="text-3xl md:text-4xl font-black mb-6">From Prototype to Product</h2>
+            <p className="text-lg text-foreground/80 mb-8">
+              The project began with physical explorations of the forest metaphor, testing how organic forms could represent data relationships before translating the concept into an interactive digital experience.
+            </p>
+            <div className="max-w-5xl mx-auto mb-4">
+              <div className="aspect-video overflow-hidden bg-muted border border-border">
+                <img 
+                  src={prototypeImage}
+                  alt="Physical prototype exploring the forest metaphor"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+            <p className="text-sm text-muted-foreground text-center">Early prototype exploring the forest visualization concept</p>
+          </motion.div>
+
           {/* Solution */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -346,32 +370,32 @@ const CovidDataForest = () => {
               <div>
                 <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
                   <img 
-                    src={visualImage1}
-                    alt="Interactive Timeline"
+                    src={interfaceImage}
+                    alt="Main interface of the COVID-19 Data Forest"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="text-sm text-muted-foreground text-center">Interactive timeline scrubbing</p>
+                <p className="text-sm text-muted-foreground text-center">Main Interface</p>
               </div>
               <div>
                 <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
                   <img 
-                    src={visualImage2}
-                    alt="Country Comparison"
+                    src={countryDataImage}
+                    alt="Detailed country data view"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="text-sm text-muted-foreground text-center">Country comparison mode</p>
+                <p className="text-sm text-muted-foreground text-center">Country Data View</p>
               </div>
               <div>
                 <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
                   <img 
-                    src={visualImage3}
-                    alt="Data Details"
+                    src={comparisonImage}
+                    alt="Country comparison chart"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="text-sm text-muted-foreground text-center">Detailed data tooltips</p>
+                <p className="text-sm text-muted-foreground text-center">Comparison Mode</p>
               </div>
             </div>
           </motion.div>
