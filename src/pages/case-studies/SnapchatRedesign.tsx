@@ -4,21 +4,28 @@ import { ArrowLeft, CheckCircle2, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // ========================================
-// 📸 IMAGE PLACEHOLDERS - EASY TO UPDATE!
+// 📸 IMAGE PLACEHOLDERS - UPLOAD YOUR IMAGES!
 // ========================================
-// TO ADD YOUR IMAGES:
-// 1. Upload your image to src/assets/ folder
-// 2. Change the filename below to your actual filename
-// 3. Save - that's it! The image will appear automatically
+// UPLOAD these 8 images to src/assets/ folder in Dev Mode:
+// 1. snapchat-interaction-comparison.png
+// 2. snapchat-navigation-redesign.png
+// 3. snapchat-camera-screen.png
+// 4. snapchat-messages-screen.png
+// 5. snapchat-stories-screen.png
+// 6. snapchat-map-screen.png
+// 7. snapchat-profile-screen.png
+// 8. snapchat-onboarding-flow.png
 // ========================================
 
-import interactionComparisonImage from "@/assets/snapchat-interaction-comparison.png";
-import navigationRedesignImage from "@/assets/snapchat-navigation-redesign.png";
-import cameraScreenImage from "@/assets/snapchat-camera-screen.png";
-import messagesScreenImage from "@/assets/snapchat-messages-screen.png";
-import storiesScreenImage from "@/assets/snapchat-stories-screen.png";
-import mapScreenImage from "@/assets/snapchat-map-screen.png";
-import onboardingFlowImage from "@/assets/snapchat-onboarding-flow.png";
+import heroImage from "@/assets/snapchat-hero.jpg";
+const interactionComparisonImage = heroImage;
+const navigationRedesignImage = heroImage;
+const cameraScreenImage = heroImage;
+const messagesScreenImage = heroImage;
+const storiesScreenImage = heroImage;
+const mapScreenImage = heroImage;
+const profileScreenImage = heroImage;
+const onboardingFlowImage = heroImage;
 
 export default function SnapchatRedesign() {
   return (
@@ -325,6 +332,26 @@ export default function SnapchatRedesign() {
                 </motion.div>
                 <p className="text-center text-muted-foreground max-w-3xl mx-auto">
                   Clear location context cards, visible privacy status, and labeled map controls replacing mystery icons and hidden privacy settings.
+                </p>
+              </div>
+
+              {/* Profile Screen */}
+              <div>
+                <h3 className="text-2xl font-bold mb-8 text-center">Profile Screen</h3>
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="overflow-hidden bg-background border border-border p-4 mb-6"
+                >
+                  <img 
+                    src={profileScreenImage}
+                    alt="Profile screen before and after comparison"
+                    className="w-full h-auto object-contain"
+                  />
+                </motion.div>
+                <p className="text-center text-muted-foreground max-w-3xl mx-auto">
+                  All settings visible and labeled, clear action buttons, and organized information replacing hidden options and unclear iconography.
                 </p>
               </div>
             </div>
