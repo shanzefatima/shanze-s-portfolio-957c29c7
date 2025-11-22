@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface CaseStudy {
   id: string;
@@ -154,14 +155,16 @@ export const CaseStudies = () => {
                     ))}
                   </div>
 
-                  <motion.button
-                    className="group/btn inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider"
-                    whileHover={{ x: 5 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    View Case Study
-                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                  </motion.button>
+                  <Link to={`/case-study/${study.id}`}>
+                    <motion.button
+                      className="group/btn inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors"
+                      whileHover={{ x: 5 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      View Case Study
+                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </motion.button>
+                  </Link>
                 </div>
               </div>
             </motion.article>

@@ -26,24 +26,23 @@ export const About = () => {
             className="space-y-6 text-lg leading-relaxed text-muted-foreground"
           >
             <p>
-              I'm Shanze Fatima Javed, a Product and UX Designer specializing in inclusive design 
-              and data-driven product development. Currently pursuing B.S. in Interactive Media at 
-              New York University, I've delivered measurable impact across accessibility, e-commerce, 
-              and learning platforms.
+              I'm Shanze Fatima Javed, a Product Designer who brings a rare blend of Interactive Media Arts, 
+              Computer Science, and accessibility expertise to every project. This unique background allows me 
+              to bridge design, engineering, and inclusive practices in ways most designers can't.
             </p>
             
             <p>
-              My approach combines deep user research with strategic product thinking. Whether it's 
-              designing the first escape room for blind teens, optimizing a university library website 
-              to serve 500+ daily users, or reimagining social media interfaces for multi-generational 
-              audiences, I focus on creating experiences that are both accessible and delightful.
+              My approach is deeply data-driven and user-centered. I don't just design screens—I build entire 
+              ecosystems that solve real problems. From creating the first accessible escape room for blind teens 
+              to optimizing platforms that serve thousands daily, I combine research, prototyping, and cross-functional 
+              collaboration to deliver measurable impact.
             </p>
 
             <p>
-              I've delivered up to 30% improvements in user retention, 22% increases in conversions, 
-              and pioneered accessibility features that have been adopted as national pilots. As a 
-              Figma Student Ambassador, Adobe Creative Jam Winner, and featured speaker at industry 
-              events, I bring both technical expertise and strategic vision to every project.
+              I've delivered 30% improvements in user retention, 22% increases in conversions, and $50K+ in cost 
+              savings through strategic design decisions. As a Figma Student Ambassador, Adobe Creative Jam Winner, 
+              and speaker at NYC Design Week, I bring both technical depth and strategic vision. I work fluently with 
+              engineering teams using Figma, React, Python, and modern design systems to ship products that scale.
             </p>
 
             <div className="pt-8 space-y-3">

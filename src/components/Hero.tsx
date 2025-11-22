@@ -47,15 +47,15 @@ export const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            Product · UX · Learning Designer
+            I'm Shanze Fatima Javed
           </motion.p>
           
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight mb-6">
-            Designing Systems
+            Product Designer
             <br />
-            <span className="text-primary">of Empathy</span>
+            <span className="text-primary">for Inclusive</span>
             <br />
-            & Impact
+            Experiences
           </h1>
 
           <motion.p
@@ -64,8 +64,9 @@ export const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Shanze Fatima Javed bridges accessibility, interaction design, 
-            and human potential through data-driven product strategy.
+            I design accessible, data-driven products that bridge technology and human needs. 
+            Combining Interactive Media Arts, CS, and accessibility expertise to create experiences 
+            that work for everyone.
           </motion.p>
 
           <motion.div
@@ -81,7 +82,7 @@ export const Hero = () => {
               className="group relative px-8 py-4 text-sm uppercase tracking-widest font-semibold overflow-hidden"
             >
               <span className="relative z-10 group-hover:text-background transition-colors duration-300">
-                Explore Work
+                Explore Case Studies
               </span>
               <motion.div
                 className="absolute inset-0 bg-primary"
