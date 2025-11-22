@@ -289,30 +289,6 @@ const CovidDataForest = () => {
             </div>
           </motion.div>
 
-          {/* From Prototype to Product */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-24"
-          >
-            <h2 className="text-3xl md:text-4xl font-black mb-6">From Prototype to Product</h2>
-            <p className="text-lg text-foreground/80 mb-8">
-              The project began with physical explorations of the forest metaphor, testing how organic forms could represent data relationships before translating the concept into an interactive digital experience.
-            </p>
-            <div className="max-w-5xl mx-auto mb-4">
-              <div className="aspect-video overflow-hidden bg-muted border border-border">
-                <img 
-                  src={prototypeImage}
-                  alt="Physical prototype exploring the forest metaphor"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </div>
-            <p className="text-sm text-muted-foreground text-center">Early prototype exploring the forest visualization concept</p>
-          </motion.div>
-
           {/* Solution */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -365,37 +341,47 @@ const CovidDataForest = () => {
             transition={{ duration: 0.6 }}
             className="mb-24"
           >
-            <h2 className="text-3xl md:text-4xl font-black mb-12 text-center">Visualization Details</h2>
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <h2 className="text-3xl md:text-4xl font-black mb-12">Visualization Details</h2>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div>
-                <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
+                <div className="aspect-video overflow-hidden bg-muted border border-border mb-4">
+                  <img 
+                    src={prototypeImage}
+                    alt="Physical prototype of the COVID-19 Data Forest concept"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground">Physical Prototype Exploration</p>
+              </div>
+              <div>
+                <div className="aspect-video overflow-hidden bg-muted border border-border mb-4">
                   <img 
                     src={interfaceImage}
-                    alt="Main interface of the COVID-19 Data Forest"
+                    alt="Digital interface of the COVID-19 Data Forest"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="text-sm text-muted-foreground text-center">Main Interface</p>
+                <p className="text-sm text-muted-foreground">Interactive Web Interface</p>
               </div>
               <div>
-                <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
+                <div className="aspect-video overflow-hidden bg-muted border border-border mb-4">
                   <img 
                     src={countryDataImage}
-                    alt="Detailed country data view"
+                    alt="Country-specific data visualization"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="text-sm text-muted-foreground text-center">Country Data View</p>
+                <p className="text-sm text-muted-foreground">Country Data Breakdown</p>
               </div>
               <div>
-                <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
+                <div className="aspect-video overflow-hidden bg-muted border border-border mb-4">
                   <img 
                     src={comparisonImage}
-                    alt="Country comparison chart"
+                    alt="Comparative analysis between countries"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="text-sm text-muted-foreground text-center">Comparison Mode</p>
+                <p className="text-sm text-muted-foreground">Cross-Country Comparison Chart</p>
               </div>
             </div>
           </motion.div>
