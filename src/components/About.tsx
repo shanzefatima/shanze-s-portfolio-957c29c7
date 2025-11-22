@@ -47,9 +47,9 @@ export const About = () => {
             </h2>
             
             <p>
-              I'm Shanze Fatima Javed, a Product Designer who brings a rare blend of Interactive Media Arts, 
-              Computer Science, and accessibility expertise to every project. This unique background allows me 
-              to bridge design, engineering, and inclusive practices in ways most designers can't.
+              Shanze holds a BSc from NYU in Interactive Media Arts and Computer Science. This rare combination 
+              allows her to bridge design, engineering, and product strategy in ways most designers can't—building 
+              not just interfaces, but entire ecosystems that are grounded in research and driven by measurable impact.
             </p>
             
             <p>
