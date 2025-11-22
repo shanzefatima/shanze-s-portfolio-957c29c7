@@ -9,6 +9,7 @@ import ShootForTheStars from "./pages/case-studies/ShootForTheStars";
 import HyperMarket from "./pages/case-studies/HyperMarket";
 import SnapchatRedesign from "./pages/case-studies/SnapchatRedesign";
 import BobstLibrary from "./pages/case-studies/BobstLibrary";
+import CovidDataForest from "./pages/case-studies/CovidDataForest";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/case-study/hypermarket" element={<HyperMarket />} />
           <Route path="/case-study/snapchat-redesign" element={<SnapchatRedesign />} />
           <Route path="/case-study/bobst-library" element={<BobstLibrary />} />
+          <Route path="/case-study/covid-data-forest" element={<CovidDataForest />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
