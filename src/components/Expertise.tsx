@@ -1,24 +1,24 @@
 import { motion } from "framer-motion";
-import { Target, BookOpen, Users } from "lucide-react";
+import { Shield, TrendingUp, Code } from "lucide-react";
 
 const capabilities = [
   {
-    icon: Target,
-    title: "Product Strategy",
-    description: "From 0-to-1 ideation to roadmapping and pilot scaling. Building products that solve real problems with measurable business impact.",
-    metrics: ["30% improvement in user retention", "22% increase in conversion rates", "$50K+ cost savings delivered"]
+    icon: Shield,
+    title: "Accessibility-First Design",
+    description: "WCAG 2.1 AA compliance, screen reader optimization, and multi-sensory interfaces. I design experiences that are inherently inclusive, not retrofitted for accessibility.",
+    metrics: ["100% visual dependency elimination", "Multi-sensory interaction design", "National accessibility pilot adoption"]
   },
   {
-    icon: BookOpen,
-    title: "Learning Experience Design",
-    description: "Simulation architectures, curriculum digitization, and gamified assessments. Bridging pedagogy with interactive technology.",
-    metrics: ["Bilingual toolkit design for refugee learners", "Multisensory escape room systems", "Career development platforms"]
+    icon: TrendingUp,
+    title: "Data-Driven Product Strategy",
+    description: "Analytics interpretation, A/B testing frameworks, and user behavior analysis. Every design decision backed by quantifiable metrics and research insights.",
+    metrics: ["30% user retention improvements", "22% conversion rate increases", "$50K+ cost reduction delivered"]
   },
   {
-    icon: Users,
-    title: "Inclusive Interaction",
-    description: "WCAG 2.1 compliance, cross-cultural design logic, and empathy-led user research. Building for everyone, not just some.",
-    metrics: ["100% visual dependency elimination", "National accessibility pilot adoption", "Adobe Creative Jam Winner"]
+    icon: Code,
+    title: "Design Systems & Engineering",
+    description: "Component libraries, design tokens, and React implementation. I build scalable systems that bridge design and code, working directly with engineering teams.",
+    metrics: ["Cross-functional collaboration", "Figma to React workflows", "Production-ready prototypes"]
   }
 ];
 

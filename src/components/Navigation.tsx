@@ -47,14 +47,14 @@ export const Navigation = () => {
         <div className="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
           <motion.a
             href="#"
-            className="text-xl font-black tracking-tight"
+            className="text-base font-black tracking-tight"
             whileHover={{ scale: 1.05 }}
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
-            SFJ
+            Shanze Fatima Javed
           </motion.a>
 
           {/* Desktop Navigation */}
