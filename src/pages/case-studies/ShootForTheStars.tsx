@@ -4,20 +4,32 @@ import { ArrowLeft, Users, Target, CheckCircle2, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // ========================================
-// 📸 IMAGE PLACEHOLDERS - EASY TO UPDATE!
+// 📸 YOUR IMAGES - UPLOAD TO src/assets/ FOLDER
 // ========================================
-// TO ADD YOUR IMAGES:
-// 1. Upload your image to src/assets/ folder
-// 2. Change "placeholder.jpg" to your filename
-// 3. Save!
+// You have 7 prototype images to upload:
+// 1. Home page (rocket icon overview) → rename to: shoot-stars-home.png
+// 2. About project → rename to: shoot-stars-about.png
+// 3. Configuration page → rename to: shoot-stars-config.png
+// 4. Puzzle 1 (Morse code) → rename to: shoot-stars-puzzle1.png
+// 5. Puzzle 2 (Audio logs) → rename to: shoot-stars-puzzle2.png
+// 6. Puzzle 3 (Magnetic maze) → rename to: shoot-stars-puzzle3.png
+// 7. Results screen → rename to: shoot-stars-results.png
+//
+// STEPS TO ADD:
+// 1. Click "Dev Mode" toggle (top left)
+// 2. Upload your 7 images to src/assets/ folder
+// 3. Rename them exactly as shown above
+// 4. The images will automatically appear!
 // ========================================
 
-import heroImage from "@/assets/placeholder.jpg";
-import researchImage from "@/assets/placeholder.jpg";
-import prototypeImage from "@/assets/placeholder.jpg";
-import audioImage from "@/assets/placeholder.jpg";
-import tactileImage from "@/assets/placeholder.jpg";
-import testingImage from "@/assets/placeholder.jpg";
+import heroImage from "@/assets/shoot-stars-hero.jpg";
+import homePageImage from "@/assets/shoot-stars-hero.jpg"; // REPLACE: upload shoot-stars-home.png
+import aboutImage from "@/assets/shoot-stars-hero.jpg"; // REPLACE: upload shoot-stars-about.png
+import configImage from "@/assets/shoot-stars-hero.jpg"; // REPLACE: upload shoot-stars-config.png
+import puzzle1Image from "@/assets/shoot-stars-hero.jpg"; // REPLACE: upload shoot-stars-puzzle1.png
+import puzzle2Image from "@/assets/shoot-stars-hero.jpg"; // REPLACE: upload shoot-stars-puzzle2.png
+import puzzle3Image from "@/assets/shoot-stars-hero.jpg"; // REPLACE: upload shoot-stars-puzzle3.png
+import resultsImage from "@/assets/shoot-stars-hero.jpg"; // REPLACE: upload shoot-stars-results.png
 
 export default function ShootForTheStars() {
   return (
@@ -108,7 +120,7 @@ export default function ShootForTheStars() {
           </div>
         </section>
 
-        {/* 📸 IMAGE: Hero */}
+        {/* 📸 IMAGE 1: Prototype Home Page */}
         <section className="px-6 mb-24">
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -118,13 +130,34 @@ export default function ShootForTheStars() {
               className="aspect-[16/9] overflow-hidden bg-muted border border-border"
             >
               <img 
-                src={heroImage}
-                alt="Shoot for the Stars Escape Room"
+                src={homePageImage}
+                alt="Interactive prototype home screen with mission overview"
                 className="w-full h-full object-cover"
               />
             </motion.div>
             <p className="text-sm text-muted-foreground text-center mt-4">
-              Non-visual escape room experience
+              Interactive prototype: Mission overview screen with accessibility features
+            </p>
+          </div>
+        </section>
+
+        {/* 📸 IMAGE 2: About Project */}
+        <section className="px-6 mb-16">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="aspect-[16/9] overflow-hidden bg-muted border border-border"
+            >
+              <img 
+                src={aboutImage}
+                alt="Project background showing research foundation and design principles"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+            <p className="text-sm text-muted-foreground text-center mt-4">
+              Research foundation and core design principles
             </p>
           </div>
         </section>
@@ -263,42 +296,79 @@ export default function ShootForTheStars() {
           </div>
         </section>
 
-        {/* 📸 IMAGE: Process Grid */}
+        {/* 📸 IMAGE 3: Configuration Page */}
         <section className="px-6 mb-24">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-black tracking-tight mb-12 text-center">Design Process</h2>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="aspect-[16/9] overflow-hidden bg-muted border border-border mb-4"
+            >
+              <img 
+                src={configImage}
+                alt="Configuration screen with difficulty settings and accessibility features"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+            <p className="text-sm text-muted-foreground text-center mb-24">
+              Player configuration: Difficulty selection and accessibility controls
+            </p>
+
+            <h2 className="text-4xl font-black tracking-tight mb-12 text-center">Puzzle Interactions</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div>
                 <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
                   <img 
-                    src={audioImage}
-                    alt="Spatial Audio"
+                    src={puzzle1Image}
+                    alt="Puzzle 1: Morse Code Signal"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="text-sm text-muted-foreground text-center">Spatial audio mapping</p>
+                <p className="text-sm text-muted-foreground text-center">Puzzle 1: Morse Code Signal - Tactile interaction</p>
               </div>
               <div>
                 <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
                   <img 
-                    src={tactileImage}
-                    alt="Tactile Puzzles"
+                    src={puzzle2Image}
+                    alt="Puzzle 2: Audio Memory Logs"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="text-sm text-muted-foreground text-center">Tactile puzzle design</p>
+                <p className="text-sm text-muted-foreground text-center">Puzzle 2: Audio Memory Logs - Spatial audio design</p>
               </div>
               <div>
                 <div className="aspect-square overflow-hidden bg-muted border border-border mb-4">
                   <img 
-                    src={testingImage}
-                    alt="User Testing"
+                    src={puzzle3Image}
+                    alt="Puzzle 3: Magnetic Maze"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="text-sm text-muted-foreground text-center">Iterative testing</p>
+                <p className="text-sm text-muted-foreground text-center">Puzzle 3: Magnetic Maze - Navigation without sight</p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* 📸 IMAGE 7: Results Screen */}
+        <section className="px-6 mb-16">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="aspect-[16/9] overflow-hidden bg-muted border border-border mb-4"
+            >
+              <img 
+                src={resultsImage}
+                alt="Mission success screen showing completion time and puzzle breakdown"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+            <p className="text-sm text-muted-foreground text-center">
+              Success screen: Real-time feedback and performance metrics
+            </p>
           </div>
         </section>
 
