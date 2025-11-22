@@ -68,24 +68,16 @@ const CovidDataForest = () => {
               </div>
             </div>
 
-            {/* Key Metrics */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-              <div className="p-6 bg-muted/50 border border-border">
-                <p className="text-3xl font-black mb-2">500K+</p>
-                <p className="text-sm text-muted-foreground">Data Points Visualized</p>
+            {/* Physical Prototype */}
+            <div className="mb-16">
+              <div className="aspect-video overflow-hidden bg-muted border border-border">
+                <img 
+                  src={prototypeImage}
+                  alt="Physical prototype exploring the COVID-19 Data Forest concept"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
               </div>
-              <div className="p-6 bg-muted/50 border border-border">
-                <p className="text-3xl font-black mb-2">8</p>
-                <p className="text-sm text-muted-foreground">Countries Analyzed</p>
-              </div>
-              <div className="p-6 bg-muted/50 border border-border">
-                <p className="text-3xl font-black mb-2">3D</p>
-                <p className="text-sm text-muted-foreground">Interactive Visualization</p>
-              </div>
-              <div className="p-6 bg-muted/50 border border-border">
-                <p className="text-3xl font-black mb-2">Real-time</p>
-                <p className="text-sm text-muted-foreground">Data Updates</p>
-              </div>
+              <p className="text-sm text-muted-foreground mt-4 text-center">Early physical prototype exploring the forest visualization metaphor</p>
             </div>
           </motion.div>
 
