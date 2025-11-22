@@ -155,7 +155,7 @@ export default function ShootForTheStars() {
                 initial={{ opacity: 0, x: 40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="overflow-hidden bg-muted border border-border"
+                className="overflow-hidden bg-muted border border-border max-w-lg"
               >
                 <img src={aboutImage} alt="Research insights" className="w-full h-auto object-contain" />
               </motion.div>
@@ -330,7 +330,7 @@ export default function ShootForTheStars() {
 
         {/* Results Screen - Full Width */}
         <section className="px-6 mb-32">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
