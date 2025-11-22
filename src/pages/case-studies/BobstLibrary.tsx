@@ -73,6 +73,22 @@ export default function BobstLibrary() {
           </div>
         </section>
 
+        {/* Hero Cover Image */}
+        <section className="mb-24">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="w-full h-[60vh] overflow-hidden bg-muted"
+          >
+            <img 
+              src={heroImage}
+              alt="NYU Bobst Library - Modern academic library interior"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+        </section>
 
         <section className="px-6 mb-24 bg-muted/30 py-24">
           <div className="max-w-5xl mx-auto">
