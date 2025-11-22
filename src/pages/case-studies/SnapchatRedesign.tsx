@@ -8,16 +8,17 @@ import { Link } from "react-router-dom";
 // ========================================
 // TO ADD YOUR IMAGES:
 // 1. Upload your image to src/assets/ folder
-// 2. Change "placeholder.jpg" below to your actual filename
+// 2. Change the filename below to your actual filename
 // 3. Save - that's it! The image will appear automatically
 // ========================================
 
-import heroImage from "@/assets/snapchat-hero.jpg";           // Main project screenshot
-import beforeImage from "@/assets/snapchat-hero.jpg";         // Before redesign
-import afterImage from "@/assets/snapchat-hero.jpg";          // After redesign
-import featureImage1 from "@/assets/snapchat-hero.jpg";       // Feature screenshot 1
-import featureImage2 from "@/assets/snapchat-hero.jpg";       // Feature screenshot 2
-import featureImage3 from "@/assets/snapchat-hero.jpg";       // Feature screenshot 3
+import interactionComparisonImage from "@/assets/snapchat-interaction-comparison.png";
+import navigationRedesignImage from "@/assets/snapchat-navigation-redesign.png";
+import cameraScreenImage from "@/assets/snapchat-camera-screen.png";
+import messagesScreenImage from "@/assets/snapchat-messages-screen.png";
+import storiesScreenImage from "@/assets/snapchat-stories-screen.png";
+import mapScreenImage from "@/assets/snapchat-map-screen.png";
+import onboardingFlowImage from "@/assets/snapchat-onboarding-flow.png";
 
 export default function SnapchatRedesign() {
   return (
@@ -73,26 +74,21 @@ export default function SnapchatRedesign() {
           </div>
         </section>
 
-        {/* ============================================ */}
-        {/* 📸 IMAGE PLACEHOLDER 1: Full-Width Hero Image */}
-        {/* ============================================ */}
-        <section className="px-6 mb-24">
+        <section className="px-6 mb-24 bg-muted/30 py-24">
           <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-black tracking-tight mb-8 text-center">Why Replace Gestures with Visible Navigation?</h2>
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="aspect-[16/9] overflow-hidden bg-muted border border-border"
+              className="overflow-hidden bg-background border border-border p-4"
             >
               <img 
-                src={heroImage}
-                alt="Snapchat Redesign Hero"
-                className="w-full h-full object-cover"
+                src={interactionComparisonImage}
+                alt="Interaction comparison between hidden gestures and visible taps"
+                className="w-full h-auto object-contain"
               />
             </motion.div>
-            <p className="text-sm text-muted-foreground text-center mt-4">
-              Main redesign overview
-            </p>
           </div>
         </section>
 
@@ -193,38 +189,24 @@ export default function SnapchatRedesign() {
           </div>
         </section>
 
-        {/* ===================================================== */}
-        {/* 📸 IMAGE PLACEHOLDER 2: Before/After Comparison */}
-        {/* ===================================================== */}
-        <section className="px-6 mb-24 bg-muted/30 py-24">
+        <section className="px-6 mb-24">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-black tracking-tight mb-12 text-center">Visual Comparison</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <div className="aspect-[9/16] overflow-hidden bg-muted border border-border mb-4">
-                  <img 
-                    src={beforeImage}
-                    alt="Before redesign"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <p className="text-sm text-muted-foreground text-center font-semibold">
-                  Before: Hidden gestures
-                </p>
-              </div>
-              <div>
-                <div className="aspect-[9/16] overflow-hidden bg-muted border border-border mb-4">
-                  <img 
-                    src={afterImage}
-                    alt="After redesign"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <p className="text-sm text-muted-foreground text-center font-semibold">
-                  After: Clear navigation
-                </p>
-              </div>
-            </div>
+            <h2 className="text-4xl font-black tracking-tight mb-12 text-center">Navigation Redesign</h2>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="overflow-hidden bg-background border border-border p-4 mb-8"
+            >
+              <img 
+                src={navigationRedesignImage}
+                alt="Navigation redesign showing before and after comparison"
+                className="w-full h-auto object-contain"
+              />
+            </motion.div>
+            <p className="text-center text-muted-foreground max-w-3xl mx-auto">
+              Replaced hidden gestures with a clear bottom navigation bar featuring labeled icons for all core features, providing immediate visual hierarchy and discoverability.
+            </p>
           </div>
         </section>
 
@@ -261,50 +243,112 @@ export default function SnapchatRedesign() {
           </div>
         </section>
 
-        {/* ============================================== */}
-        {/* 📸 IMAGE PLACEHOLDER 3: Feature Screenshots Grid */}
-        {/* ============================================== */}
-        <section className="px-6 mb-24">
+        <section className="px-6 mb-24 bg-muted/30 py-24">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-black tracking-tight mb-12 text-center">Feature Highlights</h2>
-            <div className="grid md:grid-cols-3 gap-8">
+            <h2 className="text-4xl font-black tracking-tight mb-16 text-center">High-Fidelity Screen Redesigns</h2>
+            
+            <div className="space-y-24">
+              {/* Camera Screen */}
               <div>
-                <div className="aspect-[9/16] overflow-hidden bg-muted border border-border mb-4">
+                <h3 className="text-2xl font-bold mb-8 text-center">Camera Screen</h3>
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="overflow-hidden bg-background border border-border p-4 mb-6"
+                >
                   <img 
-                    src={featureImage1}
-                    alt="Feature 1"
-                    className="w-full h-full object-cover"
+                    src={cameraScreenImage}
+                    alt="Camera screen before and after comparison"
+                    className="w-full h-auto object-contain"
                   />
-                </div>
-                <p className="text-sm text-muted-foreground text-center">
-                  Visible navigation
+                </motion.div>
+                <p className="text-center text-muted-foreground max-w-3xl mx-auto">
+                  Clear text labels on all controls, visible camera modes, and accessible navigation bar replacing unlabeled controls and ambiguous iconography.
                 </p>
               </div>
+
+              {/* Messages Screen */}
               <div>
-                <div className="aspect-[9/16] overflow-hidden bg-muted border border-border mb-4">
+                <h3 className="text-2xl font-bold mb-8 text-center">Chat/Messages Screen</h3>
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="overflow-hidden bg-background border border-border p-4 mb-6"
+                >
                   <img 
-                    src={featureImage2}
-                    alt="Feature 2"
-                    className="w-full h-full object-cover"
+                    src={messagesScreenImage}
+                    alt="Messages screen before and after comparison"
+                    className="w-full h-auto object-contain"
                   />
-                </div>
-                <p className="text-sm text-muted-foreground text-center">
-                  Guided onboarding
+                </motion.div>
+                <p className="text-center text-muted-foreground max-w-3xl mx-auto">
+                  WCAG AA compliant colors, prominent search bar, and labeled action buttons replacing poor contrast and cramped spacing.
                 </p>
               </div>
+
+              {/* Stories Screen */}
               <div>
-                <div className="aspect-[9/16] overflow-hidden bg-muted border border-border mb-4">
+                <h3 className="text-2xl font-bold mb-8 text-center">Stories Screen</h3>
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="overflow-hidden bg-background border border-border p-4 mb-6"
+                >
                   <img 
-                    src={featureImage3}
-                    alt="Feature 3"
-                    className="w-full h-full object-cover"
+                    src={storiesScreenImage}
+                    alt="Stories screen before and after comparison"
+                    className="w-full h-auto object-contain"
                   />
-                </div>
-                <p className="text-sm text-muted-foreground text-center">
-                  Accessibility features
+                </motion.div>
+                <p className="text-center text-muted-foreground max-w-3xl mx-auto">
+                  Minimum 44x44pt touch targets, high contrast throughout, and generous tap spacing for better accessibility.
+                </p>
+              </div>
+
+              {/* Map Screen */}
+              <div>
+                <h3 className="text-2xl font-bold mb-8 text-center">Snap Map Screen</h3>
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="overflow-hidden bg-background border border-border p-4 mb-6"
+                >
+                  <img 
+                    src={mapScreenImage}
+                    alt="Map screen before and after comparison"
+                    className="w-full h-auto object-contain"
+                  />
+                </motion.div>
+                <p className="text-center text-muted-foreground max-w-3xl mx-auto">
+                  Clear location context cards, visible privacy status, and labeled map controls replacing mystery icons and hidden privacy settings.
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="px-6 mb-24">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-black tracking-tight mb-8 text-center">Progressive Onboarding Flow</h2>
+            <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-12">
+              A step-by-step onboarding experience that teaches core features without overwhelming users. Each step focuses on one key function with visual guidance and the ability to skip or revisit.
+            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="overflow-hidden bg-muted border border-border p-4"
+            >
+              <img 
+                src={onboardingFlowImage}
+                alt="Progressive onboarding flow showing 3 steps"
+                className="w-full h-auto object-contain"
+              />
+            </motion.div>
           </div>
         </section>
 
