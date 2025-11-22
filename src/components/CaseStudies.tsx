@@ -6,6 +6,7 @@ import shootStarsHero from "@/assets/shoot-stars-hero.jpg";
 import hypermarketHero from "@/assets/hypermarket-hero.jpg";
 import snapchatHero from "@/assets/snapchat-hero.jpg";
 import bobstHero from "@/assets/bobst-hero.jpg";
+import covidForestPrototype from "@/assets/covid-forest-prototype.png";
 interface CaseStudy {
   id: string;
   title: string;
@@ -83,7 +84,7 @@ const caseStudies: CaseStudy[] = [
       "Real-time tracking of cases, deaths, and recoveries",
       "Featured in data journalism communities",
     ],
-    image: covidForestHero,
+    image: covidForestPrototype,
     color: "hsl(var(--accent))",
   },
 ];
