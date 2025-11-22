@@ -1,24 +1,24 @@
 import { motion } from "framer-motion";
-import { Shield, TrendingUp, Code } from "lucide-react";
+import { Search, TrendingUp, Layers } from "lucide-react";
 
 const capabilities = [
   {
-    icon: Shield,
-    title: "Accessibility-First Design",
-    description: "WCAG 2.1 AA compliance, screen reader optimization, and multi-sensory interfaces. I design experiences that are inherently inclusive, not retrofitted for accessibility.",
-    metrics: ["100% visual dependency elimination", "Multi-sensory interaction design", "National accessibility pilot adoption"]
+    icon: Search,
+    title: "User Research & Product Strategy",
+    description: "Deep user insights drive every decision. From ethnographic studies to usability testing with 10+ participants, turning research into products that solve real problems and deliver measurable business impact.",
+    metrics: ["Led 10+ user research studies", "30% improvement in user retention", "$50K+ cost savings through strategic optimization"]
   },
   {
     icon: TrendingUp,
-    title: "Data-Driven Product Strategy",
-    description: "Analytics interpretation, A/B testing frameworks, and user behavior analysis. Every design decision backed by quantifiable metrics and research insights.",
-    metrics: ["30% user retention improvements", "22% conversion rate increases", "$50K+ cost reduction delivered"]
+    title: "Data-Driven Design Decisions",
+    description: "Using analytics, A/B testing, and metrics to validate design choices. Every pixel backed by data from Google Analytics, Hotjar, and user behavior analysis to drive tangible results.",
+    metrics: ["22% increase in online orders", "20% boost in task completion rates", "25% improvement in service discoverability"]
   },
   {
-    icon: Code,
-    title: "Design Systems & Engineering",
-    description: "Component libraries, design tokens, and React implementation. I build scalable systems that bridge design and code, working directly with engineering teams.",
-    metrics: ["Cross-functional collaboration", "Figma to React workflows", "Production-ready prototypes"]
+    icon: Layers,
+    title: "Design Systems & Cross-Functional Collaboration",
+    description: "Building scalable design systems while bridging the gap between design and engineering. Leading cross-functional teams to ship products that work for thousands of users.",
+    metrics: ["Design frameworks adopted across 3 organizations", "Coordinated implementations serving 500+ daily users", "Led cross-functional teams of 5+ members"]
   }
 ];
 

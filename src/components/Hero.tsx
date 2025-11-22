@@ -53,9 +53,9 @@ export const Hero = () => {
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight mb-6">
             Product Designer
             <br />
-            <span className="text-primary">Specializing in</span>
+            <span className="text-primary">Building Experiences</span>
             <br />
-            Accessible Design
+            That Actually Work
           </h1>
 
           <motion.p
@@ -64,8 +64,8 @@ export const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Currently studying Interactive Media Arts and Computer Science at NYU. 
-            I combine design, engineering, and accessibility to build inclusive digital experiences.
+            Shanze holds a BSc from NYU in Interactive Media Arts and Computer Science. 
+            She bridges design, engineering, and strategy to create data-driven digital products that solve real problems.
           </motion.p>
 
           <motion.div
