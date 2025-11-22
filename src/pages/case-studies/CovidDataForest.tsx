@@ -16,6 +16,7 @@ import prototypeImage from "@/assets/covid-forest-prototype.png";
 import interfaceImage from "@/assets/covid-forest-interface.png";
 import countryDataImage from "@/assets/covid-forest-country-data.png";
 import comparisonImage from "@/assets/covid-forest-comparison.png";
+import heroImage from "@/assets/covid-forest-hero.jpg";
 
 const CovidDataForest = () => {
   return (
@@ -61,21 +62,27 @@ const CovidDataForest = () => {
                 <p className="font-semibold">8 Weeks</p>
               </div>
             </div>
-
-            {/* Physical Prototype */}
-            <div className="mb-16">
-              <div className="aspect-video overflow-hidden bg-muted border border-border">
-                <img
-                  src={prototypeImage}
-                  alt="Physical prototype exploring the COVID-19 Data Forest concept"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <p className="text-sm text-muted-foreground mt-4 text-center">
-                Early physical prototype exploring the forest visualization metaphor
-              </p>
-            </div>
           </motion.div>
+        </div>
+
+        {/* Hero Cover Image */}
+        <section className="mb-24">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="w-full h-[60vh] overflow-hidden bg-muted"
+          >
+            <img 
+              src={heroImage}
+              alt="COVID-19 Data Forest - Abstract data visualization"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+        </section>
+
+        <div className="max-w-6xl mx-auto px-6">
 
 
           {/* Overview */}
