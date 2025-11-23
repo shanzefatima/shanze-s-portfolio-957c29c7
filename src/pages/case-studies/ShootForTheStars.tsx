@@ -71,7 +71,7 @@ export default function ShootForTheStars() {
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">Team</p>
-                  <p className="font-semibold">4 Designers + 2 Engineers</p>
+                  <p className="font-semibold">1 Designer + 1 Engineer</p>
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">Duration</p>
