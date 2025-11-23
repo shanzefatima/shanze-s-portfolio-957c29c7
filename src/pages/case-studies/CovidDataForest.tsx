@@ -12,6 +12,7 @@ import { Navigation } from "@/components/Navigation";
 // 3. Save!
 // ========================================
 
+import heroImage from "@/assets/covid-forest-hero.png";
 import prototypeImage from "@/assets/covid-forest-prototype.png";
 import interfaceImage from "@/assets/covid-forest-interface.png";
 import countryDataImage from "@/assets/covid-forest-country-data.png";
@@ -62,18 +63,15 @@ const CovidDataForest = () => {
               </div>
             </div>
 
-            {/* Physical Prototype */}
+            {/* Hero Image */}
             <div className="mb-16">
               <div className="aspect-video overflow-hidden bg-muted border border-border">
                 <img
-                  src={prototypeImage}
-                  alt="Physical prototype exploring the COVID-19 Data Forest concept"
+                  src={heroImage}
+                  alt="The COVID-19 Data Forest visualization"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <p className="text-sm text-muted-foreground mt-4 text-center">
-                Early physical prototype exploring the forest visualization metaphor
-              </p>
             </div>
           </motion.div>
 
