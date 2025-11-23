@@ -152,6 +152,11 @@ export const CaseStudies = () => {
                       duration: 0.4,
                     }}
                   >
+                    <img 
+                      src={study.image} 
+                      alt={study.title}
+                      className="w-full h-full object-cover"
+                    />
                     <motion.div
                       className="absolute bottom-0 left-0 w-full h-1 bg-primary"
                       initial={{
