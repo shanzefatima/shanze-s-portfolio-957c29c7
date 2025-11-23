@@ -61,7 +61,7 @@ export default function ShootForTheStars() {
               </h1>
               
               <p className="text-2xl text-muted-foreground leading-relaxed mb-12">
-                The first fully non-visual escape room designed for complete independence
+                The first fully escape room designed for complete independence
               </p>
 
               <div className="grid grid-cols-2 md:grid-cols-3 gap-8 py-8 border-y border-border">
@@ -125,13 +125,17 @@ export default function ShootForTheStars() {
 
         {/* Hero Image - Full Bleed */}
         <section className="mb-24">
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }} 
-            whileInView={{ opacity: 1, scale: 1 }} 
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="w-full h-[70vh] overflow-hidden bg-muted"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          scale: 0.95
+        }} whileInView={{
+          opacity: 1,
+          scale: 1
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.6
+        }} className="w-full h-[70vh] overflow-hidden bg-muted">
             <img src={homePageImage} alt="Mission overview interface" className="w-full h-full object-cover" />
           </motion.div>
         </section>
@@ -151,12 +155,15 @@ export default function ShootForTheStars() {
                   </p>
                 </div>
               </div>
-              <motion.div
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="overflow-hidden bg-muted border border-border max-w-lg"
-              >
+              <motion.div initial={{
+              opacity: 0,
+              x: 40
+            }} whileInView={{
+              opacity: 1,
+              x: 0
+            }} viewport={{
+              once: true
+            }} className="overflow-hidden bg-muted border border-border max-w-lg">
                 <img src={aboutImage} alt="Research insights" className="w-full h-auto object-contain" />
               </motion.div>
             </div>
@@ -237,12 +244,15 @@ export default function ShootForTheStars() {
             <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-16 text-center">The Solution</h2>
             
             {/* Config Image Full Width */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-20 overflow-hidden bg-muted border border-border"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 40
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} className="mb-20 overflow-hidden bg-muted border border-border">
               <img src={configImage} alt="Configuration interface" className="w-full h-auto" />
             </motion.div>
 
@@ -278,12 +288,15 @@ export default function ShootForTheStars() {
             
             <div className="space-y-20">
               {/* Puzzle 1 */}
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="grid md:grid-cols-2 gap-12 items-center"
-              >
+              <motion.div initial={{
+              opacity: 0,
+              y: 40
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} viewport={{
+              once: true
+            }} className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="aspect-square overflow-hidden bg-muted">
                   <img src={puzzle1Image} alt="Morse Code puzzle interface" className="w-full h-full object-cover" />
                 </div>
@@ -294,12 +307,15 @@ export default function ShootForTheStars() {
               </motion.div>
 
               {/* Puzzle 2 - Reversed layout */}
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="grid md:grid-cols-2 gap-12 items-center"
-              >
+              <motion.div initial={{
+              opacity: 0,
+              y: 40
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} viewport={{
+              once: true
+            }} className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="md:order-2 aspect-square overflow-hidden bg-muted">
                   <img src={puzzle2Image} alt="Audio memory logs interface" className="w-full h-full object-cover" />
                 </div>
@@ -310,12 +326,15 @@ export default function ShootForTheStars() {
               </motion.div>
 
               {/* Puzzle 3 */}
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="grid md:grid-cols-2 gap-12 items-center"
-              >
+              <motion.div initial={{
+              opacity: 0,
+              y: 40
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} viewport={{
+              once: true
+            }} className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="aspect-square overflow-hidden bg-muted">
                   <img src={puzzle3Image} alt="Magnetic maze interface" className="w-full h-full object-cover" />
                 </div>
@@ -331,12 +350,15 @@ export default function ShootForTheStars() {
         {/* Results Screen - Full Width */}
         <section className="px-6 mb-32">
           <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="overflow-hidden bg-muted border border-border"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            scale: 0.95
+          }} whileInView={{
+            opacity: 1,
+            scale: 1
+          }} viewport={{
+            once: true
+          }} className="overflow-hidden bg-muted border border-border">
               <img alt="Success screen with metrics" className="w-full h-auto object-contain" src="/lovable-uploads/0e12a65f-13ef-4047-be64-26ea22b2bd80.png" />
             </motion.div>
           </div>
