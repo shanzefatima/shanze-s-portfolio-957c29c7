@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import shootStarsHero from "@/assets/shoot-stars-hero.jpg";
-import hypermarketHero from "@/assets/hypermarket-hero.jpg";
-import snapchatHero from "@/assets/snapchat-hero.jpg";
-import bobstHero from "@/assets/bobst-hero.jpg";
+import shootStarsHero from "@/assets/shoot-stars-hero.png";
+import hypermarketHero from "@/assets/hypermarket-hero.png";
+import snapchatHero from "@/assets/snapchat-hero.png";
+import bobstHero from "@/assets/bobst-hero.png";
 import covidForestPrototype from "@/assets/covid-forest-prototype.png";
 interface CaseStudy {
   id: string;
