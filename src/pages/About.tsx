@@ -87,8 +87,8 @@ export default function About() {
                   </p>
                   
                   <p>
-                    Her work spans e-commerce optimization, accessible learning experiences, 
-                    and data visualization, always grounded in research and driven by 
+                    Her work spans design systems, accessible product experiences, 
+                    and UX architecture, always grounded in research and driven by 
                     measurable outcomes.
                   </p>
                 </div>
@@ -240,7 +240,7 @@ export default function About() {
                 <div className="space-y-3">
                   <h3 className="text-xl font-medium text-foreground">What types of projects do you work on?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Mobile-first e-commerce, learning platforms, data visualization, and accessible products. 
+                    Product design systems, mobile experiences, learning platforms, and accessible products. 
                     Anything that requires strategic thinking, user research, and measurable outcomes.
                   </p>
                 </div>
@@ -256,7 +256,7 @@ export default function About() {
                 <div className="space-y-3">
                   <h3 className="text-xl font-medium text-foreground">What's your design process timeline?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    It depends on scope, but typically 1-2 weeks for research and strategy, 2-3 weeks for design and testing, 
+                    It depends on scope, but typically 1 to 2 weeks for research and strategy, 2 to 3 weeks for design and testing, 
                     and ongoing collaboration during implementation. Complex products require longer timelines.
                   </p>
                 </div>

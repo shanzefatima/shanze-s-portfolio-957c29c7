@@ -10,7 +10,7 @@ export const Hero = () => {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="space-y-12"
         >
-          <h1 className="font-sans text-[clamp(2.5rem,7vw,5.5rem)] leading-[1.15] tracking-tight font-light max-w-5xl">
+          <h1 className="font-sans text-[clamp(2.5rem,7vw,5.5rem)] leading-[1.15] tracking-tight font-light max-w-5xl text-foreground">
             Product designer who thinks in systems, ships with intention, and moves business metrics.
           </h1>
 
@@ -21,10 +21,6 @@ export const Hero = () => {
 
             <p>
               I take pride in craft and care about the details that make experiences feel right. From 0 to 1 launches to optimization work that shifts conversion rates, I bring clarity to ambiguity and build things people actually use.
-            </p>
-
-            <p>
-              Recent work: reduced cart abandonment 22% through mobile checkout redesign, launched an accessible learning platform adopted by 500+ users nationwide, built data viz tools that made pandemic metrics understandable.
             </p>
           </div>
         </motion.div>

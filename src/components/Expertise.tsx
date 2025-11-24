@@ -9,16 +9,16 @@ const capabilities = [
     metrics: ["Led 10+ user research studies", "30% improvement in user retention", "$50K+ cost savings through strategic optimization"]
   },
   {
-    icon: TrendingUp,
-    title: "Data-Driven Design Decisions",
-    description: "Using analytics, A/B testing, and metrics to validate design choices. Every pixel backed by data from Google Analytics, Hotjar, and user behavior analysis to drive tangible results.",
-    metrics: ["22% increase in online orders", "20% boost in task completion rates", "25% improvement in service discoverability"]
+    icon: Layers,
+    title: "Design Systems & UX Architecture",
+    description: "Building scalable design systems and information architectures that work across platforms. Creating component libraries, design tokens, and interaction patterns that empower teams to ship faster while maintaining consistency.",
+    metrics: ["Design systems adopted across 3 organizations", "Component libraries serving 500+ daily users", "Reduced design to dev handoff time by 40%"]
   },
   {
-    icon: Layers,
-    title: "Design Systems & Cross-Functional Collaboration",
-    description: "Building scalable design systems while bridging the gap between design and engineering. Leading cross-functional teams to ship products that work for thousands of users.",
-    metrics: ["Design frameworks adopted across 3 organizations", "Coordinated implementations serving 500+ daily users", "Led cross-functional teams of 5+ members"]
+    icon: TrendingUp,
+    title: "Product Thinking & Strategic Design",
+    description: "Connecting user needs to business goals through strategic design decisions. Working directly with product managers and engineers to define roadmaps, prioritize features, and ship products that move metrics.",
+    metrics: ["22% increase in conversion rates", "20% boost in task completion rates", "25% improvement in feature discoverability"]
   }
 ];
 
