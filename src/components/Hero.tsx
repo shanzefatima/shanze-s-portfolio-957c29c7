@@ -2,63 +2,55 @@ import { motion } from "framer-motion";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 py-20">
-      <div className="max-w-5xl w-full">
+    <section className="relative px-6 py-32 md:py-40">
+      <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="mb-32"
         >
-          {/* Role */}
-          <p className="text-sm font-medium tracking-wide text-muted-foreground mb-8">
-            PRODUCT DESIGNER
-          </p>
-
-          {/* Name */}
-          <h1 className="font-serif text-[clamp(3rem,8vw,7rem)] leading-[0.95] mb-12 tracking-tight">
-            Shanze Fatima
-            <br />
-            Javed
+          <h1 className="font-sans text-[clamp(2.5rem,6vw,5rem)] leading-[1.1] tracking-tight mb-12 max-w-5xl">
+            Shanze Fatima Javed is a product designer specializing in ecosystems that bridge strategy, engineering, and user needs.
           </h1>
+          
+          <p className="text-lg text-muted-foreground max-w-2xl">
+            Currently building at the intersection of learning design and digital experiences. BSc in Interactive Media Arts and Computer Science from NYU.
+          </p>
+        </motion.div>
 
-          {/* Intro */}
-          <div className="max-w-2xl space-y-6">
-            <p className="text-xl leading-relaxed text-foreground/90">
-              I design products that bridge strategy, engineering, and user needs. Currently building at the intersection of learning design and digital experiences.
+        {/* Featured Project */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          className="grid md:grid-cols-2 gap-12 items-start"
+        >
+          <div>
+            <h2 className="text-3xl font-sans font-semibold mb-6 tracking-tight">
+              HyperMarket — Mobile E-commerce
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              Redesigned online grocery shopping experience, reducing cart abandonment by 22% and improving service discoverability by 25%. Mobile-first approach with AI-powered search and real-time order tracking.
             </p>
-            
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              BSc in Interactive Media Arts and Computer Science from NYU. Previously worked on educational platforms, e-commerce systems, and data visualization tools.
-            </p>
-          </div>
-
-          {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="mt-16 flex gap-6"
-          >
-            <button
-              onClick={() => {
-                document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="group relative text-sm font-medium py-3 px-6 border border-foreground hover:bg-foreground hover:text-background transition-all duration-200"
-            >
-              View Selected Work
-            </button>
-
             <a
-              href="#contact"
-              className="text-sm font-medium py-3 px-6 text-muted-foreground hover:text-foreground transition-colors duration-200"
+              href="#work"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
               }}
+              className="inline-block text-sm font-medium border-b border-foreground pb-1 hover:opacity-60 transition-opacity"
             >
-              Get in Touch →
+              View all work →
             </a>
-          </motion.div>
+          </div>
+          
+          <div className="relative aspect-[4/3] bg-accent rounded-sm overflow-hidden">
+            {/* Placeholder for featured project image */}
+            <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
+              Featured project visual
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
