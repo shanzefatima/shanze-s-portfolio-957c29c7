@@ -67,8 +67,8 @@ const CovidDataForest = () => {
             <div className="mb-16">
               <div className="aspect-video overflow-hidden bg-muted border border-border">
                 <img
-                  src={heroImage}
-                  alt="The COVID-19 Data Forest visualization"
+                  src={prototypeImage}
+                  alt="COVID-19 Data Forest physical prototype exploration"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
