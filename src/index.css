@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,31 +10,27 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Radical Minimalism - Black/White with Electric Blue */
-    --background: 209 40% 96%;
-    --foreground: 222 47% 11%;
+    /* Professional Editorial Palette */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
 
-    --card: 210 40% 98%;
-    --card-foreground: 222 47% 11%;
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 10%;
 
-    --popover: 214 31% 91%;
-    --popover-foreground: 222 47% 11%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 0 0% 10%;
 
-    /* Primary - Dark for text */
-    --primary: 222 47% 11%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 0 0% 10%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 215 19% 34%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 0 0% 40%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 215 20% 65%;
-    --muted-foreground: 222 47% 11%;
+    --muted: 0 0% 60%;
+    --muted-foreground: 0 0% 40%;
 
-    /* Electric Blue - THE ACCENT */
-    --electric-blue: 210 100% 50%;
-    --electric-blue-glow: 210 100% 60%;
-    --accent: 210 100% 50%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 72% 50%;
     --destructive-foreground: 0 85% 97%;
@@ -73,9 +69,9 @@ All colors MUST be HSL.
 
     --sidebar: 210 40% 98%;
 
-    --font-sans: 'DM Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+    --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
-    --font-serif: 'Crimson Pro', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+    --font-serif: 'Instrument Serif', ui-serif, Georgia, 'Times New Roman', serif;
 
     --font-mono: 'SF Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 
@@ -101,8 +97,8 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222 47% 11%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 10%;
+    --foreground: 0 0% 98%;
 
     --card: 217 32% 17%;
     --card-foreground: 210 40% 98%;
@@ -161,6 +157,7 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-feature-settings: "ss01" on, "ss02" on, "cv01" on, "cv02" on;
   }
 
   h1, h2, h3, h4, h5, h6 {
