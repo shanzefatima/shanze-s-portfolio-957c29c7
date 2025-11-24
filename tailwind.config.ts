@@ -85,7 +85,11 @@ export default {
   				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
   				border: 'hsl(var(--sidebar-border))',
   				ring: 'hsl(var(--sidebar-ring))'
-  			}
+  			},
+  			peach: 'hsl(var(--peach))',
+  			lavender: 'hsl(var(--lavender))',
+  			mint: 'hsl(var(--mint))',
+  			rose: 'hsl(var(--rose))'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
