@@ -1,37 +1,60 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Palette, X } from "lucide-react";
+import { Palette, X, Moon, Sun } from "lucide-react";
+
+interface GradientPreset {
+  name: string;
+  colors: string[];
+}
+
+const gradientPresets: GradientPreset[] = [
+  { name: "Default", colors: ["hsl(0, 0%, 100%)", "hsl(0, 0%, 100%)", "hsl(0, 0%, 100%)", "hsl(0, 0%, 100%)", "hsl(0, 0%, 100%)"] },
+  { name: "Sunset", colors: ["hsl(0, 0%, 100%)", "hsl(20, 60%, 96%)", "hsl(340, 60%, 96%)", "hsl(280, 50%, 96%)", "hsl(0, 0%, 100%)"] },
+  { name: "Ocean", colors: ["hsl(0, 0%, 100%)", "hsl(200, 60%, 96%)", "hsl(220, 60%, 96%)", "hsl(240, 50%, 96%)", "hsl(0, 0%, 100%)"] },
+  { name: "Forest", colors: ["hsl(0, 0%, 100%)", "hsl(120, 40%, 96%)", "hsl(160, 50%, 96%)", "hsl(180, 40%, 96%)", "hsl(0, 0%, 100%)"] },
+  { name: "Lavender", colors: ["hsl(0, 0%, 100%)", "hsl(270, 50%, 96%)", "hsl(290, 60%, 96%)", "hsl(310, 50%, 96%)", "hsl(0, 0%, 100%)"] },
+  { name: "Warm", colors: ["hsl(0, 0%, 100%)", "hsl(30, 60%, 96%)", "hsl(40, 70%, 96%)", "hsl(50, 60%, 96%)", "hsl(0, 0%, 100%)"] },
+];
 
 export const ThemeController = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [hue, setHue] = useState(0);
-  const [saturation, setSaturation] = useState(0);
-  const [lightness, setLightness] = useState(97);
+  const [isDark, setIsDark] = useState(false);
+  const [selectedGradient, setSelectedGradient] = useState(0);
 
-  const updateTheme = (h: number, s: number, l: number) => {
-    document.documentElement.style.setProperty('--background', `${h} ${s}% ${l}%`);
+  useEffect(() => {
+    const isDarkMode = document.documentElement.classList.contains('dark');
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      setIsDark(true);
+      document.documentElement.classList.add('dark');
+    }
+    setIsDark(isDarkMode);
+  }, []);
+
+  const toggleDarkMode = () => {
+    const newIsDark = !isDark;
+    setIsDark(newIsDark);
+    
+    if (newIsDark) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
   };
 
-  const handleHueChange = (value: number) => {
-    setHue(value);
-    updateTheme(value, saturation, lightness);
-  };
-
-  const handleSaturationChange = (value: number) => {
-    setSaturation(value);
-    updateTheme(hue, value, lightness);
-  };
-
-  const handleLightnessChange = (value: number) => {
-    setLightness(value);
-    updateTheme(hue, saturation, value);
-  };
-
-  const resetTheme = () => {
-    setHue(0);
-    setSaturation(0);
-    setLightness(97);
-    updateTheme(0, 0, 97);
+  const applyGradient = (index: number) => {
+    setSelectedGradient(index);
+    const preset = gradientPresets[index];
+    
+    // Apply gradient via CSS custom property for scroll-based transitions
+    const root = document.documentElement;
+    root.style.setProperty('--gradient-0', preset.colors[0]);
+    root.style.setProperty('--gradient-1', preset.colors[1]);
+    root.style.setProperty('--gradient-2', preset.colors[2]);
+    root.style.setProperty('--gradient-3', preset.colors[3]);
+    root.style.setProperty('--gradient-4', preset.colors[4]);
   };
 
   return (
@@ -56,7 +79,7 @@ export const ThemeController = () => {
             className="fixed bottom-24 right-8 z-50 bg-background border border-border rounded-2xl shadow-2xl p-6 w-80"
           >
             <div className="flex items-center justify-between mb-6">
-              <h3 className="text-lg font-semibold">Theme Colors</h3>
+              <h3 className="text-lg font-semibold">Theme</h3>
               <button
                 onClick={() => setIsOpen(false)}
                 className="w-8 h-8 rounded-full hover:bg-muted flex items-center justify-center transition-colors"
@@ -66,124 +89,53 @@ export const ThemeController = () => {
             </div>
 
             <div className="space-y-6">
-              {/* Hue Slider */}
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <label className="text-sm font-medium">Hue</label>
-                  <span className="text-xs text-muted-foreground">{hue}°</span>
-                </div>
-                <div className="relative">
-                  <input
-                    type="range"
-                    min="0"
-                    max="360"
-                    value={hue}
-                    onChange={(e) => handleHueChange(Number(e.target.value))}
-                    className="w-full h-2 rounded-full appearance-none cursor-pointer"
-                    style={{
-                      background: `linear-gradient(to right, 
-                        hsl(0, 100%, 50%), 
-                        hsl(60, 100%, 50%), 
-                        hsl(120, 100%, 50%), 
-                        hsl(180, 100%, 50%), 
-                        hsl(240, 100%, 50%), 
-                        hsl(300, 100%, 50%), 
-                        hsl(360, 100%, 50%))`,
-                    }}
-                  />
-                </div>
+              {/* Dark Mode Toggle */}
+              <div className="flex items-center justify-between pb-4 border-b border-border">
+                <span className="text-sm font-medium">Dark Mode</span>
+                <button
+                  onClick={toggleDarkMode}
+                  className="w-12 h-12 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80 transition-colors"
+                >
+                  {isDark ? (
+                    <Moon className="w-5 h-5" />
+                  ) : (
+                    <Sun className="w-5 h-5" />
+                  )}
+                </button>
               </div>
 
-              {/* Saturation Slider */}
+              {/* Gradient Presets */}
               <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <label className="text-sm font-medium">Saturation</label>
-                  <span className="text-xs text-muted-foreground">{saturation}%</span>
+                <label className="text-sm font-medium">Scroll Gradient</label>
+                <div className="grid grid-cols-2 gap-3">
+                  {gradientPresets.map((preset, index) => (
+                    <button
+                      key={preset.name}
+                      onClick={() => applyGradient(index)}
+                      className={`relative p-4 rounded-lg border-2 transition-all ${
+                        selectedGradient === index
+                          ? 'border-foreground'
+                          : 'border-border hover:border-foreground/50'
+                      }`}
+                    >
+                      <div className="flex gap-1 mb-2">
+                        {preset.colors.slice(1, 4).map((color, i) => (
+                          <div
+                            key={i}
+                            className="h-6 flex-1 rounded"
+                            style={{ backgroundColor: color }}
+                          />
+                        ))}
+                      </div>
+                      <span className="text-xs font-medium">{preset.name}</span>
+                    </button>
+                  ))}
                 </div>
-                <div className="relative">
-                  <input
-                    type="range"
-                    min="0"
-                    max="100"
-                    value={saturation}
-                    onChange={(e) => handleSaturationChange(Number(e.target.value))}
-                    className="w-full h-2 rounded-full appearance-none cursor-pointer"
-                    style={{
-                      background: `linear-gradient(to right, 
-                        hsl(${hue}, 0%, ${lightness}%), 
-                        hsl(${hue}, 100%, ${lightness}%))`,
-                    }}
-                  />
-                </div>
-              </div>
-
-              {/* Lightness Slider */}
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <label className="text-sm font-medium">Lightness</label>
-                  <span className="text-xs text-muted-foreground">{lightness}%</span>
-                </div>
-                <div className="relative">
-                  <input
-                    type="range"
-                    min="85"
-                    max="100"
-                    value={lightness}
-                    onChange={(e) => handleLightnessChange(Number(e.target.value))}
-                    className="w-full h-2 rounded-full appearance-none cursor-pointer"
-                    style={{
-                      background: `linear-gradient(to right, 
-                        hsl(${hue}, ${saturation}%, 85%), 
-                        hsl(${hue}, ${saturation}%, 100%))`,
-                    }}
-                  />
-                </div>
-              </div>
-
-              {/* Preview */}
-              <div className="pt-4 border-t border-border">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm font-medium">Preview</span>
-                  <button
-                    onClick={resetTheme}
-                    className="text-xs text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    Reset
-                  </button>
-                </div>
-                <div
-                  className="w-full h-20 rounded-lg border border-border"
-                  style={{ backgroundColor: `hsl(${hue}, ${saturation}%, ${lightness}%)` }}
-                />
               </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Custom Slider Styles */}
-      <style>{`
-        input[type="range"]::-webkit-slider-thumb {
-          appearance: none;
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          background: hsl(var(--foreground));
-          cursor: pointer;
-          border: 3px solid hsl(var(--background));
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-        }
-        
-        input[type="range"]::-moz-range-thumb {
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          background: hsl(var(--foreground));
-          cursor: pointer;
-          border: 3px solid hsl(var(--background));
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-        }
-      `}</style>
     </>
   );
 };
