@@ -43,35 +43,35 @@ export const About = () => {
             </h2>
 
             <p>
-              I hold a BSc from NYU in Interactive Media Arts and Computer Science. This unique combination allows
-              me to bridge design, engineering, and product strategy—building not just interfaces, but complete
-              product ecosystems grounded in research and driven by measurable business outcomes.
+              She holds a BSc from NYU in Interactive Media Arts and Computer Science. This background allows
+              her to work across design, engineering, and product strategy to build complete
+              systems rather than isolated features.
             </p>
 
             <p>
-              My approach is deeply data-driven and user-centered. I build end-to-end product experiences that solve
-              real problems and move metrics. From reducing cart abandonment by 22% in e-commerce to launching 0-to-1
-              accessible products adopted by 500+ users, I combine research, prototyping, and cross-functional
-              collaboration to deliver commercial impact.
+              Her process combines user research, rapid prototyping, and close collaboration with engineering
+              and product teams. Past work includes reducing cart abandonment in e-commerce, launching accessible
+              products for underserved users, and building data visualization tools that make complex information
+              understandable.
             </p>
 
             <div className="pt-6 space-y-3">
               <div className="flex items-center gap-3">
                 <div className="w-1 h-1 bg-primary rounded-full" />
                 <p className="text-sm font-semibold text-foreground">
-                  Product Design · UX Research · Accessibility Strategy
+                  Product Design · UX Research · Accessibility
                 </p>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-1 h-1 bg-primary rounded-full" />
                 <p className="text-sm font-semibold text-foreground">
-                  Mobile-First E-commerce · Learning Experience Design · Data Visualization
+                  Mobile-First E-commerce · Learning Experience Design
                 </p>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-1 h-1 bg-primary rounded-full" />
                 <p className="text-sm font-semibold text-foreground">
-                  Cross-functional Collaboration · Metrics-Driven Design · WCAG 2.1 AA Compliance
+                  Cross-functional Collaboration · Data-Driven Design
                 </p>
               </div>
             </div>

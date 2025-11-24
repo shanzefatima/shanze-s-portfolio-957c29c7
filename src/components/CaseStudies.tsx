@@ -202,6 +202,45 @@ export const CaseStudies = () => {
             </motion.article>
           ))}
         </div>
+
+        {/* More Work Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mt-32 pt-32 border-t border-border/40"
+        >
+          <h3 className="text-3xl md:text-4xl font-black tracking-tight mb-16">More Work</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <Link to="/case-study/snapchat-redesign" className="group">
+              <div className="relative aspect-[4/3] bg-muted overflow-hidden mb-6">
+                <img 
+                  src={snapchatHero} 
+                  alt="Snapchat Redesign"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-2">Social Media · Accessibility</p>
+              <h4 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">Snapchat Redesign</h4>
+              <p className="text-muted-foreground">Accessibility improvements for older demographics</p>
+            </Link>
+
+            <Link to="/case-study/bobst-library" className="group">
+              <div className="relative aspect-[4/3] bg-muted overflow-hidden mb-6">
+                <img 
+                  src={bobstHero} 
+                  alt="NYU Bobst Library"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-2">Web Design · Information Architecture</p>
+              <h4 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">NYU Bobst Library</h4>
+              <p className="text-muted-foreground">Website optimization and accessibility compliance</p>
+            </Link>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
