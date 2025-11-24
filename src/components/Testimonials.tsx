@@ -3,13 +3,13 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "She consistently delivers work that balances user needs with technical constraints. Her designs are thoughtful, well-researched, and ready for production.",
+    quote: "She consistently delivers work that balances user needs with technical constraints. Her designs are thoughtful, well researched, and ready for production.",
     author: "Product Manager",
-    role: "E-commerce Platform",
+    role: "SaaS Platform",
     avatar: "★"
   },
   {
-    quote: "Working with her is seamless. She understands the entire product lifecycle and makes decisions that consider both immediate needs and long-term scalability.",
+    quote: "Working with her is seamless. She understands the entire product lifecycle and makes decisions that consider both immediate needs and long term scalability.",
     author: "Engineering Lead",
     role: "Mobile Team",
     avatar: "★"

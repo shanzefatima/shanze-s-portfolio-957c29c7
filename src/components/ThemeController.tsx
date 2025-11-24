@@ -44,11 +44,12 @@ export const ThemeController = () => {
     }
   };
 
+  useEffect(() => {
+    applyGradient(selectedGradient);
+  }, [selectedGradient]);
+
   const applyGradient = (index: number) => {
-    setSelectedGradient(index);
     const preset = gradientPresets[index];
-    
-    // Apply gradient via CSS custom property for scroll-based transitions
     const root = document.documentElement;
     root.style.setProperty('--gradient-0', preset.colors[0]);
     root.style.setProperty('--gradient-1', preset.colors[1]);
@@ -112,15 +113,18 @@ export const ThemeController = () => {
                 </div>
                 <div className="grid grid-cols-2 gap-3">
                   {gradientPresets.map((preset, index) => (
-                    <button
-                      key={preset.name}
-                      onClick={() => applyGradient(index)}
-                      className={`relative p-4 rounded-lg border-2 transition-all ${
-                        selectedGradient === index
-                          ? 'border-foreground'
-                          : 'border-border hover:border-foreground/50'
-                      }`}
-                    >
+            <button
+              key={preset.name}
+              onClick={() => {
+                setSelectedGradient(index);
+                applyGradient(index);
+              }}
+              className={`relative p-4 rounded-lg border-2 transition-all ${
+                selectedGradient === index
+                  ? 'border-foreground'
+                  : 'border-border hover:border-foreground/50'
+              }`}
+            >
                       <div className="flex gap-1 mb-2">
                         {preset.colors.slice(1, 4).map((color, i) => (
                           <div

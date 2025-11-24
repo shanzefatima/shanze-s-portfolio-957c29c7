@@ -26,8 +26,8 @@ const Index = () => {
 
   return (
     <motion.div 
-      className="min-h-screen"
-      style={{ backgroundColor }}
+      className="min-h-screen w-full"
+      style={{ backgroundColor, minHeight: '100vh' }}
     >
       <Navigation />
       <ThemeController />
