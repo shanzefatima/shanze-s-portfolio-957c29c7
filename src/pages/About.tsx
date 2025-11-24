@@ -11,7 +11,7 @@ export default function About() {
   });
 
   const [activeSection, setActiveSection] = useState(0);
-  const sections = ["Intro", "Background", "Expertise", "Beyond Work"];
+  const sections = ["Intro", "Philosophy", "Process", "FAQ"];
 
   useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (latest) => {
@@ -112,7 +112,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* Background Section */}
+        {/* Design Philosophy Section */}
         <section className="min-h-screen flex items-center px-6 lg:px-16 bg-muted/30">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -120,37 +120,42 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="space-y-8"
+              className="space-y-12"
             >
               <h2 className="text-4xl lg:text-5xl font-light tracking-tight">
-                Background
+                Design Philosophy
               </h2>
               
-              <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
-                <p>
-                  Design has always been about solving problems. During her time at NYU, 
-                  Shanze realized that the most impactful solutions come from understanding 
-                  both the technical constraints and the human needs.
-                </p>
-                
-                <p>
-                  This dual perspective led her to work on projects ranging from accessible 
-                  escape rooms to large-scale e-commerce platforms, each requiring a different 
-                  balance of creativity and technical precision.
-                </p>
+              <div className="space-y-8 text-lg leading-relaxed">
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-medium text-foreground">Ecosystems, not screens</h3>
+                  <p className="text-muted-foreground">
+                    Great products are systems, not collections of features. Every interaction connects to a larger experience, 
+                    and understanding those connections is what separates good design from great design.
+                  </p>
+                </div>
 
-                <p>
-                  Her approach focuses on research, prototyping, and working closely with 
-                  cross-functional teams. Recent work includes improving checkout flows that 
-                  reduced cart abandonment by 22%, launching accessible products for underserved 
-                  users, and building tools that make complex data more understandable.
-                </p>
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-medium text-foreground">Research drives decisions</h3>
+                  <p className="text-muted-foreground">
+                    Assumptions are expensive. User research, data analysis, and testing provide the foundation for 
+                    design decisions that actually move metrics and improve lives.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-medium text-foreground">Accessibility is non-negotiable</h3>
+                  <p className="text-muted-foreground">
+                    Designing for everyone isn't a feature, it's a baseline. WCAG compliance and inclusive design 
+                    principles ensure products work for real humans in real contexts.
+                  </p>
+                </div>
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* Expertise Section */}
+        {/* Process Section */}
         <section className="min-h-screen flex items-center px-6 lg:px-16">
           <div className="max-w-4xl mx-auto w-full">
             <motion.div
@@ -161,32 +166,47 @@ export default function About() {
               className="space-y-12"
             >
               <h2 className="text-4xl lg:text-5xl font-light tracking-tight">
-                Expertise
+                How I Work
               </h2>
               
-              <div className="grid gap-8">
-                <div className="space-y-3 p-8 bg-muted/50 rounded-lg">
-                  <h3 className="text-2xl font-medium">User Research & Product Strategy</h3>
+              <div className="space-y-12">
+                <div className="space-y-4 border-l-2 border-border pl-6">
+                  <div className="flex items-baseline gap-4">
+                    <span className="text-sm font-mono text-muted-foreground">01</span>
+                    <h3 className="text-2xl font-medium text-foreground">Understand the problem</h3>
+                  </div>
                   <p className="text-muted-foreground leading-relaxed">
-                    From 0-to-1 ideation, roadmapping, and pilot scaling. She defines success 
-                    metrics, conducts user interviews, and translates insights into actionable 
-                    product decisions.
+                    Stakeholder interviews, user research, data analysis, and competitive audits to define what success looks like.
                   </p>
                 </div>
 
-                <div className="space-y-3 p-8 bg-muted/50 rounded-lg">
-                  <h3 className="text-2xl font-medium">Learning Experience Design</h3>
+                <div className="space-y-4 border-l-2 border-border pl-6">
+                  <div className="flex items-baseline gap-4">
+                    <span className="text-sm font-mono text-muted-foreground">02</span>
+                    <h3 className="text-2xl font-medium text-foreground">Explore solutions</h3>
+                  </div>
                   <p className="text-muted-foreground leading-relaxed">
-                    Simulation architectures, curriculum digitization, and gamified assessments. 
-                    Creating educational experiences that engage and transform understanding.
+                    Rapid prototyping, user flows, wireframes, and concept testing with real users to validate direction.
                   </p>
                 </div>
 
-                <div className="space-y-3 p-8 bg-muted/50 rounded-lg">
-                  <h3 className="text-2xl font-medium">Inclusive Interaction</h3>
+                <div className="space-y-4 border-l-2 border-border pl-6">
+                  <div className="flex items-baseline gap-4">
+                    <span className="text-sm font-mono text-muted-foreground">03</span>
+                    <h3 className="text-2xl font-medium text-foreground">Design & iterate</h3>
+                  </div>
                   <p className="text-muted-foreground leading-relaxed">
-                    WCAG 2.1 compliance, cross-cultural design logic, and empathy-led user research. 
-                    Building products that work for everyone, not just the majority.
+                    High-fidelity designs, design systems, and close collaboration with engineering to ship quality products.
+                  </p>
+                </div>
+
+                <div className="space-y-4 border-l-2 border-border pl-6">
+                  <div className="flex items-baseline gap-4">
+                    <span className="text-sm font-mono text-muted-foreground">04</span>
+                    <h3 className="text-2xl font-medium text-foreground">Measure impact</h3>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Post-launch analytics, user feedback loops, and continuous improvement based on real-world data.
                   </p>
                 </div>
               </div>
@@ -194,7 +214,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* Beyond Work Section */}
+        {/* FAQ Section */}
         <section className="min-h-screen flex items-center px-6 lg:px-16 bg-muted/30">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -202,23 +222,52 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="space-y-8"
+              className="space-y-12"
             >
               <h2 className="text-4xl lg:text-5xl font-light tracking-tight">
-                Beyond Work
+                Frequently Asked
               </h2>
               
-              <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
-                <p>
-                  When not designing, Shanze explores the intersection of technology and art, 
-                  experiments with generative systems, and mentors students navigating the 
-                  transition from academic projects to commercial products.
-                </p>
-                
-                <p>
-                  She believes that great design comes from diverse experiences and perspectives, 
-                  which is why she continuously seeks out new challenges and learning opportunities.
-                </p>
+              <div className="space-y-8">
+                <div className="space-y-3">
+                  <h3 className="text-xl font-medium text-foreground">What makes your approach different?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    The combination of design and engineering background means I understand technical constraints 
+                    and can work directly with developers to find solutions that are both beautiful and feasible.
+                  </p>
+                </div>
+
+                <div className="space-y-3">
+                  <h3 className="text-xl font-medium text-foreground">What types of projects do you work on?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Mobile-first e-commerce, learning platforms, data visualization, and accessible products. 
+                    Anything that requires strategic thinking, user research, and measurable outcomes.
+                  </p>
+                </div>
+
+                <div className="space-y-3">
+                  <h3 className="text-xl font-medium text-foreground">How do you measure success?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Through clear metrics defined at the start. Whether it's reduced cart abandonment, 
+                    improved task completion rates, or higher user satisfaction, success is measurable and tied to business goals.
+                  </p>
+                </div>
+
+                <div className="space-y-3">
+                  <h3 className="text-xl font-medium text-foreground">What's your design process timeline?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    It depends on scope, but typically 1-2 weeks for research and strategy, 2-3 weeks for design and testing, 
+                    and ongoing collaboration during implementation. Complex products require longer timelines.
+                  </p>
+                </div>
+
+                <div className="space-y-3">
+                  <h3 className="text-xl font-medium text-foreground">Do you code your designs?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Yes. With a CS background, I can prototype in code, understand technical constraints, 
+                    and work closely with engineering teams to ensure designs ship as intended.
+                  </p>
+                </div>
               </div>
             </motion.div>
           </div>
