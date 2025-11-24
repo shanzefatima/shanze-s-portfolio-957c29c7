@@ -5,11 +5,13 @@ import { Expertise } from "@/components/Expertise";
 import { About } from "@/components/About";
 import { Testimonials } from "@/components/Testimonials";
 import { Contact } from "@/components/Contact";
+import { ThemeController } from "@/components/ThemeController";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
+      <ThemeController />
       <main>
         <Hero />
         <CaseStudies />
