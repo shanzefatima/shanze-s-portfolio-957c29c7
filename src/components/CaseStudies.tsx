@@ -122,8 +122,8 @@ export const CaseStudies = () => {
                     backgroundColor: study.color,
                   }}
                 >
-                  <div className="absolute inset-0 p-12 flex flex-col justify-end">
-                    <h3 className="text-5xl md:text-6xl font-bold tracking-tight mb-4 text-foreground">
+                  <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-end">
+                    <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-3 text-foreground">
                       {study.title}
                     </h3>
                   </div>
@@ -154,8 +154,8 @@ export const CaseStudies = () => {
                 className="relative aspect-[16/10] overflow-hidden mb-4"
                 style={{ backgroundColor: "hsl(270, 50%, 85%)" }}
               >
-                <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                  <h4 className="text-3xl font-bold tracking-tight text-foreground">Snapchat Redesign</h4>
+                <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                  <h4 className="text-2xl font-bold tracking-tight text-foreground">Snapchat Redesign</h4>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground">Accessibility improvements for older demographics</p>
@@ -166,8 +166,8 @@ export const CaseStudies = () => {
                 className="relative aspect-[16/10] overflow-hidden mb-4"
                 style={{ backgroundColor: "hsl(45, 70%, 88%)" }}
               >
-                <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                  <h4 className="text-3xl font-bold tracking-tight text-foreground">NYU Bobst Library</h4>
+                <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                  <h4 className="text-2xl font-bold tracking-tight text-foreground">NYU Bobst Library</h4>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground">Website optimization and accessibility compliance</p>
