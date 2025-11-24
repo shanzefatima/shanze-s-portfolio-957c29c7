@@ -36,44 +36,21 @@ export const About = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6 text-lg leading-relaxed text-muted-foreground order-1 lg:order-2"
           >
-            <h2 className="text-5xl md:text-6xl font-black tracking-tight mb-8 text-foreground">
-              Building for
-              <br />
-              <span className="text-primary">Everyone</span>
+            <h2 className="text-3xl md:text-4xl font-medium tracking-tight mb-8 text-foreground">
+              About
             </h2>
 
             <p>
-              She holds a BSc from NYU in Interactive Media Arts and Computer Science. This background allows
-              her to work across design, engineering, and product strategy to build complete
-              systems rather than isolated features.
+              Shanze holds a BSc from NYU in Interactive Media Arts and Computer Science. She works across design, engineering, and product to build experiences that solve real problems.
             </p>
 
             <p>
-              Her process combines user research, rapid prototyping, and close collaboration with engineering
-              and product teams. Past work includes reducing cart abandonment in e-commerce, launching accessible
-              products for underserved users, and building data visualization tools that make complex information
-              understandable.
+              Her process focuses on research, prototyping, and working closely with cross-functional teams. Recent work includes improving e-commerce checkout flows, launching accessible products for underserved users, and building tools that make complex data more understandable.
             </p>
 
-            <div className="pt-6 space-y-3">
-              <div className="flex items-center gap-3">
-                <div className="w-1 h-1 bg-primary rounded-full" />
-                <p className="text-sm font-semibold text-foreground">
-                  Product Design · UX Research · Accessibility
-                </p>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-1 h-1 bg-primary rounded-full" />
-                <p className="text-sm font-semibold text-foreground">
-                  Mobile-First E-commerce · Learning Experience Design
-                </p>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-1 h-1 bg-primary rounded-full" />
-                <p className="text-sm font-semibold text-foreground">
-                  Cross-functional Collaboration · Data-Driven Design
-                </p>
-              </div>
+            <div className="pt-6 space-y-3 text-sm text-muted-foreground">
+              <p>Product Design · UX Research · Accessibility</p>
+              <p>Mobile E-commerce · Learning Experience Design · Data Visualization</p>
             </div>
           </motion.div>
         </div>

@@ -82,10 +82,7 @@ export const CaseStudies = () => {
           }}
           className="mb-24"
         >
-          <h2 className="text-5xl md:text-7xl font-black tracking-tight mb-6">Selected Work</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl">
-            Real-world impact through inclusive design and data-driven product strategy
-          </p>
+          <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-4">Work</h2>
         </motion.div>
 
         <div className="space-y-32">
@@ -150,11 +147,11 @@ export const CaseStudies = () => {
                 {/* Content */}
                 <div className="order-1 lg:order-2 space-y-6">
                   <div>
-                    <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4">{study.category}</p>
-                    <h3 className="text-4xl md:text-5xl font-black tracking-tight mb-4 group-hover:text-primary transition-colors duration-300">
+                    <h3 className="text-3xl md:text-4xl font-medium tracking-tight mb-3 group-hover:text-primary transition-colors duration-300">
                       {study.title}
                     </h3>
-                    <p className="text-lg text-muted-foreground">{study.subtitle}</p>
+                    <p className="text-base text-muted-foreground mb-2">{study.subtitle}</p>
+                    <p className="text-sm text-muted-foreground/60">{study.category}</p>
                   </div>
 
                   <div className="space-y-3 py-6">
@@ -211,7 +208,7 @@ export const CaseStudies = () => {
           transition={{ duration: 0.8 }}
           className="mt-32 pt-32 border-t border-border/40"
         >
-          <h3 className="text-3xl md:text-4xl font-black tracking-tight mb-16">More Work</h3>
+          <h3 className="text-2xl md:text-3xl font-medium tracking-tight mb-12">More Work</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <Link to="/case-study/snapchat-redesign" className="group">
@@ -222,9 +219,9 @@ export const CaseStudies = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-2">Social Media · Accessibility</p>
-              <h4 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">Snapchat Redesign</h4>
-              <p className="text-muted-foreground">Accessibility improvements for older demographics</p>
+              <h4 className="text-xl font-medium mb-2 group-hover:text-primary transition-colors">Snapchat Redesign</h4>
+              <p className="text-sm text-muted-foreground mb-1">Accessibility improvements for older demographics</p>
+              <p className="text-xs text-muted-foreground/60">Social Media · Accessibility</p>
             </Link>
 
             <Link to="/case-study/bobst-library" className="group">
@@ -235,9 +232,9 @@ export const CaseStudies = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-2">Web Design · Information Architecture</p>
-              <h4 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">NYU Bobst Library</h4>
-              <p className="text-muted-foreground">Website optimization and accessibility compliance</p>
+              <h4 className="text-xl font-medium mb-2 group-hover:text-primary transition-colors">NYU Bobst Library</h4>
+              <p className="text-sm text-muted-foreground mb-1">Website optimization and accessibility compliance</p>
+              <p className="text-xs text-muted-foreground/60">Web Design · Information Architecture</p>
             </Link>
           </div>
         </motion.div>
