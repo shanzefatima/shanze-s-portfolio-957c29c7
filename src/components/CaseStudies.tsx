@@ -118,20 +118,21 @@ export const CaseStudies = () => {
                   transition={{
                     duration: 0.4,
                   }}
-                  style={{
-                    backgroundColor: study.color,
-                  }}
                 >
-                  <div className="absolute inset-0 p-12 flex flex-col justify-end">
+                  <img 
+                    src={study.image} 
+                    alt={study.title}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div 
+                    className="absolute inset-0 transition-opacity duration-500 group-hover:opacity-0"
+                    style={{ backgroundColor: study.color }}
+                  />
+                  <div className="absolute inset-0 p-12 flex flex-col justify-end transition-opacity duration-500 group-hover:opacity-0">
                     <h3 className="text-5xl md:text-6xl font-bold tracking-tight mb-4 text-foreground">
                       {study.title}
                     </h3>
                   </div>
-                  <img 
-                    src={study.image} 
-                    alt={study.title}
-                    className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-30 transition-opacity duration-500"
-                  />
                 </motion.div>
               </Link>
             </motion.article>
@@ -150,11 +151,17 @@ export const CaseStudies = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Link to="/case-study/snapchat-redesign" className="group">
-              <div 
-                className="relative aspect-[16/10] overflow-hidden mb-4"
-                style={{ backgroundColor: "hsl(270, 50%, 85%)" }}
-              >
-                <div className="absolute inset-0 p-8 flex flex-col justify-end">
+              <div className="relative aspect-[16/10] overflow-hidden mb-4">
+                <img 
+                  src={snapchatHero}
+                  alt="Snapchat Redesign"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div 
+                  className="absolute inset-0 transition-opacity duration-500 group-hover:opacity-0"
+                  style={{ backgroundColor: "hsl(270, 50%, 85%)" }}
+                />
+                <div className="absolute inset-0 p-8 flex flex-col justify-end transition-opacity duration-500 group-hover:opacity-0">
                   <h4 className="text-3xl font-bold tracking-tight text-foreground">Snapchat Redesign</h4>
                 </div>
               </div>
@@ -162,11 +169,17 @@ export const CaseStudies = () => {
             </Link>
 
             <Link to="/case-study/bobst-library" className="group">
-              <div 
-                className="relative aspect-[16/10] overflow-hidden mb-4"
-                style={{ backgroundColor: "hsl(45, 70%, 88%)" }}
-              >
-                <div className="absolute inset-0 p-8 flex flex-col justify-end">
+              <div className="relative aspect-[16/10] overflow-hidden mb-4">
+                <img 
+                  src={bobstHero}
+                  alt="NYU Bobst Library"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div 
+                  className="absolute inset-0 transition-opacity duration-500 group-hover:opacity-0"
+                  style={{ backgroundColor: "hsl(45, 70%, 88%)" }}
+                />
+                <div className="absolute inset-0 p-8 flex flex-col justify-end transition-opacity duration-500 group-hover:opacity-0">
                   <h4 className="text-3xl font-bold tracking-tight text-foreground">NYU Bobst Library</h4>
                 </div>
               </div>
