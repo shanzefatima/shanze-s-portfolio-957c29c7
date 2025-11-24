@@ -1,71 +1,38 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Palette, X, Moon, Sun } from "lucide-react";
+import { Slider } from "@/components/ui/slider";
 
-interface GradientPreset {
-  name: string;
-  lightColors: string[];
-  darkColors: string[];
-}
-
-const gradientPresets: GradientPreset[] = [
-  { 
-    name: "Default", 
-    lightColors: ["hsl(0, 0%, 100%)", "hsl(0, 0%, 98%)", "hsl(0, 0%, 97%)", "hsl(0, 0%, 98%)", "hsl(0, 0%, 100%)"],
-    darkColors: ["hsl(0, 0%, 0%)", "hsl(0, 0%, 3%)", "hsl(0, 0%, 5%)", "hsl(0, 0%, 3%)", "hsl(0, 0%, 0%)"]
-  },
-  { 
-    name: "Sunset", 
-    lightColors: ["hsl(0, 0%, 100%)", "hsl(20, 70%, 88%)", "hsl(340, 65%, 90%)", "hsl(280, 60%, 92%)", "hsl(0, 0%, 100%)"],
-    darkColors: ["hsl(0, 0%, 0%)", "hsl(20, 60%, 12%)", "hsl(340, 60%, 10%)", "hsl(280, 50%, 12%)", "hsl(0, 0%, 0%)"]
-  },
-  { 
-    name: "Ocean", 
-    lightColors: ["hsl(0, 0%, 100%)", "hsl(200, 65%, 88%)", "hsl(220, 70%, 90%)", "hsl(240, 60%, 92%)", "hsl(0, 0%, 100%)"],
-    darkColors: ["hsl(0, 0%, 0%)", "hsl(200, 60%, 12%)", "hsl(220, 60%, 10%)", "hsl(240, 50%, 12%)", "hsl(0, 0%, 0%)"]
-  },
-  { 
-    name: "Forest", 
-    lightColors: ["hsl(0, 0%, 100%)", "hsl(120, 50%, 88%)", "hsl(160, 55%, 90%)", "hsl(180, 50%, 92%)", "hsl(0, 0%, 100%)"],
-    darkColors: ["hsl(0, 0%, 0%)", "hsl(120, 40%, 12%)", "hsl(160, 50%, 10%)", "hsl(180, 40%, 12%)", "hsl(0, 0%, 0%)"]
-  },
-  { 
-    name: "Lavender", 
-    lightColors: ["hsl(0, 0%, 100%)", "hsl(270, 60%, 88%)", "hsl(290, 65%, 90%)", "hsl(310, 60%, 92%)", "hsl(0, 0%, 100%)"],
-    darkColors: ["hsl(0, 0%, 0%)", "hsl(270, 50%, 12%)", "hsl(290, 60%, 10%)", "hsl(310, 50%, 12%)", "hsl(0, 0%, 0%)"]
-  },
-  { 
-    name: "Warm", 
-    lightColors: ["hsl(0, 0%, 100%)", "hsl(30, 70%, 88%)", "hsl(40, 75%, 90%)", "hsl(50, 70%, 92%)", "hsl(0, 0%, 100%)"],
-    darkColors: ["hsl(0, 0%, 0%)", "hsl(30, 60%, 12%)", "hsl(40, 70%, 10%)", "hsl(50, 60%, 12%)", "hsl(0, 0%, 0%)"]
-  },
-];
+// Helper function to interpolate HSL colors
+const interpolateHSL = (hue: number, saturation: number, lightness: number) => {
+  return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+};
 
 export const ThemeController = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
-  const [selectedGradient, setSelectedGradient] = useState(0);
+  const [hueValue, setHueValue] = useState([0]);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
-    const savedGradient = localStorage.getItem('selectedGradient');
+    const savedHue = localStorage.getItem('hueValue');
     
     if (savedTheme === 'dark') {
       setIsDark(true);
       document.documentElement.classList.add('dark');
     }
     
-    if (savedGradient) {
-      const gradientIndex = parseInt(savedGradient, 10);
-      setSelectedGradient(gradientIndex);
+    if (savedHue) {
+      const hue = parseInt(savedHue, 10);
+      setHueValue([hue]);
     }
     
-    applyGradient(savedGradient ? parseInt(savedGradient, 10) : 0, savedTheme === 'dark');
+    applyGradient(savedHue ? parseInt(savedHue, 10) : 0, savedTheme === 'dark');
   }, []);
 
   useEffect(() => {
-    applyGradient(selectedGradient, isDark);
-  }, [selectedGradient, isDark]);
+    applyGradient(hueValue[0], isDark);
+  }, [hueValue, isDark]);
 
   const toggleDarkMode = () => {
     const newIsDark = !isDark;
@@ -80,21 +47,29 @@ export const ThemeController = () => {
     }
   };
 
-  const applyGradient = (index: number, dark: boolean = isDark) => {
-    const preset = gradientPresets[index];
-    const colors = dark ? preset.darkColors : preset.lightColors;
+  const applyGradient = (hue: number, dark: boolean = isDark) => {
     const root = document.documentElement;
     
-    root.style.setProperty('--gradient-0', colors[0]);
-    root.style.setProperty('--gradient-1', colors[1]);
-    root.style.setProperty('--gradient-2', colors[2]);
-    root.style.setProperty('--gradient-3', colors[3]);
-    root.style.setProperty('--gradient-4', colors[4]);
+    if (dark) {
+      // Dark mode: subtle dark colors with selected hue
+      root.style.setProperty('--gradient-0', 'hsl(0, 0%, 0%)');
+      root.style.setProperty('--gradient-1', interpolateHSL(hue, 60, 10));
+      root.style.setProperty('--gradient-2', interpolateHSL(hue, 65, 8));
+      root.style.setProperty('--gradient-3', interpolateHSL(hue, 60, 10));
+      root.style.setProperty('--gradient-4', 'hsl(0, 0%, 0%)');
+    } else {
+      // Light mode: subtle light colors with selected hue
+      root.style.setProperty('--gradient-0', 'hsl(0, 0%, 100%)');
+      root.style.setProperty('--gradient-1', interpolateHSL(hue, 65, 90));
+      root.style.setProperty('--gradient-2', interpolateHSL(hue, 70, 88));
+      root.style.setProperty('--gradient-3', interpolateHSL(hue, 65, 90));
+      root.style.setProperty('--gradient-4', 'hsl(0, 0%, 100%)');
+    }
   };
 
-  const handleGradientChange = (index: number) => {
-    setSelectedGradient(index);
-    localStorage.setItem('selectedGradient', index.toString());
+  const handleHueChange = (value: number[]) => {
+    setHueValue(value);
+    localStorage.setItem('hueValue', value[0].toString());
   };
 
   return (
@@ -144,34 +119,26 @@ export const ThemeController = () => {
                 </button>
               </div>
 
-              {/* Gradient Presets */}
-              <div className="space-y-3">
+              {/* Color Slider */}
+              <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <label className="text-sm font-medium text-foreground">Scroll Gradient</label>
-                  <span className="text-xs text-muted-foreground">{gradientPresets[selectedGradient].name}</span>
+                  <label className="text-sm font-medium text-foreground">Background Color</label>
+                  <span className="text-xs text-muted-foreground">{hueValue[0]}°</span>
                 </div>
-                <div className="grid grid-cols-2 gap-3">
-                  {gradientPresets.map((preset, index) => (
-                    <button
-                      key={preset.name}
-                      onClick={() => handleGradientChange(index)}
-                      className={`relative p-4 rounded-lg border-2 transition-all ${
-                        selectedGradient === index
-                          ? 'border-foreground'
-                          : 'border-border hover:border-foreground/50'
-                      }`}
-                    >
-                      <div className="flex gap-1 mb-2">
-                        {(isDark ? preset.darkColors : preset.lightColors).slice(1, 4).map((color, i) => (
-                          <div
-                            key={i}
-                            className="h-6 flex-1 rounded"
-                            style={{ backgroundColor: color }}
-                          />
-                        ))}
-                      </div>
-                      <span className="text-xs font-medium text-foreground">{preset.name}</span>
-                    </button>
+                <Slider
+                  value={hueValue}
+                  onValueChange={handleHueChange}
+                  max={360}
+                  step={1}
+                  className="w-full"
+                />
+                <div className="flex gap-2 h-8 rounded-lg overflow-hidden">
+                  {[0, 60, 120, 180, 240, 300].map((hue) => (
+                    <div
+                      key={hue}
+                      className="flex-1"
+                      style={{ backgroundColor: interpolateHSL(hue, 70, isDark ? 10 : 88) }}
+                    />
                   ))}
                 </div>
               </div>
