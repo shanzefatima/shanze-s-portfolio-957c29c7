@@ -3,19 +3,19 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Shanze brings a rare combination of technical depth and user empathy. Her work consistently bridges complex systems with intuitive experiences that drive measurable business impact.",
+    quote: "She consistently delivers work that balances user needs with technical constraints. Her designs are thoughtful, well-researched, and ready for production.",
     author: "Product Manager",
     role: "E-commerce Platform",
     avatar: "★"
   },
   {
-    quote: "One of the most strategic designers I've worked with. She thinks beyond pixels and understands the entire product ecosystem, from user research to engineering trade-offs.",
+    quote: "Working with her is seamless. She understands the entire product lifecycle and makes decisions that consider both immediate needs and long-term scalability.",
     author: "Engineering Lead",
     role: "Mobile Team",
     avatar: "★"
   },
   {
-    quote: "Her approach to accessibility isn't just compliance—it's about genuinely inclusive design that creates measurable value. She turned constraints into competitive advantages.",
+    quote: "Her approach to accessibility goes beyond compliance. She designs systems that are genuinely inclusive and create value for users who are often overlooked.",
     author: "Director of Product",
     role: "Learning Platform",
     avatar: "★"
