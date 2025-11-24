@@ -20,9 +20,9 @@ All colors MUST be HSL.
     --popover: 214 31% 91%;
     --popover-foreground: 222 47% 11%;
 
-    /* Electric Blue Accent */
-    --primary: 216 19% 26%;
-    --primary-foreground: 210 19% 98%;
+    /* Primary - Dark for text */
+    --primary: 222 47% 11%;
+    --primary-foreground: 210 40% 98%;
 
     --secondary: 215 19% 34%;
     --secondary-foreground: 210 40% 98%;
@@ -30,9 +30,11 @@ All colors MUST be HSL.
     --muted: 215 20% 65%;
     --muted-foreground: 222 47% 11%;
 
-    /* Electric Blue for highlights */
-    --accent: 210 40% 98%;
-    --accent-foreground: 215 16% 46%;
+    /* Electric Blue - THE ACCENT */
+    --electric-blue: 210 100% 50%;
+    --electric-blue-glow: 210 100% 60%;
+    --accent: 210 100% 50%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 72% 50%;
     --destructive-foreground: 0 85% 97%;
