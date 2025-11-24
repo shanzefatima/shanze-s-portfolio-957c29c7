@@ -8,15 +8,15 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="mb-32"
+          className="mb-32 text-center"
         >
-          <h1 className="font-sans text-[clamp(3rem,8vw,7rem)] leading-[1.05] tracking-tight mb-8 font-medium">
-            Shanze Fatima Javed
-          </h1>
-          
-          <p className="text-xl text-muted-foreground max-w-3xl leading-relaxed">
-            Product designer focused on accessible experiences and learning platforms. Background in e-commerce, data visualization, and mobile design.
+          <p className="text-sm uppercase tracking-wider text-muted-foreground mb-8 font-medium">
+            Design Work Portfolio
           </p>
+          
+          <h1 className="font-sans text-[clamp(2.5rem,7vw,6rem)] leading-[1.1] tracking-tight mb-0 font-bold max-w-5xl mx-auto">
+            — Hi! I'm Shanze, a product designer with a background in e-commerce, accessible learning experiences, and data visualization.
+          </h1>
         </motion.div>
       </div>
     </section>

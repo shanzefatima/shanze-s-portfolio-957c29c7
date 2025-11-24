@@ -29,7 +29,7 @@ const caseStudies: CaseStudy[] = [
       "40% increase in repeat orders"
     ],
     image: hypermarketHero,
-    color: "hsl(var(--accent))",
+    color: "hsl(24, 80%, 92%)",
   },
   {
     id: "shoot-for-stars",
@@ -43,7 +43,7 @@ const caseStudies: CaseStudy[] = [
       "Adopted by Helen Keller Services"
     ],
     image: shootStarsHero,
-    color: "hsl(var(--accent))",
+    color: "hsl(200, 25%, 60%)",
   },
   {
     id: "covid-data-forest",
@@ -57,7 +57,7 @@ const caseStudies: CaseStudy[] = [
       "Simplified 180+ country datasets"
     ],
     image: covidForestHero,
-    color: "hsl(var(--accent))",
+    color: "hsl(150, 40%, 85%)",
   },
 ];
 export const CaseStudies = () => {
@@ -109,93 +109,31 @@ export const CaseStudies = () => {
               onMouseLeave={() => setHoveredIndex(null)}
               className="group cursor-pointer"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                {/* Image */}
-                <Link to={`/case-study/${study.id}`} className="block order-2 lg:order-1">
-                  <motion.div
-                    className="relative aspect-[4/3] bg-muted overflow-hidden"
-                    whileHover={{
-                      scale: 1.02,
-                    }}
-                    transition={{
-                      duration: 0.4,
-                    }}
-                  >
-                    <img 
-                      src={study.image} 
-                      alt={study.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <motion.div
-                      className="absolute bottom-0 left-0 w-full h-1 bg-primary"
-                      initial={{
-                        scaleX: 0,
-                      }}
-                      animate={{
-                        scaleX: hoveredIndex === index ? 1 : 0,
-                      }}
-                      transition={{
-                        duration: 0.3,
-                      }}
-                      style={{
-                        originX: 0,
-                      }}
-                    />
-                  </motion.div>
-                </Link>
-
-                {/* Content */}
-                <div className="order-1 lg:order-2 space-y-6">
-                  <div>
-                    <h3 className="text-3xl md:text-4xl font-medium tracking-tight mb-3 group-hover:text-primary transition-colors duration-300">
+              <Link to={`/case-study/${study.id}`} className="block">
+                <motion.div
+                  className="relative aspect-[16/10] overflow-hidden group"
+                  whileHover={{
+                    scale: 0.98,
+                  }}
+                  transition={{
+                    duration: 0.4,
+                  }}
+                  style={{
+                    backgroundColor: study.color,
+                  }}
+                >
+                  <div className="absolute inset-0 p-12 flex flex-col justify-end">
+                    <h3 className="text-5xl md:text-6xl font-bold tracking-tight mb-4 text-foreground">
                       {study.title}
                     </h3>
-                    <p className="text-base text-muted-foreground mb-2">{study.subtitle}</p>
-                    <p className="text-sm text-muted-foreground/60">{study.category}</p>
                   </div>
-
-                  <div className="space-y-3 py-6">
-                    {study.impact.map((item, i) => (
-                      <motion.div
-                        key={i}
-                        initial={{
-                          opacity: 0,
-                          x: -20,
-                        }}
-                        whileInView={{
-                          opacity: 1,
-                          x: 0,
-                        }}
-                        viewport={{
-                          once: true,
-                        }}
-                        transition={{
-                          delay: i * 0.1,
-                        }}
-                        className="flex items-start gap-3"
-                      >
-                        <div className="w-1 h-1 mt-2 bg-primary rounded-full flex-shrink-0" />
-                        <p className="text-sm text-foreground/80">{item}</p>
-                      </motion.div>
-                    ))}
-                  </div>
-
-                  <Link to={`/case-study/${study.id}`}>
-                    <motion.button
-                      className="group/btn inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors"
-                      whileHover={{
-                        x: 5,
-                      }}
-                      transition={{
-                        duration: 0.2,
-                      }}
-                    >
-                      View Case Study
-                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                    </motion.button>
-                  </Link>
-                </div>
-              </div>
+                  <img 
+                    src={study.image} 
+                    alt={study.title}
+                    className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-30 transition-opacity duration-500"
+                  />
+                </motion.div>
+              </Link>
             </motion.article>
           ))}
         </div>
@@ -208,33 +146,31 @@ export const CaseStudies = () => {
           transition={{ duration: 0.8 }}
           className="mt-32 pt-32 border-t border-border/40"
         >
-          <h3 className="text-2xl md:text-3xl font-medium tracking-tight mb-12">More Work</h3>
+          <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-12">More Work</h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Link to="/case-study/snapchat-redesign" className="group">
-              <div className="relative aspect-[4/3] bg-muted overflow-hidden mb-6">
-                <img 
-                  src={snapchatHero} 
-                  alt="Snapchat Redesign"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+              <div 
+                className="relative aspect-[16/10] overflow-hidden mb-4"
+                style={{ backgroundColor: "hsl(270, 50%, 85%)" }}
+              >
+                <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                  <h4 className="text-3xl font-bold tracking-tight text-foreground">Snapchat Redesign</h4>
+                </div>
               </div>
-              <h4 className="text-xl font-medium mb-2 group-hover:text-primary transition-colors">Snapchat Redesign</h4>
-              <p className="text-sm text-muted-foreground mb-1">Accessibility improvements for older demographics</p>
-              <p className="text-xs text-muted-foreground/60">Social Media · Accessibility</p>
+              <p className="text-sm text-muted-foreground">Accessibility improvements for older demographics</p>
             </Link>
 
             <Link to="/case-study/bobst-library" className="group">
-              <div className="relative aspect-[4/3] bg-muted overflow-hidden mb-6">
-                <img 
-                  src={bobstHero} 
-                  alt="NYU Bobst Library"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+              <div 
+                className="relative aspect-[16/10] overflow-hidden mb-4"
+                style={{ backgroundColor: "hsl(45, 70%, 88%)" }}
+              >
+                <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                  <h4 className="text-3xl font-bold tracking-tight text-foreground">NYU Bobst Library</h4>
+                </div>
               </div>
-              <h4 className="text-xl font-medium mb-2 group-hover:text-primary transition-colors">NYU Bobst Library</h4>
-              <p className="text-sm text-muted-foreground mb-1">Website optimization and accessibility compliance</p>
-              <p className="text-xs text-muted-foreground/60">Web Design · Information Architecture</p>
+              <p className="text-sm text-muted-foreground">Website optimization and accessibility compliance</p>
             </Link>
           </div>
         </motion.div>
