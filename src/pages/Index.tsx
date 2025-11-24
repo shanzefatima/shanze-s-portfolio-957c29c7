@@ -25,27 +25,30 @@ const Index = () => {
   );
 
   return (
-    <motion.div 
-      className="min-h-screen w-full"
-      style={{ backgroundColor, minHeight: '100vh' }}
-    >
-      <Navigation />
-      <ThemeController />
-      <main>
-        <Hero />
-        <CaseStudies />
-        <div id="expertise">
-          <Expertise />
-        </div>
-        <div id="about">
-          <About />
-        </div>
-        <Testimonials />
-        <div id="contact">
-          <Contact />
-        </div>
-      </main>
-    </motion.div>
+    <>
+      <motion.div 
+        className="min-h-screen w-full fixed inset-0 -z-10"
+        style={{ backgroundColor }}
+      />
+      <div className="relative z-0">
+        <Navigation />
+        <ThemeController />
+        <main>
+          <Hero />
+          <CaseStudies />
+          <div id="expertise">
+            <Expertise />
+          </div>
+          <div id="about">
+            <About />
+          </div>
+          <Testimonials />
+          <div id="contact">
+            <Contact />
+          </div>
+        </main>
+      </div>
+    </>
   );
 };
 
