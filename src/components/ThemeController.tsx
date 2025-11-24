@@ -85,11 +85,16 @@ export const ThemeController = () => {
     const colors = dark ? preset.darkColors : preset.lightColors;
     const root = document.documentElement;
     
+    console.log('Applying gradient:', preset.name, 'Dark mode:', dark, 'Colors:', colors);
+    
     root.style.setProperty('--gradient-0', colors[0]);
     root.style.setProperty('--gradient-1', colors[1]);
     root.style.setProperty('--gradient-2', colors[2]);
     root.style.setProperty('--gradient-3', colors[3]);
     root.style.setProperty('--gradient-4', colors[4]);
+    
+    // Force a repaint
+    window.dispatchEvent(new Event('gradientChange'));
   };
 
   const handleGradientChange = (index: number) => {
