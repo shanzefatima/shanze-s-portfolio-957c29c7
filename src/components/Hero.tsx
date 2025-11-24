@@ -10,11 +10,11 @@ export const Hero = () => {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="mb-32 text-center"
         >
-          <p className="text-sm uppercase tracking-wider text-muted-foreground mb-6 font-medium">
+          <p className="text-sm uppercase tracking-wider text-muted-foreground mb-8 font-medium">
             Design Work Portfolio
           </p>
           
-          <h1 className="font-sans text-[clamp(2rem,5vw,3.5rem)] leading-[1.2] tracking-tight mb-0 font-bold max-w-4xl mx-auto">
+          <h1 className="font-sans text-[clamp(2.5rem,7vw,6rem)] leading-[1.1] tracking-tight mb-0 font-bold max-w-5xl mx-auto">
             — Hi! I'm Shanze, a product designer with a background in e-commerce, accessible learning experiences, and data visualization.
           </h1>
         </motion.div>
