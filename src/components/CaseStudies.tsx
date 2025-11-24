@@ -109,11 +109,11 @@ export const CaseStudies = () => {
               onMouseLeave={() => setHoveredIndex(null)}
               className="group cursor-pointer"
             >
-              <Link to={`/case-study/${study.id}`} className="block">
+              <Link to={`/case-study/${study.id}`} className="block space-y-6">
                 <motion.div
-                  className="relative aspect-[16/10] overflow-hidden group"
+                  className="relative aspect-[16/10] overflow-hidden rounded-lg"
                   whileHover={{
-                    scale: 0.98,
+                    scale: 1.02,
                   }}
                   transition={{
                     duration: 0.4,
@@ -122,18 +122,15 @@ export const CaseStudies = () => {
                   <img 
                     src={study.image} 
                     alt={study.title}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover"
                   />
-                  <div 
-                    className="absolute inset-0 transition-opacity duration-500 group-hover:opacity-0"
-                    style={{ backgroundColor: study.color }}
-                  />
-                  <div className="absolute inset-0 p-12 flex flex-col justify-end transition-opacity duration-500 group-hover:opacity-0">
-                    <h3 className="text-5xl md:text-6xl font-bold tracking-tight mb-4 text-foreground">
-                      {study.title}
-                    </h3>
-                  </div>
                 </motion.div>
+                
+                <div className="space-y-2">
+                  <p className="text-sm text-muted-foreground">{study.category}</p>
+                  <h3 className="text-2xl md:text-3xl font-light">{study.title}</h3>
+                  <p className="text-muted-foreground">{study.subtitle}</p>
+                </div>
               </Link>
             </motion.article>
           ))}
@@ -149,41 +146,43 @@ export const CaseStudies = () => {
         >
           <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-12">More Work</h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Link to="/case-study/snapchat-redesign" className="group">
-              <div className="relative aspect-[16/10] overflow-hidden mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <Link to="/case-study/snapchat-redesign" className="group block space-y-4">
+              <motion.div 
+                className="relative aspect-[16/10] overflow-hidden rounded-lg"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.4 }}
+              >
                 <img 
                   src={snapchatHero}
                   alt="Snapchat Redesign"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover"
                 />
-                <div 
-                  className="absolute inset-0 transition-opacity duration-500 group-hover:opacity-0"
-                  style={{ backgroundColor: "hsl(270, 50%, 85%)" }}
-                />
-                <div className="absolute inset-0 p-8 flex flex-col justify-end transition-opacity duration-500 group-hover:opacity-0">
-                  <h4 className="text-3xl font-bold tracking-tight text-foreground">Snapchat Redesign</h4>
-                </div>
+              </motion.div>
+              <div className="space-y-2">
+                <p className="text-sm text-muted-foreground">UX Redesign</p>
+                <h4 className="text-xl md:text-2xl font-light">Snapchat Redesign</h4>
+                <p className="text-sm text-muted-foreground">Accessibility improvements for older demographics</p>
               </div>
-              <p className="text-sm text-muted-foreground">Accessibility improvements for older demographics</p>
             </Link>
 
-            <Link to="/case-study/bobst-library" className="group">
-              <div className="relative aspect-[16/10] overflow-hidden mb-4">
+            <Link to="/case-study/bobst-library" className="group block space-y-4">
+              <motion.div 
+                className="relative aspect-[16/10] overflow-hidden rounded-lg"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.4 }}
+              >
                 <img 
                   src={bobstHero}
                   alt="NYU Bobst Library"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover"
                 />
-                <div 
-                  className="absolute inset-0 transition-opacity duration-500 group-hover:opacity-0"
-                  style={{ backgroundColor: "hsl(45, 70%, 88%)" }}
-                />
-                <div className="absolute inset-0 p-8 flex flex-col justify-end transition-opacity duration-500 group-hover:opacity-0">
-                  <h4 className="text-3xl font-bold tracking-tight text-foreground">NYU Bobst Library</h4>
-                </div>
+              </motion.div>
+              <div className="space-y-2">
+                <p className="text-sm text-muted-foreground">Digital Product</p>
+                <h4 className="text-xl md:text-2xl font-light">NYU Bobst Library</h4>
+                <p className="text-sm text-muted-foreground">Website optimization and accessibility compliance</p>
               </div>
-              <p className="text-sm text-muted-foreground">Website optimization and accessibility compliance</p>
             </Link>
           </div>
         </motion.div>
