@@ -4,16 +4,41 @@ import { Palette, X, Moon, Sun } from "lucide-react";
 
 interface GradientPreset {
   name: string;
-  colors: string[];
+  lightColors: string[];
+  darkColors: string[];
 }
 
 const gradientPresets: GradientPreset[] = [
-  { name: "Default", colors: ["hsl(0, 0%, 100%)", "hsl(0, 0%, 100%)", "hsl(0, 0%, 100%)", "hsl(0, 0%, 100%)", "hsl(0, 0%, 100%)"] },
-  { name: "Sunset", colors: ["hsl(0, 0%, 100%)", "hsl(20, 60%, 96%)", "hsl(340, 60%, 96%)", "hsl(280, 50%, 96%)", "hsl(0, 0%, 100%)"] },
-  { name: "Ocean", colors: ["hsl(0, 0%, 100%)", "hsl(200, 60%, 96%)", "hsl(220, 60%, 96%)", "hsl(240, 50%, 96%)", "hsl(0, 0%, 100%)"] },
-  { name: "Forest", colors: ["hsl(0, 0%, 100%)", "hsl(120, 40%, 96%)", "hsl(160, 50%, 96%)", "hsl(180, 40%, 96%)", "hsl(0, 0%, 100%)"] },
-  { name: "Lavender", colors: ["hsl(0, 0%, 100%)", "hsl(270, 50%, 96%)", "hsl(290, 60%, 96%)", "hsl(310, 50%, 96%)", "hsl(0, 0%, 100%)"] },
-  { name: "Warm", colors: ["hsl(0, 0%, 100%)", "hsl(30, 60%, 96%)", "hsl(40, 70%, 96%)", "hsl(50, 60%, 96%)", "hsl(0, 0%, 100%)"] },
+  { 
+    name: "Default", 
+    lightColors: ["hsl(0, 0%, 100%)", "hsl(0, 0%, 100%)", "hsl(0, 0%, 100%)", "hsl(0, 0%, 100%)", "hsl(0, 0%, 100%)"],
+    darkColors: ["hsl(0, 0%, 0%)", "hsl(0, 0%, 0%)", "hsl(0, 0%, 0%)", "hsl(0, 0%, 0%)", "hsl(0, 0%, 0%)"]
+  },
+  { 
+    name: "Sunset", 
+    lightColors: ["hsl(0, 0%, 100%)", "hsl(20, 60%, 96%)", "hsl(340, 60%, 96%)", "hsl(280, 50%, 96%)", "hsl(0, 0%, 100%)"],
+    darkColors: ["hsl(0, 0%, 0%)", "hsl(20, 60%, 15%)", "hsl(340, 60%, 15%)", "hsl(280, 50%, 15%)", "hsl(0, 0%, 0%)"]
+  },
+  { 
+    name: "Ocean", 
+    lightColors: ["hsl(0, 0%, 100%)", "hsl(200, 60%, 96%)", "hsl(220, 60%, 96%)", "hsl(240, 50%, 96%)", "hsl(0, 0%, 100%)"],
+    darkColors: ["hsl(0, 0%, 0%)", "hsl(200, 60%, 15%)", "hsl(220, 60%, 15%)", "hsl(240, 50%, 15%)", "hsl(0, 0%, 0%)"]
+  },
+  { 
+    name: "Forest", 
+    lightColors: ["hsl(0, 0%, 100%)", "hsl(120, 40%, 96%)", "hsl(160, 50%, 96%)", "hsl(180, 40%, 96%)", "hsl(0, 0%, 100%)"],
+    darkColors: ["hsl(0, 0%, 0%)", "hsl(120, 40%, 15%)", "hsl(160, 50%, 15%)", "hsl(180, 40%, 15%)", "hsl(0, 0%, 0%)"]
+  },
+  { 
+    name: "Lavender", 
+    lightColors: ["hsl(0, 0%, 100%)", "hsl(270, 50%, 96%)", "hsl(290, 60%, 96%)", "hsl(310, 50%, 96%)", "hsl(0, 0%, 100%)"],
+    darkColors: ["hsl(0, 0%, 0%)", "hsl(270, 50%, 15%)", "hsl(290, 60%, 15%)", "hsl(310, 50%, 15%)", "hsl(0, 0%, 0%)"]
+  },
+  { 
+    name: "Warm", 
+    lightColors: ["hsl(0, 0%, 100%)", "hsl(30, 60%, 96%)", "hsl(40, 70%, 96%)", "hsl(50, 60%, 96%)", "hsl(0, 0%, 100%)"],
+    darkColors: ["hsl(0, 0%, 0%)", "hsl(30, 60%, 15%)", "hsl(40, 70%, 15%)", "hsl(50, 60%, 15%)", "hsl(0, 0%, 0%)"]
+  },
 ];
 
 export const ThemeController = () => {
@@ -22,14 +47,25 @@ export const ThemeController = () => {
   const [selectedGradient, setSelectedGradient] = useState(0);
 
   useEffect(() => {
-    const isDarkMode = document.documentElement.classList.contains('dark');
     const savedTheme = localStorage.getItem('theme');
+    const savedGradient = localStorage.getItem('selectedGradient');
+    
     if (savedTheme === 'dark') {
       setIsDark(true);
       document.documentElement.classList.add('dark');
     }
-    setIsDark(isDarkMode);
+    
+    if (savedGradient) {
+      const gradientIndex = parseInt(savedGradient, 10);
+      setSelectedGradient(gradientIndex);
+    }
+    
+    applyGradient(savedGradient ? parseInt(savedGradient, 10) : 0, savedTheme === 'dark');
   }, []);
+
+  useEffect(() => {
+    applyGradient(selectedGradient, isDark);
+  }, [selectedGradient, isDark]);
 
   const toggleDarkMode = () => {
     const newIsDark = !isDark;
@@ -44,18 +80,21 @@ export const ThemeController = () => {
     }
   };
 
-  useEffect(() => {
-    applyGradient(selectedGradient);
-  }, [selectedGradient]);
-
-  const applyGradient = (index: number) => {
+  const applyGradient = (index: number, dark: boolean = isDark) => {
     const preset = gradientPresets[index];
+    const colors = dark ? preset.darkColors : preset.lightColors;
     const root = document.documentElement;
-    root.style.setProperty('--gradient-0', preset.colors[0]);
-    root.style.setProperty('--gradient-1', preset.colors[1]);
-    root.style.setProperty('--gradient-2', preset.colors[2]);
-    root.style.setProperty('--gradient-3', preset.colors[3]);
-    root.style.setProperty('--gradient-4', preset.colors[4]);
+    
+    root.style.setProperty('--gradient-0', colors[0]);
+    root.style.setProperty('--gradient-1', colors[1]);
+    root.style.setProperty('--gradient-2', colors[2]);
+    root.style.setProperty('--gradient-3', colors[3]);
+    root.style.setProperty('--gradient-4', colors[4]);
+  };
+
+  const handleGradientChange = (index: number) => {
+    setSelectedGradient(index);
+    localStorage.setItem('selectedGradient', index.toString());
   };
 
   return (
@@ -80,7 +119,7 @@ export const ThemeController = () => {
             className="fixed bottom-24 right-8 z-50 bg-background border border-border rounded-2xl shadow-2xl p-6 w-80"
           >
             <div className="flex items-center justify-between mb-6">
-              <h3 className="text-lg font-semibold">Theme</h3>
+              <h3 className="text-lg font-semibold text-foreground">Theme</h3>
               <button
                 onClick={() => setIsOpen(false)}
                 className="w-8 h-8 rounded-full hover:bg-muted flex items-center justify-center transition-colors"
@@ -92,15 +131,15 @@ export const ThemeController = () => {
             <div className="space-y-6">
               {/* Dark Mode Toggle */}
               <div className="flex items-center justify-between pb-4 border-b border-border">
-                <span className="text-sm font-medium">Dark Mode</span>
+                <span className="text-sm font-medium text-foreground">Dark Mode</span>
                 <button
                   onClick={toggleDarkMode}
                   className="w-12 h-12 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80 transition-colors"
                 >
                   {isDark ? (
-                    <Moon className="w-5 h-5" />
+                    <Moon className="w-5 h-5 text-foreground" />
                   ) : (
-                    <Sun className="w-5 h-5" />
+                    <Sun className="w-5 h-5 text-foreground" />
                   )}
                 </button>
               </div>
@@ -108,25 +147,22 @@ export const ThemeController = () => {
               {/* Gradient Presets */}
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <label className="text-sm font-medium">Scroll Gradient</label>
+                  <label className="text-sm font-medium text-foreground">Scroll Gradient</label>
                   <span className="text-xs text-muted-foreground">{gradientPresets[selectedGradient].name}</span>
                 </div>
                 <div className="grid grid-cols-2 gap-3">
                   {gradientPresets.map((preset, index) => (
-            <button
-              key={preset.name}
-              onClick={() => {
-                setSelectedGradient(index);
-                applyGradient(index);
-              }}
-              className={`relative p-4 rounded-lg border-2 transition-all ${
-                selectedGradient === index
-                  ? 'border-foreground'
-                  : 'border-border hover:border-foreground/50'
-              }`}
-            >
+                    <button
+                      key={preset.name}
+                      onClick={() => handleGradientChange(index)}
+                      className={`relative p-4 rounded-lg border-2 transition-all ${
+                        selectedGradient === index
+                          ? 'border-foreground'
+                          : 'border-border hover:border-foreground/50'
+                      }`}
+                    >
                       <div className="flex gap-1 mb-2">
-                        {preset.colors.slice(1, 4).map((color, i) => (
+                        {(isDark ? preset.darkColors : preset.lightColors).slice(1, 4).map((color, i) => (
                           <div
                             key={i}
                             className="h-6 flex-1 rounded"
@@ -134,7 +170,7 @@ export const ThemeController = () => {
                           />
                         ))}
                       </div>
-                      <span className="text-xs font-medium">{preset.name}</span>
+                      <span className="text-xs font-medium text-foreground">{preset.name}</span>
                     </button>
                   ))}
                 </div>
