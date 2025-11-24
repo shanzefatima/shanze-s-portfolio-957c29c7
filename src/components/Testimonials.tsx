@@ -33,12 +33,9 @@ export const Testimonials = () => {
           transition={{ duration: 0.8 }}
           className="mb-24 text-center"
         >
-          <h2 className="text-5xl md:text-7xl font-black tracking-tight mb-6">
-            What People Say
+          <h2 className="text-3xl md:text-4xl font-medium tracking-tight mb-4">
+            Testimonials
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Feedback from collaborators, mentors, and partners
-          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
