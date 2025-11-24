@@ -43,35 +43,35 @@ export const About = () => {
             </h2>
 
             <p>
-              Shanze holds a BSc from NYU in Interactive Media Arts and Computer Science. This rare combination allows
-              her to bridge design, engineering, and product strategy in ways most designers can't—building not just
-              interfaces, but entire ecosystems that are grounded in research and driven by measurable impact.
+              I hold a BSc from NYU in Interactive Media Arts and Computer Science. This unique combination allows
+              me to bridge design, engineering, and product strategy—building not just interfaces, but complete
+              product ecosystems grounded in research and driven by measurable business outcomes.
             </p>
 
             <p>
-              My approach is deeply data-driven and user-centered. I don't just design screens—I build entire ecosystems
-              that solve real problems. From creating the first accessible escape room for blind teens to optimizing
-              platforms that serve thousands daily, I combine research, prototyping, and cross-functional collaboration
-              to deliver measurable impact.
+              My approach is deeply data-driven and user-centered. I build end-to-end product experiences that solve
+              real problems and move metrics. From reducing cart abandonment by 22% in e-commerce to launching 0-to-1
+              accessible products adopted by 500+ users, I combine research, prototyping, and cross-functional
+              collaboration to deliver commercial impact.
             </p>
 
             <div className="pt-6 space-y-3">
               <div className="flex items-center gap-3">
                 <div className="w-1 h-1 bg-primary rounded-full" />
                 <p className="text-sm font-semibold text-foreground">
-                  Dean's Honors List · NYU Social Impact Fellowship
+                  Product Design · UX Research · Accessibility Strategy
                 </p>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-1 h-1 bg-primary rounded-full" />
                 <p className="text-sm font-semibold text-foreground">
-                  Figma Student Ambassador · Adobe Creative Jam Winner
+                  Mobile-First E-commerce · Learning Experience Design · Data Visualization
                 </p>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-1 h-1 bg-primary rounded-full" />
                 <p className="text-sm font-semibold text-foreground">
-                  Featured Speaker, NYC Design Week & Parsons Symposium
+                  Cross-functional Collaboration · Metrics-Driven Design · WCAG 2.1 AA Compliance
                 </p>
               </div>
             </div>

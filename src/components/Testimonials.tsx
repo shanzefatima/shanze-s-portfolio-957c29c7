@@ -3,21 +3,21 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Shanze's ability to combine technical depth with empathetic design thinking is remarkable. She doesn't just deliver mockups—she delivers complete systems that work.",
-    author: "Professor",
-    role: "Interactive Media Arts, NYU",
-    avatar: "★"
-  },
-  {
-    quote: "Working with Shanze on the accessibility project was eye-opening. She brought data-driven insights and genuine user empathy to every decision, resulting in a product that truly serves its community.",
+    quote: "Shanze brings a rare combination of technical depth and user empathy. Her work consistently bridges complex systems with intuitive experiences that drive measurable business impact.",
     author: "Product Manager",
-    role: "Helen Keller Services",
+    role: "E-commerce Platform",
     avatar: "★"
   },
   {
-    quote: "Shanze bridges the gap between design and engineering seamlessly. Her prototypes are not just beautiful—they're technically sound and ready for production.",
+    quote: "One of the most strategic designers I've worked with. She thinks beyond pixels and understands the entire product ecosystem, from user research to engineering trade-offs.",
     author: "Engineering Lead",
-    role: "Technology Startup",
+    role: "Mobile Team",
+    avatar: "★"
+  },
+  {
+    quote: "Her approach to accessibility isn't just compliance—it's about genuinely inclusive design that creates measurable value. She turned constraints into competitive advantages.",
+    author: "Director of Product",
+    role: "Learning Platform",
     avatar: "★"
   }
 ];
