@@ -11,19 +11,20 @@ export const Hero = () => {
           className="space-y-12"
         >
           <h1 className="font-sans text-[clamp(2.5rem,7vw,5.5rem)] leading-[1.15] tracking-tight font-light max-w-5xl">
-            Product designer who builds ecosystems that solve real problems and move metrics.
+            Product designer who thinks in systems, ships with intention, and moves business metrics.
           </h1>
 
           <div className="space-y-8 text-lg md:text-xl leading-relaxed text-muted-foreground max-w-4xl pt-8">
             <p>
-              Shanze is a product designer with a BSc from NYU in Interactive Media Arts and Computer Science. 
-              She works across design, engineering, and product to create experiences that deliver measurable impact.
+              I'm Shanze, a designer with a BSc from NYU in Interactive Media Arts and Computer Science. I work across the full stack—research, strategy, design, and enough code to be dangerous.
             </p>
 
             <p>
-              She takes pride in her craft and focuses on research-driven design. From 0-to-1 product launches 
-              to optimization work that moves conversion rates, she brings strategic thinking and technical fluency 
-              to every project.
+              I take pride in craft and care about the details that make experiences feel right. From 0-to-1 launches to optimization work that shifts conversion rates, I bring clarity to ambiguity and build things people actually use.
+            </p>
+
+            <p>
+              Recent work: reduced cart abandonment 22% through mobile checkout redesign, launched an accessible learning platform adopted by 500+ users nationwide, built data viz tools that made pandemic metrics understandable.
             </p>
           </div>
         </motion.div>
