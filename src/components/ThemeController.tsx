@@ -106,7 +106,10 @@ export const ThemeController = () => {
 
               {/* Gradient Presets */}
               <div className="space-y-3">
-                <label className="text-sm font-medium">Scroll Gradient</label>
+                <div className="flex items-center justify-between">
+                  <label className="text-sm font-medium">Scroll Gradient</label>
+                  <span className="text-xs text-muted-foreground">{gradientPresets[selectedGradient].name}</span>
+                </div>
                 <div className="grid grid-cols-2 gap-3">
                   {gradientPresets.map((preset, index) => (
                     <button

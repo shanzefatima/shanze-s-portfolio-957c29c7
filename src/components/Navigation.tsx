@@ -30,10 +30,13 @@ export const Navigation = () => {
     { label: "Contact", href: "#contact", type: "scroll" }
   ];
 
-  const handleNavClick = (item: typeof navItems[0]) => {
+  const handleNavClick = (item: typeof navItems[0], e?: React.MouseEvent) => {
     if (item.type === "scroll") {
-      // Only scroll if on homepage
-      if (location.pathname === "/") {
+      if (e) e.preventDefault();
+      // If not on homepage, navigate there first
+      if (location.pathname !== "/") {
+        window.location.href = "/" + item.href;
+      } else {
         const element = document.querySelector(item.href);
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });

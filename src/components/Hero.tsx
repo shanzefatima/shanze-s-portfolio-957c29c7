@@ -16,11 +16,11 @@ export const Hero = () => {
 
           <div className="space-y-8 text-lg md:text-xl leading-relaxed text-muted-foreground max-w-4xl pt-8">
             <p>
-              I'm Shanze, a designer with a BSc from NYU in Interactive Media Arts and Computer Science. I work across the full stack—research, strategy, design, and enough code to be dangerous.
+              I'm Shanze, a designer with a BSc from NYU in Interactive Media Arts and Computer Science. I work across the full stack: research, strategy, design, and enough code to be dangerous.
             </p>
 
             <p>
-              I take pride in craft and care about the details that make experiences feel right. From 0-to-1 launches to optimization work that shifts conversion rates, I bring clarity to ambiguity and build things people actually use.
+              I take pride in craft and care about the details that make experiences feel right. From 0 to 1 launches to optimization work that shifts conversion rates, I bring clarity to ambiguity and build things people actually use.
             </p>
 
             <p>
