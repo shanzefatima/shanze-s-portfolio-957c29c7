@@ -3,7 +3,7 @@ import profilePhoto from "@/assets/profile-photo.png";
 
 export const About = () => {
   return (
-    <section className="py-32 px-6 bg-background">
+    <section className="py-32 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Profile Photo */}

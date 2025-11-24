@@ -63,7 +63,7 @@ const caseStudies: CaseStudy[] = [
 export const CaseStudies = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   return (
-    <section id="work" className="py-32 px-6 bg-background">
+    <section id="work" className="py-32 px-6">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{
