@@ -111,9 +111,9 @@ export const CaseStudies = () => {
             >
               <Link to={`/case-study/${study.id}`} className="block space-y-6">
                 <motion.div
-                  className="relative aspect-[16/10] overflow-hidden rounded-lg"
+                  className="relative aspect-[3/2] overflow-hidden rounded-sm bg-muted/30"
                   whileHover={{
-                    scale: 1.02,
+                    scale: 1.01,
                   }}
                   transition={{
                     duration: 0.4,
@@ -122,7 +122,7 @@ export const CaseStudies = () => {
                   <img 
                     src={study.image} 
                     alt={study.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </motion.div>
                 
@@ -149,14 +149,14 @@ export const CaseStudies = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <Link to="/case-study/snapchat-redesign" className="group block space-y-4">
               <motion.div 
-                className="relative aspect-[16/10] overflow-hidden rounded-lg"
-                whileHover={{ scale: 1.02 }}
+                className="relative aspect-[3/2] overflow-hidden rounded-sm bg-muted/30"
+                whileHover={{ scale: 1.01 }}
                 transition={{ duration: 0.4 }}
               >
                 <img 
                   src={snapchatHero}
                   alt="Snapchat Redesign"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </motion.div>
               <div className="space-y-2">
@@ -168,14 +168,14 @@ export const CaseStudies = () => {
 
             <Link to="/case-study/bobst-library" className="group block space-y-4">
               <motion.div 
-                className="relative aspect-[16/10] overflow-hidden rounded-lg"
-                whileHover={{ scale: 1.02 }}
+                className="relative aspect-[3/2] overflow-hidden rounded-sm bg-muted/30"
+                whileHover={{ scale: 1.01 }}
                 transition={{ duration: 0.4 }}
               >
                 <img 
                   src={bobstHero}
                   alt="NYU Bobst Library"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </motion.div>
               <div className="space-y-2">
