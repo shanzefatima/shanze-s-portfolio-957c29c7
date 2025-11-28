@@ -39,6 +39,14 @@ export default function ShootForTheStars() {
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                 How I designed the first fully non visual escape room, enabling Helen Keller Services to launch a national pilot that reached 500+ blind and visually impaired teens, generating $120K in new program revenue and winning NYIT Innovation Award.
               </p>
+
+              {/* Executive Summary */}
+              <div className="p-8 bg-muted/30 border-l-4 border-primary mb-8">
+                <h2 className="text-xl font-medium mb-4">Executive Summary</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Escape rooms are built on visual logic. Blind and low vision players are systematically excluded, not because the concept doesn't work for them, but because no one designed it to. I didn't adapt an existing model. I broke it. Shoot for the Stars is the first escape room designed specifically for blind teens, no visuals, no compromise, no retrofits. Through sensory substitution using tactile interfaces, spatial audio, and voice input, I created a three puzzle narrative experience tested with real users at Helen Keller Services. The result: 500+ participants in the national pilot, 60% increase in user autonomy, and $120K in new program revenue.
+                </p>
+              </div>
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-border">
                 <div>

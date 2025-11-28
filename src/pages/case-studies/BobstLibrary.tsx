@@ -51,6 +51,14 @@ export default function BobstLibrary() {
                 500+ daily active users.
               </p>
 
+              {/* Executive Summary */}
+              <div className="p-8 bg-muted/30 border-l-4 border-primary mb-12">
+                <h2 className="text-xl font-medium mb-4">Executive Summary</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  NYU Bobst Library's website served 500+ daily users but suffered from buried navigation, failed searches, and a 68% mobile bounce rate. Students couldn't book study rooms. Faculty abandoned resource searches. The help desk was overwhelmed. I led a 5 month redesign combining analytics deep dives, 30 user interviews, and competitive analysis. The result: 20% increase in task completion, 25% faster service discovery, and $50K annual cost savings from reduced support tickets. Dashboard style homepage, federated search, and WCAG 2.1 AA compliance made the library's digital presence match its physical one.
+                </p>
+              </div>
+
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 py-8 border-y border-border">
                 <div>
                   <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">Role</p>

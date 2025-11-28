@@ -47,6 +47,14 @@ const CovidDataForest = () => {
               of a digital forest
             </p>
 
+            {/* Executive Summary */}
+            <div className="p-8 bg-muted/30 border-l-4 border-primary mb-12">
+              <h2 className="text-xl font-medium mb-4">Executive Summary</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                During the pandemic, people drowned in numbers. Daily cases, death rates, recovery stats. Traditional charts failed to make the data stick or reveal regional patterns. I created the COVID Data Forest, an interactive visualization where each country becomes a living tree in a digital ecosystem. 500K+ data points across 8 South Asian countries, visualized through height (total cases), color (mortality), and growth over time. The metaphor made complex epidemiological data accessible to general audiences while maintaining depth for researchers. Physical and digital prototypes merged data science with storytelling.
+              </p>
+            </div>
+
             {/* Project Meta */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 pb-16 border-b border-border">
               <div>

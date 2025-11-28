@@ -59,6 +59,14 @@ export default function SnapchatRedesign() {
                 WCAG 2.1 AA compliance.
               </p>
 
+              {/* Executive Summary */}
+              <div className="p-8 bg-muted/30 border-l-4 border-primary mb-12">
+                <h2 className="text-xl font-medium mb-4">Executive Summary</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Snapchat's interface relies on hidden gestures and undocumented interactions that lock out older users and anyone with accessibility needs. 80% of users aged 35 to 65 couldn't complete basic tasks like sending messages or viewing stories without external help. I redesigned the core interface to replace gesture dependence with visible navigation, created guided onboarding, and fixed 47 WCAG violations. The result: 30% faster task completion for non Gen Z users and full AA compliance without sacrificing Snapchat's personality. Tested with 25 participants across age groups and tech literacy levels.
+                </p>
+              </div>
+
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 py-8 border-y border-border">
                 <div>
                   <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">Role</p>

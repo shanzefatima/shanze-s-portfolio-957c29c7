@@ -39,6 +39,14 @@ export default function HyperMarket() {
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                 How I reduced cart abandonment from 58% to 36% by fixing critical mobile UX bottlenecks in Pakistan's fastest growing online grocery platform, directly impacting $2.1M in annual recovered revenue.
               </p>
+
+              {/* Executive Summary */}
+              <div className="p-8 bg-muted/30 border-l-4 border-primary mb-8">
+                <h2 className="text-xl font-medium mb-4">Executive Summary</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  HyperMarket was bleeding $2.1M annually from cart abandonment. The problem was clear: 70% mobile traffic forced through a desktop first interface. Hidden delivery fees appeared at checkout. Search failed 35% of the time. I led the mobile first redesign that cut abandonment from 58% to 36%, slashed checkout time by 2.5x, and increased repeat orders 40%. The work combined research with 18 users, three design iterations, and ruthless prioritization with PM and engineering to ship an MVP in 4 months.
+                </p>
+              </div>
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-border">
                 <div>
