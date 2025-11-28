@@ -1,57 +1,131 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
-import { Mail, Linkedin, Globe, Send, ArrowUpRight } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+import { Mail, Linkedin, Send, Loader2 } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
+
+interface Message {
+  role: "user" | "assistant";
+  content: string;
+}
 
 export const Contact = () => {
-  const [showEmailCard, setShowEmailCard] = useState(false);
-  const [message, setMessage] = useState("");
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      role: "assistant",
+      content: "what's your name?"
+    }
+  ]);
+  const [inputMessage, setInputMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const { toast } = useToast();
   const email = "shanze.fatima.j@nyu.edu";
 
-  const handleEmailClick = () => {
-    window.location.href = `mailto:${email}?subject=Let's Chat&body=${encodeURIComponent(message || "Hi Shanze,")}`;
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
+  const handleSendMessage = async () => {
+    if (!inputMessage.trim() || isLoading) return;
+
+    const userMessage: Message = { role: "user", content: inputMessage };
+    setMessages(prev => [...prev, userMessage]);
+    setInputMessage("");
+    setIsLoading(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('contact-chat', {
+        body: { messages: [...messages, userMessage] }
+      });
+
+      if (error) throw error;
+
+      const assistantMessage: Message = { role: "assistant", content: data.message };
+      setMessages(prev => [...prev, assistantMessage]);
+    } catch (error) {
+      console.error('Chat error:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSendMessage();
+    }
   };
 
   return (
     <footer className="min-h-screen py-24 px-6 bg-background flex items-center justify-center relative overflow-hidden">
       <div className="max-w-4xl mx-auto w-full">
         {/* Chat Messages */}
-        <div className="space-y-6 mb-8">
-          {/* Shanze's Message */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="flex items-start gap-4"
-          >
-            <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-border">
-              <img 
-                src={profilePhoto} 
-                alt="Shanze Fatima Javed"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div>
-              <p className="text-sm text-muted-foreground mb-2 font-medium">Shanze</p>
-              <div className="bg-muted px-6 py-4 rounded-3xl rounded-tl-sm max-w-md">
-                <p className="text-foreground text-lg">what's your name?</p>
+        <div className="space-y-6 mb-8 max-h-[60vh] overflow-y-auto">
+          {messages.map((msg, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: msg.role === "assistant" ? -40 : 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4 }}
+              className={msg.role === "assistant" ? "flex items-start gap-4" : "flex justify-end"}
+            >
+              {msg.role === "assistant" && (
+                <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-border">
+                  <img 
+                    src={profilePhoto} 
+                    alt="Shanze Fatima Javed"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              )}
+              <div className={msg.role === "assistant" ? "" : ""}>
+                {msg.role === "assistant" && (
+                  <p className="text-sm text-muted-foreground mb-2 font-medium">Shanze's AI</p>
+                )}
+                <div className={msg.role === "assistant" 
+                  ? "bg-muted px-6 py-4 rounded-3xl rounded-tl-sm max-w-md"
+                  : "bg-primary px-6 py-4 rounded-3xl rounded-tr-sm max-w-md"
+                }>
+                  <p className={msg.role === "assistant" ? "text-foreground text-lg" : "text-primary-foreground text-lg"}>
+                    {msg.content}
+                  </p>
+                </div>
               </div>
-            </div>
-          </motion.div>
-
-          {/* Response Message */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex justify-end"
-          >
-            <div className="bg-primary px-6 py-4 rounded-3xl rounded-tr-sm max-w-md">
-              <p className="text-primary-foreground text-lg">sounds good 🙏</p>
-            </div>
-          </motion.div>
+            </motion.div>
+          ))}
+          {isLoading && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="flex items-start gap-4"
+            >
+              <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-border">
+                <img 
+                  src={profilePhoto} 
+                  alt="Shanze Fatima Javed"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <p className="text-sm text-muted-foreground mb-2 font-medium">Shanze's AI</p>
+                <div className="bg-muted px-6 py-4 rounded-3xl rounded-tl-sm">
+                  <Loader2 className="w-5 h-5 animate-spin text-muted-foreground" />
+                </div>
+              </div>
+            </motion.div>
+          )}
+          <div ref={messagesEndRef} />
         </div>
 
         {/* Input Area */}
@@ -88,74 +162,29 @@ export const Contact = () => {
           <div className="relative">
             <input
               type="text"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              onFocus={() => setShowEmailCard(true)}
-              placeholder="Message"
-              className="w-full px-8 py-5 bg-background border-2 border-primary rounded-full text-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-0 pr-16 transition-colors"
+              value={inputMessage}
+              onChange={(e) => setInputMessage(e.target.value)}
+              onKeyPress={handleKeyPress}
+              placeholder="Type your message..."
+              disabled={isLoading}
+              className="w-full px-8 py-5 bg-background border-2 border-primary rounded-full text-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-0 pr-16 transition-colors disabled:opacity-50"
             />
             <motion.button
-              onClick={() => setShowEmailCard(true)}
+              onClick={handleSendMessage}
+              disabled={isLoading || !inputMessage.trim()}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="absolute right-2 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:bg-primary/90 transition-colors"
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <Send className="w-5 h-5" />
+              {isLoading ? (
+                <Loader2 className="w-5 h-5 animate-spin" />
+              ) : (
+                <Send className="w-5 h-5" />
+              )}
             </motion.button>
           </div>
         </motion.div>
 
-        {/* Email Card Overlay */}
-        <AnimatePresence>
-          {showEmailCard && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-background/80 backdrop-blur-md z-50 flex items-center justify-center p-6"
-              onClick={() => setShowEmailCard(false)}
-            >
-              <motion.div
-                initial={{ scale: 0.9, y: 20 }}
-                animate={{ scale: 1, y: 0 }}
-                exit={{ scale: 0.9, y: 20 }}
-                onClick={(e) => e.stopPropagation()}
-                className="bg-muted/50 backdrop-blur-sm rounded-2xl p-8 max-w-lg w-full border border-border shadow-2xl"
-              >
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-16 h-16 rounded-2xl bg-foreground flex items-center justify-center">
-                    <Mail className="w-8 h-8 text-background" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-semibold text-foreground">Shanze Fatima Javed</h3>
-                    <p className="text-muted-foreground">{email}</p>
-                  </div>
-                </div>
-
-                <div className="bg-background/50 rounded-xl p-6 mb-6 border-l-4 border-primary space-y-4">
-                  <div>
-                    <span className="text-sm text-muted-foreground">To</span>
-                    <p className="text-foreground font-medium">{email}</p>
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-foreground mb-2">Let's Chat</h4>
-                    <p className="text-muted-foreground">Say hello</p>
-                  </div>
-                </div>
-
-                <motion.button
-                  onClick={handleEmailClick}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full py-4 rounded-full border-2 border-foreground text-foreground font-semibold text-lg hover:bg-foreground hover:text-background transition-all flex items-center justify-center gap-2 group"
-                >
-                  Email Me
-                  <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                </motion.button>
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
 
         {/* Footer Links */}
         <motion.div
