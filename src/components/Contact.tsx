@@ -16,14 +16,15 @@ export const Contact = () => {
   const [inputMessage, setInputMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
   const {
     toast
   } = useToast();
   const email = "shanze.fatima.j@nyu.edu";
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({
-      behavior: "smooth"
-    });
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+    }
   };
   useEffect(() => {
     scrollToBottom();
@@ -72,7 +73,7 @@ export const Contact = () => {
   return <footer className="min-h-screen py-24 px-6 bg-background flex items-center justify-center relative overflow-hidden">
       <div className="max-w-4xl mx-auto w-full">
         {/* Chat Messages */}
-        <div className="space-y-6 mb-8 max-h-[60vh] overflow-y-auto">
+        <div ref={messagesContainerRef} className="space-y-6 mb-8 max-h-[60vh] overflow-y-auto">
           {messages.map((msg, index) => <motion.div key={index} initial={{
           opacity: 0,
           x: msg.role === "assistant" ? -40 : 40
