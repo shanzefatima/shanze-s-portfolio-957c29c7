@@ -71,7 +71,7 @@ export const ChatWidget = () => {
   };
   return <>
       {/* Chat Button */}
-      <motion.button onClick={() => setIsOpen(!isOpen)} className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center hover:scale-110 transition-transform" whileHover={{
+      <motion.button onClick={() => setIsOpen(!isOpen)} className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 w-14 h-14 md:w-16 md:h-16 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center hover:scale-110 transition-transform" whileHover={{
       scale: 1.1
     }} whileTap={{
       scale: 0.95
@@ -95,7 +95,7 @@ export const ChatWidget = () => {
         scale: 0.95
       }} transition={{
         duration: 0.2
-      }} className="fixed bottom-24 right-6 z-50 w-96 h-[600px] bg-background border-2 border-border rounded-3xl shadow-2xl flex flex-col overflow-hidden">
+      }} className="fixed inset-4 md:bottom-24 md:right-6 md:left-auto md:top-auto z-50 md:w-96 md:h-[600px] bg-background border-2 border-border rounded-3xl shadow-2xl flex flex-col overflow-hidden">
             {/* Header */}
             <div className="bg-muted px-6 py-4 border-b border-border">
               <div className="flex items-center gap-3">
