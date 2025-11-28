@@ -12,6 +12,7 @@ import HyperMarket from "./pages/case-studies/HyperMarket";
 import SnapchatRedesign from "./pages/case-studies/SnapchatRedesign";
 import BobstLibrary from "./pages/case-studies/BobstLibrary";
 import CovidDataForest from "./pages/case-studies/CovidDataForest";
+import { ChatWidget } from "./components/ChatWidget";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +44,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <ChatWidget />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
