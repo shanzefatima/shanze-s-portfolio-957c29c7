@@ -11,7 +11,7 @@ export default function About() {
   });
 
   const [activeSection, setActiveSection] = useState(0);
-  const sections = ["Intro", "Philosophy", "Process", "FAQ"];
+  const sections = ["Intro", "Philosophy", "Skills", "Education", "Process", "FAQ"];
 
   useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (latest) => {
@@ -149,6 +149,114 @@ export default function About() {
                     Designing for everyone isn't a feature, it's a baseline. WCAG compliance and inclusive design 
                     principles ensure products work for real humans in real contexts.
                   </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Skills Section */}
+        <section className="min-h-screen flex items-center px-6 lg:px-16">
+          <div className="max-w-4xl mx-auto w-full">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="space-y-12"
+            >
+              <h2 className="text-4xl lg:text-5xl font-light tracking-tight">
+                Skills
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="space-y-4">
+                  <h3 className="text-xl font-medium text-foreground">Design & Prototyping</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Figma, Sketch, Adobe XD, Framer, Axure, InVision Studio. High and low fidelity prototyping, 
+                    user flows, wireframes, motion design.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  <h3 className="text-xl font-medium text-foreground">UX & Product</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Design thinking, user centered design, iOS guidelines, design systems, 
+                    interaction design, minimum viable products, chatbot design.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  <h3 className="text-xl font-medium text-foreground">Development</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    HTML, CSS, JavaScript, P5.js, responsive web design, Rhino, Grasshopper. 
+                    Comfortable prototyping in code and collaborating with engineers.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  <h3 className="text-xl font-medium text-foreground">Creative Tools</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Adobe Creative Suite (Photoshop, Illustrator, InDesign, Premiere), Autodesk Maya, 
+                    Vectary 3D. Graphic design, branding, 3D modeling, animation.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Education Section */}
+        <section className="min-h-screen flex items-center px-6 lg:px-16 bg-muted/30">
+          <div className="max-w-4xl mx-auto w-full">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="space-y-12"
+            >
+              <h2 className="text-4xl lg:text-5xl font-light tracking-tight">
+                Education
+              </h2>
+              
+              <div className="space-y-12">
+                <div className="space-y-4 pb-8 border-b border-border">
+                  <h3 className="text-2xl font-medium text-foreground">New York University</h3>
+                  <p className="text-lg text-muted-foreground">
+                    Bachelor of Science in Interactive Media Arts & Computer Science
+                  </p>
+                </div>
+
+                <div className="space-y-6">
+                  <h3 className="text-xl font-medium text-foreground">Online Certifications</h3>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <p className="text-sm font-mono text-muted-foreground">University of Michigan</p>
+                      <p className="text-foreground">Extended Reality for Everybody</p>
+                    </div>
+
+                    <div className="space-y-2">
+                      <p className="text-sm font-mono text-muted-foreground">Google</p>
+                      <p className="text-foreground">User Experience Design</p>
+                    </div>
+
+                    <div className="space-y-2">
+                      <p className="text-sm font-mono text-muted-foreground">AWS</p>
+                      <p className="text-foreground">Generative AI Learning</p>
+                    </div>
+
+                    <div className="space-y-2">
+                      <p className="text-sm font-mono text-muted-foreground">Meta</p>
+                      <p className="text-foreground">AR Developer Professional Certificate</p>
+                    </div>
+
+                    <div className="space-y-2">
+                      <p className="text-sm font-mono text-muted-foreground">Parsons</p>
+                      <p className="text-foreground">Design Certification</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>
