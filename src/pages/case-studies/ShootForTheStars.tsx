@@ -10,6 +10,9 @@ import puzzle1Image from "@/assets/shoot-stars-puzzle1.png";
 import puzzle2Image from "@/assets/shoot-stars-puzzle2.png";
 import puzzle3Image from "@/assets/shoot-stars-puzzle3.png";
 import resultsImage from "@/assets/shoot-stars-results.png";
+import researchNotesImage from "@/assets/shoot-stars-research-notes.png";
+import themesImage from "@/assets/shoot-stars-themes.png";
+import prototypingImage from "@/assets/shoot-stars-prototyping.png";
 
 export default function ShootForTheStars() {
   return (
@@ -303,6 +306,65 @@ export default function ShootForTheStars() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </motion.div>
+
+            {/* Design Process & Research */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mb-24"
+            >
+              <h2 className="text-3xl font-light mb-8">Design Process & Research</h2>
+              <p className="text-muted-foreground leading-relaxed mb-12">
+                I led a comprehensive research process combining academic review, community ethnography, and iterative prototyping. Here's how insights shaped design decisions:
+              </p>
+
+              {/* Research Notes */}
+              <div className="mb-16">
+                <h3 className="text-2xl font-light mb-6">Research Synthesis</h3>
+                <div className="aspect-[16/9] overflow-hidden border border-border bg-muted mb-6">
+                  <img 
+                    src={researchNotesImage}
+                    alt="Research notes showing ideation and grouping of accessibility insights"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Research notes synthesizing insights from academic literature on game accessibility, community ethnography with blind gamers, and competitive analysis of existing accessible games. Key themes emerged around sensory substitution, feedback loops, and autonomy.
+                </p>
+              </div>
+
+              {/* Themes */}
+              <div className="mb-16">
+                <h3 className="text-2xl font-light mb-6">Design Themes & Principles</h3>
+                <div className="aspect-[16/9] overflow-hidden border border-border bg-muted mb-6">
+                  <img 
+                    src={themesImage}
+                    alt="Three design theme groups showing accessibility tips, rules for accessible games, and player feedback"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Three core design themes guided all decisions: Group 1 focused on accessibility tips (sensory substitution, feedback mechanisms, alt text). Group 2 established rules for accessible games (physical/sonic game elements, autonomy over assistance). Group 3 captured player sentiments emphasizing challenge and independence over simplification.
+                </p>
+              </div>
+
+              {/* Prototyping Process */}
+              <div className="mb-16">
+                <h3 className="text-2xl font-light mb-6">Prototyping & Iteration Map</h3>
+                <div className="aspect-[16/9] overflow-hidden border border-border bg-muted mb-6">
+                  <img 
+                    src={prototypingImage}
+                    alt="Comprehensive prototyping process map showing puzzle iterations, accessibility features, and design considerations"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Complete prototyping process documenting puzzle mechanics, accessibility toolkit decisions (braille, voice command, keyboard navigation, spatial audio), and iterative refinements. Each puzzle went through multiple rounds of testing with explicit documentation of what worked, what failed, and why changes were made.
+                </p>
               </div>
             </motion.div>
 
