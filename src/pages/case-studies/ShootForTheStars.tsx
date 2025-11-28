@@ -11,14 +11,9 @@ import puzzle2Image from "@/assets/shoot-stars-puzzle2.png";
 import puzzle3Image from "@/assets/shoot-stars-puzzle3.png";
 import resultsImage from "@/assets/shoot-stars-results.png";
 
-// TODO: Replace these placeholders with actual research images
-// Upload these to src/assets/ in Dev Mode:
-// 1. shoot-stars-research-notes.png
-// 2. shoot-stars-themes.png  
-// 3. shoot-stars-prototyping.png
-const researchNotesImage = aboutImage; // Placeholder
-const themesImage = configImage; // Placeholder
-const prototypingImage = puzzle1Image; // Placeholder
+import researchNotesImage from "@/assets/shoot-stars-research-notes.png";
+import themesImage from "@/assets/shoot-stars-themes.png";
+import prototypingImage from "@/assets/shoot-stars-prototyping.png";
 
 export default function ShootForTheStars() {
   return (
