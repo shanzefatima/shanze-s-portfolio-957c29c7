@@ -121,7 +121,7 @@ export const ChatWidget = () => {
             duration: 0.3
           }} className={msg.role === "assistant" ? "flex items-start gap-2" : "flex justify-end"}>
                   {msg.role === "assistant" && <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0 ring-1 ring-border">
-                      <img src={profilePhoto} alt="AI" className="w-full h-full object-cover" />
+                      <img alt="AI" className="w-full h-full object-cover" src="/lovable-uploads/7937fa5e-491a-48b5-b9ea-a6ce1c292fe4.png" />
                     </div>}
                   <div className={msg.role === "assistant" ? "bg-muted px-4 py-3 rounded-2xl rounded-tl-sm max-w-[280px]" : "bg-primary px-4 py-3 rounded-2xl rounded-tr-sm max-w-[280px]"}>
                     <p className={msg.role === "assistant" ? "text-foreground text-sm" : "text-primary-foreground text-sm"}>
