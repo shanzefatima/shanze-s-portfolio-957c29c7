@@ -100,7 +100,7 @@ export const ChatWidget = () => {
             <div className="bg-muted px-6 py-4 border-b border-border">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-border">
-                  <img alt="Shanze Fatima Javed" className="w-full h-full object-cover" src="/lovable-uploads/a995649d-4478-4f97-bb2d-a6b866608298.png" />
+                  <img alt="Shanze Fatima Javed" className="w-full h-full object-cover" src="/lovable-uploads/0072b064-c325-4845-8cc7-c6d5f0bed655.png" />
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">Shanze's AI</p>
