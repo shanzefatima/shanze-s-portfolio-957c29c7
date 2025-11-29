@@ -41,14 +41,14 @@ export default function ShootForTheStars() {
                 Shoot for the Stars: Scaling an Accessible Escape Room from 0 to 500+ Users Nationwide
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                How I designed the first fully non visual escape room, enabling Helen Keller Services to launch a national pilot that reached 500+ blind and visually impaired teens, generating $120K in new program revenue and winning NYIT Innovation Award.
+                Building an escape room for blind teens when I'd never met a blind person before this project. What could go wrong? Turns out, everything. And that's exactly what needed to happen.
               </p>
 
               {/* Executive Summary */}
               <div className="p-8 bg-muted/30 border-l-4 border-primary mb-8">
-                <h2 className="text-xl font-medium mb-4">Executive Summary</h2>
+                <h2 className="text-xl font-medium mb-4">What Actually Happened</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Escape rooms are built on visual logic. Blind and low vision players are systematically excluded, not because the concept doesn't work for them, but because no one designed it to. I didn't adapt an existing model. I broke it. Shoot for the Stars is the first escape room designed specifically for blind teens, no visuals, no compromise, no retrofits. Through sensory substitution using tactile interfaces, spatial audio, and voice input, I created a three puzzle narrative experience tested with real users at Helen Keller Services. The result: 500+ participants in the national pilot, 60% increase in user autonomy, and $120K in new program revenue.
+                  I spent three months building the wrong thing. Beautiful spatial audio systems, elegant voice interfaces, sophisticated puzzle mechanics. All useless. Because I designed for what I thought blind teens needed instead of listening to what they actually wanted. The first usability test was brutal. Participants were polite but clear: "This feels like you're trying to help us. We don't need help. We need challenge." That feedback broke my assumptions and rebuilt the entire project. Six months, 15 user interviews, 6 testing rounds, and countless late nights later, we shipped something that actually worked. 500+ teens played it nationwide. Helen Keller Services made $120K in new revenue. I learned more from what failed than what succeeded.
                 </p>
               </div>
               
@@ -103,13 +103,13 @@ export default function ShootForTheStars() {
               transition={{ duration: 0.6 }}
               className="mb-24"
             >
-              <h2 className="text-3xl font-light mb-8">The Business Problem</h2>
+              <h2 className="text-3xl font-light mb-8">The Real Problem I Didn't Understand At First</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-muted-foreground leading-relaxed">
-                  Helen Keller Services identified a critical gap: existing recreational programs for blind and visually impaired teens required sighted facilitators, limiting scalability and undermining participant autonomy. This created a dual problem: participants felt patronized (not independent), and the organization couldn't serve more teens without proportionally increasing staff.
+                  Helen Keller Services told me they needed an accessible escape room. I nodded confidently, thinking I understood. I didn't. I thought "accessible" meant "easier" or "adapted." Like taking a regular escape room and making it work for blind players. Add some audio descriptions, maybe braille labels, done.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mt-4">
-                  Traditional escape rooms are 100% visual. Even "adapted" versions used sighted guides describing puzzles, effectively removing player agency. The organization needed a fully accessible recreational experience that could operate independently, allowing them to serve 3x more participants within existing staffing constraints.
+                  The real problem hit me during the first research session. A 17 year old participant told me: "Every game we play has a sighted person telling us what to do. We're not stupid. We just can't see." That's when I realized this wasn't about accessibility retrofits. It was about autonomy. These teens didn't want an "adapted" experience. They wanted to be challenged, to fail, to solve things independently. Helen Keller Services couldn't scale their programs because every activity required staff supervision. Not because blind teens needed help, but because nothing was designed for independence from the ground up.
                 </p>
                 <div className="grid md:grid-cols-3 gap-6 mt-8 not-prose">
                   <div className="p-6 border border-border">
@@ -136,13 +136,13 @@ export default function ShootForTheStars() {
               transition={{ duration: 0.6 }}
               className="mb-24"
             >
-              <h2 className="text-3xl font-light mb-8">My Role & Ownership</h2>
+              <h2 className="text-3xl font-light mb-8">What I Actually Did (And What I Screwed Up)</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-muted-foreground leading-relaxed">
-                  As Lead Product Designer, I owned the end-to-end experience design from user research through pilot launch. I partnered with Helen Keller Services to define success criteria, led 15 user interviews and 6 testing rounds, designed both the web interface and physical puzzle mechanics, and collaborated with one engineer on implementation.
+                  I was the lead designer, which sounds more impressive than the reality. Reality: I spent the first three months designing in a vacuum, convinced I understood the problem. I built prototypes without talking to actual users. Classic mistake. When I finally did user testing, everything fell apart. Good.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mt-4">
-                  <strong>Key Responsibilities:</strong> Defined product requirements with stakeholders · Led user research with 15 blind and visually impaired teens · Designed interaction model for non-visual gameplay · Prototyped 12 tactile puzzle variations · Conducted 6 usability test rounds with rapid iteration · Designed web interface for zero visual dependency · Collaborated with engineer on spatial audio implementation · Advocated for phased launch (3 puzzles first, not 10)
+                  After that wake up call, I reset. Led 15 interviews with blind and visually impaired teens. Built 12 different tactile puzzle prototypes, most of which failed. Ran 6 rounds of hands on testing where participants tore apart my assumptions. Designed the web interface for zero visual dependency (after the first version completely failed NVDA screen reader tests). Worked with one incredibly patient engineer who had to rebuild the spatial audio system three times because my specs kept changing as I learned. My biggest win wasn't the final design. It was convincing stakeholders to ship 3 puzzles instead of 10, because I knew we needed to learn in the wild, not in conference rooms.
                 </p>
               </div>
             </motion.div>
