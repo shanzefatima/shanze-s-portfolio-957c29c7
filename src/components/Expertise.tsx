@@ -55,9 +55,7 @@ export const Expertise = () => {
         }} className="group relative">
               <div className="h-full p-8 bg-background border border-border hover:border-primary transition-all duration-300">
                 <div className="mb-6">
-                  <div className="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary mb-6">
-                    <capability.icon className="w-6 h-6" />
-                  </div>
+                  
                   <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">
                     {capability.title}
                   </h3>
