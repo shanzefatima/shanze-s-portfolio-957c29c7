@@ -12,9 +12,7 @@ export const Hero = () => {
         duration: 0.8,
         ease: [0.22, 1, 0.36, 1]
       }} className="space-y-12">
-          <h1 className="font-sans text-[clamp(2.5rem,7vw,5.5rem)] leading-[1.15] tracking-tight font-light max-w-5xl text-foreground">
-            Hi, I'm Shanze. I design products that actually work for people.
-          </h1>
+          <h1 className="font-sans text-[clamp(2.5rem,7vw,5.5rem)] leading-[1.15] tracking-tight font-light max-w-5xl text-foreground">Hi, I'm Shanze. I design products that actually work for people.</h1>
 
           <div className="space-y-8 text-lg md:text-xl leading-relaxed text-muted-foreground max-w-4xl pt-8">
             <p>
