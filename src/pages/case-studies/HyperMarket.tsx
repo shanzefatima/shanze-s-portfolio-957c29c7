@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import { ArrowLeft, TrendingUp, Users, ShoppingCart, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
-
 import heroImage from "@/assets/hypermarket-home-screen.png";
 import onboardingImage from "@/assets/hypermarket-onboarding.png";
 import searchImage from "@/assets/hypermarket-search-discovery.png";
@@ -10,10 +9,8 @@ import categoriesImage from "@/assets/hypermarket-categories-offers.png";
 import cartTrackingImage from "@/assets/hypermarket-cart-tracking.png";
 import checkoutImage from "@/assets/hypermarket-checkout-payment.png";
 import profileImage from "@/assets/hypermarket-profile-wishlist.png";
-
 export default function HyperMarket() {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       <article className="pt-32 pb-24">
@@ -24,18 +21,19 @@ export default function HyperMarket() {
               Back to Portfolio
             </Link>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="mb-16"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.6
+          }} className="mb-16">
               <div className="inline-block px-3 py-1 mb-6 text-sm border border-border rounded-full">
                 E-Commerce · Mobile UX · Product Strategy
               </div>
-              <h1 className="text-4xl md:text-6xl font-light tracking-tight mb-6">
-                HyperMarket: Recovering $2.1M in Lost Revenue Through Mobile Checkout Optimization
-              </h1>
+              <h1 className="text-4xl md:text-6xl font-light tracking-tight mb-6">HyperMarket: Recovering Lost Revenue Through Mobile Checkout Optimization</h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                 Sometimes the best design decision is admitting your entire approach is wrong and starting over. This is that story.
               </p>
@@ -69,18 +67,17 @@ export default function HyperMarket() {
             </motion.div>
 
             {/* Hero Image */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-24"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} className="mb-24">
               <div className="aspect-[16/10] overflow-hidden border border-border bg-muted">
-                <img 
-                  src={heroImage}
-                  alt="HyperMarket Mobile Home Screen"
-                  className="w-full h-full object-cover"
-                />
+                <img src={heroImage} alt="HyperMarket Mobile Home Screen" className="w-full h-full object-cover" />
               </div>
               <p className="text-sm text-muted-foreground mt-4">
                 Redesigned mobile-first shopping experience with smart search, simplified checkout, and real-time tracking
@@ -92,13 +89,17 @@ export default function HyperMarket() {
         <section className="px-6 mb-24">
           <div className="max-w-5xl mx-auto">
             {/* Business Problem */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mb-24"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6
+          }} className="mb-24">
               <h2 className="text-3xl font-light mb-8">How We Were Bleeding Money (And Didn't Realize Why)</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-muted-foreground leading-relaxed">
@@ -125,13 +126,17 @@ export default function HyperMarket() {
             </motion.div>
 
             {/* My Role */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mb-24"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6
+          }} className="mb-24">
               <h2 className="text-3xl font-light mb-8">My Role (Or: How I Almost Missed The Deadline)</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-muted-foreground leading-relaxed">
@@ -144,13 +149,17 @@ export default function HyperMarket() {
             </motion.div>
 
             {/* Goals & Success Metrics */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mb-24"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6
+          }} className="mb-24">
               <h2 className="text-3xl font-light mb-8">Goals & Success Metrics</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-muted-foreground leading-relaxed mb-6">
@@ -178,13 +187,17 @@ export default function HyperMarket() {
             </motion.div>
 
             {/* Research & Insights */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mb-24"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6
+          }} className="mb-24">
               <h2 className="text-3xl font-light mb-8">What Users Actually Taught Me (After I Stopped Talking)</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-muted-foreground leading-relaxed mb-8">
@@ -198,7 +211,7 @@ export default function HyperMarket() {
                       Watching someone spend 20 minutes carefully building a $40 cart, then seeing their face when $8 in fees appeared at checkout, that's when I got it. We were sabotaging ourselves. They felt tricked. One woman literally said, "I feel stupid now." She didn't come back.
                     </p>
                     <p className="text-sm italic text-muted-foreground">
-                      "I spent 20 minutes adding items, then saw the delivery charge and just closed the app. I felt tricked. Like you were hiding it on purpose." <br/>
+                      "I spent 20 minutes adding items, then saw the delivery charge and just closed the app. I felt tricked. Like you were hiding it on purpose." <br />
                       — User Interview, 32 year old mom of three, price sensitive shopper
                     </p>
                   </div>
@@ -209,7 +222,7 @@ export default function HyperMarket() {
                       User types "organic tomatoes." We have 12 SKUs. Search returns nothing because it requires exact product name matches. User assumes we don't carry organic tomatoes. Opens competitor app. We just lost a customer because our search algorithm was too literal to be useful. This happened constantly.
                     </p>
                     <p className="text-sm italic text-muted-foreground">
-                      "If I can't find what I need in 30 seconds, I just open Instacart. I have two kids screaming. I don't have time for your category browsing." <br/>
+                      "If I can't find what I need in 30 seconds, I just open Instacart. I have two kids screaming. I don't have time for your category browsing." <br />
                       — User Interview, busy parent segment, weekly shopper
                     </p>
                   </div>
@@ -220,7 +233,7 @@ export default function HyperMarket() {
                       People would place an order, then immediately panic. "Did it go through? When is it coming? Should I have ordered more?" They'd call support three times in an hour. We gave them zero visibility, then acted surprised when they needed hand holding. 28% of support tickets were "Where's my order?" within 60 minutes of purchase. Self inflicted wound.
                     </p>
                     <p className="text-sm italic text-muted-foreground">
-                      "I ordered groceries for dinner tonight but have no idea if they're actually coming. I've called support three times. This is stressful." <br/>
+                      "I ordered groceries for dinner tonight but have no idea if they're actually coming. I've called support three times. This is stressful." <br />
                       — User Interview, first time user who never ordered again
                     </p>
                   </div>
@@ -229,13 +242,17 @@ export default function HyperMarket() {
             </motion.div>
 
             {/* Strategy & Decision Making */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mb-24"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6
+          }} className="mb-24">
               <h2 className="text-3xl font-light mb-8">The Decisions That Hurt (But Had To Be Made)</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-muted-foreground leading-relaxed mb-8">
@@ -307,13 +324,17 @@ export default function HyperMarket() {
             </motion.div>
 
             {/* Solution & Design Iterations */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mb-24"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6
+          }} className="mb-24">
               <h2 className="text-3xl font-light mb-8">Solution & Design Iterations</h2>
               <p className="text-muted-foreground leading-relaxed mb-12">
                 The final solution emerged through three major iterations based on usability testing with 24 users across two rounds. Here's what changed and why:
@@ -323,11 +344,7 @@ export default function HyperMarket() {
               <div className="mb-16">
                 <h3 className="text-2xl font-light mb-6">Smart Search & Product Discovery</h3>
                 <div className="aspect-[16/10] overflow-hidden border border-border bg-muted mb-6">
-                  <img 
-                    src={searchImage}
-                    alt="AI powered search interface"
-                    className="w-full h-full object-cover"
-                  />
+                  <img src={searchImage} alt="AI powered search interface" className="w-full h-full object-cover" />
                 </div>
                 <div className="space-y-4 text-sm text-muted-foreground">
                   <p><strong>Iteration 1:</strong> Category first navigation with search bar. Users ignored categories and went straight to search, which failed 35% of time.</p>
@@ -341,18 +358,10 @@ export default function HyperMarket() {
                 <h3 className="text-2xl font-light mb-6">Simplified Checkout with Upfront Pricing</h3>
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div className="aspect-square overflow-hidden border border-border bg-muted">
-                    <img 
-                      src={checkoutImage}
-                      alt="Redesigned checkout flow"
-                      className="w-full h-full object-cover"
-                    />
+                    <img src={checkoutImage} alt="Redesigned checkout flow" className="w-full h-full object-cover" />
                   </div>
                   <div className="aspect-square overflow-hidden border border-border bg-muted">
-                    <img 
-                      src={cartTrackingImage}
-                      alt="Cart with delivery pricing"
-                      className="w-full h-full object-cover"
-                    />
+                    <img src={cartTrackingImage} alt="Cart with delivery pricing" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div className="space-y-4 text-sm text-muted-foreground">
@@ -366,11 +375,7 @@ export default function HyperMarket() {
               <div className="mb-16">
                 <h3 className="text-2xl font-light mb-6">Real Time Order Tracking</h3>
                 <div className="aspect-[16/10] overflow-hidden border border-border bg-muted mb-6">
-                  <img 
-                    src={profileImage}
-                    alt="Order tracking dashboard"
-                    className="w-full h-full object-cover"
-                  />
+                  <img src={profileImage} alt="Order tracking dashboard" className="w-full h-full object-cover" />
                 </div>
                 <div className="space-y-4 text-sm text-muted-foreground">
                   <p><strong>Iteration 1:</strong> Email notifications only. Support tickets remained high (28% of all tickets).</p>
@@ -381,13 +386,17 @@ export default function HyperMarket() {
             </motion.div>
 
             {/* Results & Impact */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mb-24"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6
+          }} className="mb-24">
               <h2 className="text-3xl font-light mb-8">Results & Business Impact</h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
                 Validated via live product analytics (Mixpanel) measured 3 months post launch (Dec 2023 - Feb 2024), comparing to baseline period (Jun - Aug 2023):
@@ -417,13 +426,17 @@ export default function HyperMarket() {
             </motion.div>
 
             {/* Learnings */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mb-24"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6
+          }} className="mb-24">
               <h2 className="text-3xl font-light mb-8">What I Learned</h2>
               <div className="space-y-6">
                 <div className="border-l-2 border-primary pl-6">
@@ -452,16 +465,12 @@ export default function HyperMarket() {
         {/* Navigation */}
         <section className="px-6 py-16 border-t border-border">
           <div className="max-w-5xl mx-auto">
-            <Link 
-              to="/" 
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-            >
+            <Link to="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
               <ArrowLeft className="w-4 h-4" />
               View All Projects
             </Link>
           </div>
         </section>
       </article>
-    </div>
-  );
+    </div>;
 }
