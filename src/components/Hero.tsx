@@ -18,8 +18,7 @@ export const Hero = () => {
 
           <div className="space-y-8 text-lg md:text-xl leading-relaxed text-muted-foreground max-w-4xl pt-8">
             <p>
-              I've spent late nights in usability labs watching blind teenagers navigate digital escape rooms, convinced PMs to kill features because the data said so, and redesigned checkout flows that recovered millions in lost revenue. The work isn't always glamorous, but it's real, it ships, and it moves numbers.
-            </p>
+          </p>
 
             <p>What drives me? Building things that bridge the gap between business goals and human needs. Not just following best practices, questioning them when they don't serve users. That's the work I care about.</p>
           </div>
