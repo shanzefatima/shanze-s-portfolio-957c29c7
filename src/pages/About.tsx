@@ -100,12 +100,17 @@ export default function About() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="relative"
               >
-                <div className="aspect-square max-w-lg mx-auto overflow-hidden rounded-2xl">
+                <div className="aspect-square max-w-lg mx-auto overflow-hidden rounded-2xl border-4 border-border">
                   <img 
                     src={profilePhoto} 
-                    alt="Shanze Fatima Javed" 
+                    alt="Shanze Fatima Javed - Professional headshot" 
                     className="w-full h-full object-cover"
                   />
+                  <div className="text-center mt-4">
+                    <p className="text-xs text-destructive font-medium">
+                      ⚠ Replace with professional headshot (not AI-generated)
+                    </p>
+                  </div>
                 </div>
               </motion.div>
             </div>

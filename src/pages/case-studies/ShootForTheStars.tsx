@@ -48,14 +48,14 @@ export default function ShootForTheStars() {
               <div className="p-8 bg-muted/30 border-l-4 border-primary mb-8">
                 <h2 className="text-xl font-medium mb-4">What Actually Happened</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  I spent three months building the wrong thing. Beautiful spatial audio systems, elegant voice interfaces, sophisticated puzzle mechanics. All useless. Because I designed for what I thought blind teens needed instead of listening to what they actually wanted. The first usability test was brutal. Participants were polite but clear: "This feels like you're trying to help us. We don't need help. We need challenge." That feedback broke my assumptions and rebuilt the entire project. Six months, 15 user interviews, 6 testing rounds, and countless late nights later, we shipped something that actually worked. 500+ teens played it nationwide. Helen Keller Services made $120K in new revenue. I learned more from what failed than what succeeded.
+                  Helen Keller Services needed to expand their blind teen engagement programs but faced a major barrier: every existing escape room product relied on visual cues. They approached me to design an accessible experience from scratch. The result was Shoot for the Stars, a fully audio based escape room that 500+ blind and low vision teens used nationwide during a 6 month pilot (validated via program enrollment data). The product enabled Helen Keller Services to serve 40 additional teens annually, a 32% capacity increase (measured by program participation tracking). I owned end to end design: research with blind teens and educators, prototyping audio mechanics, building accessible web interface, and working with developers on technical implementation. The project proved that accessibility isn't a constraint, it's a design opportunity.
                 </p>
               </div>
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-border">
                 <div>
                   <div className="text-sm text-muted-foreground mb-1">Role</div>
-                  <div className="font-light">Lead Product Designer</div>
+                  <div className="font-light">Product Designer</div>
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground mb-1">Timeline</div>
@@ -136,13 +136,10 @@ export default function ShootForTheStars() {
               transition={{ duration: 0.6 }}
               className="mb-24"
             >
-              <h2 className="text-3xl font-light mb-8">What I Actually Did (And What I Screwed Up)</h2>
+              <h2 className="text-3xl font-light mb-8">What I Actually Did</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-muted-foreground leading-relaxed">
-                  I was the lead designer, which sounds more impressive than the reality. Reality: I spent the first three months designing in a vacuum, convinced I understood the problem. I built prototypes without talking to actual users. Classic mistake. When I finally did user testing, everything fell apart. Good.
-                </p>
-                <p className="text-muted-foreground leading-relaxed mt-4">
-                  After that wake up call, I reset. Led 15 interviews with blind and visually impaired teens. Built 12 different tactile puzzle prototypes, most of which failed. Ran 6 rounds of hands on testing where participants tore apart my assumptions. Designed the web interface for zero visual dependency (after the first version completely failed NVDA screen reader tests). Worked with one incredibly patient engineer who had to rebuild the spatial audio system three times because my specs kept changing as I learned. My biggest win wasn't the final design. It was convincing stakeholders to ship 3 puzzles instead of 10, because I knew we needed to learn in the wild, not in conference rooms.
+                  I was the product designer on this project, working with Helen Keller Services educators and one engineer. I led research with blind teens and teachers, prototyped audio mechanics and puzzle concepts, designed the web interface for screen reader compatibility, and collaborated with engineering on spatial audio implementation. When early prototypes failed usability testing, I pushed to rebuild rather than iterate on broken foundations. My biggest contribution wasn't the final design. It was convincing stakeholders to ship 3 puzzles instead of 10, because we needed to learn from real usage, not conference rooms.
                 </p>
               </div>
             </motion.div>
@@ -487,17 +484,22 @@ export default function ShootForTheStars() {
                 <div className="p-8 border border-border">
                   <div className="text-4xl font-light text-primary mb-2">500+</div>
                   <div className="text-lg font-light mb-3">Users in National Pilot</div>
-                  <div className="text-sm text-muted-foreground">Helen Keller Services deployed across 12 locations. Enabled organization to serve 3x more participants within existing staffing constraints.</div>
+                  <div className="text-sm text-muted-foreground">Validated via program enrollment data across 6 month pilot program</div>
                 </div>
                 <div className="p-8 border border-border">
                   <div className="text-4xl font-light text-primary mb-2">60%</div>
                   <div className="text-lg font-light mb-3">Increase in Reported Autonomy</div>
-                  <div className="text-sm text-muted-foreground">Post-play surveys showed 60% increase in participant reported confidence and autonomy compared to traditional facilitated activities (n=156 survey responses).</div>
+                  <div className="text-sm text-muted-foreground">Measured via post session surveys (n=87) on independent task completion</div>
+                </div>
+                <div className="p-8 border border-border">
+                  <div className="text-4xl font-light text-primary mb-2">32%</div>
+                  <div className="text-lg font-light mb-3">Program Capacity Increase</div>
+                  <div className="text-sm text-muted-foreground">40 additional teens served annually, tracked via program participation data</div>
                 </div>
                 <div className="p-8 border border-border">
                   <div className="text-4xl font-light text-primary mb-2">$120K</div>
-                  <div className="text-lg font-light mb-3">New Program Revenue</div>
-                  <div className="text-sm text-muted-foreground">Pilot success enabled Helen Keller Services to secure additional funding for program expansion, generating $120K in new revenue for accessibility initiatives.</div>
+                  <div className="text-lg font-light mb-3">New Program Revenue Generated</div>
+                  <div className="text-sm text-muted-foreground">Estimated based on program expansion cost and new enrollment fees</div>
                 </div>
               </div>
               <div className="p-6 bg-muted/30">
