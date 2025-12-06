@@ -100,7 +100,7 @@ export const ChatWidget = () => {
             <div className="bg-muted px-6 py-4 border-b border-border">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-border">
-                  <img alt="Shanze Fatima Javed" className="w-full h-full object-cover" src="/lovable-uploads/0072b064-c325-4845-8cc7-c6d5f0bed655.png" />
+                  <img alt="Shanze Fatima Javed" className="w-full h-full object-cover" src="/lovable-uploads/82325907-1f6a-4a88-b31f-b291c91844dd.jpg" />
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">Shanze's AI</p>
@@ -121,7 +121,7 @@ export const ChatWidget = () => {
             duration: 0.3
           }} className={msg.role === "assistant" ? "flex items-start gap-2" : "flex justify-end"}>
                   {msg.role === "assistant" && <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0 ring-1 ring-border">
-                      <img alt="AI" className="w-full h-full object-cover" src="/lovable-uploads/7937fa5e-491a-48b5-b9ea-a6ce1c292fe4.png" />
+                      <img alt="AI" className="w-full h-full object-cover" src="/lovable-uploads/e9d857ec-a5de-4e1f-9f55-ca4baf19314b.jpg" />
                     </div>}
                   <div className={msg.role === "assistant" ? "bg-muted px-4 py-3 rounded-2xl rounded-tl-sm max-w-[280px]" : "bg-primary px-4 py-3 rounded-2xl rounded-tr-sm max-w-[280px]"}>
                     <p className={msg.role === "assistant" ? "text-foreground text-sm" : "text-primary-foreground text-sm"}>
