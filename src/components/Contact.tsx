@@ -84,7 +84,7 @@ export const Contact = () => {
           duration: 0.4
         }} className={msg.role === "assistant" ? "flex items-start gap-4" : "flex justify-end"}>
               {msg.role === "assistant" && <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-border">
-                  <img alt="Shanze Fatima Javed" className="w-full h-full object-cover" src="/lovable-uploads/32aeb974-bae5-4614-bb28-df4904bcb119.png" />
+                  <img alt="Shanze Fatima Javed" className="w-full h-full object-cover" src="/lovable-uploads/0cc7632c-b1ff-40b5-b663-b17b0ea6d565.jpg" />
                 </div>}
               <div className={msg.role === "assistant" ? "" : ""}>
                 {msg.role === "assistant" && <p className="text-sm text-muted-foreground mb-2 font-medium">Shanze's AI</p>}
