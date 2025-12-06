@@ -54,9 +54,7 @@ export const About = () => {
               About
             </h2>
 
-            <p>
-              Shanze holds a BSc from NYU in Interactive Media Arts and Computer Science. She works across design, engineering, and product to build experiences that solve real problems.
-            </p>
+            <p>Shanze holds a BSc from NYU in Digital Media and Computer Science. She works across design, engineering, and product to build experiences that solve real problems.</p>
 
             <p>Her process focuses on research, prototyping, and working closely with cross functional teams. Recent work includes improving e-commerce checkout flows, launching accessible products for underserved users, and building tools that make complex data more understandable.</p>
 
