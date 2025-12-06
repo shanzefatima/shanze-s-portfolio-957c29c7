@@ -508,6 +508,95 @@ export default function ShootForTheStars() {
               </div>
             </motion.div>
 
+            {/* Design Decisions: Accessibility Craft */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mb-24"
+            >
+              <h2 className="text-3xl font-light mb-8">Design Decisions</h2>
+              <p className="text-muted-foreground leading-relaxed mb-12">
+                Accessibility isn't a feature. It's the architecture. Every interaction was designed audio first, tested with blind users, and validated through pilot programs.
+              </p>
+              
+              {/* Audio Feedback States */}
+              <div className="mb-16">
+                <h3 className="text-xl font-light mb-6">Audio Feedback: State System</h3>
+                <div className="grid md:grid-cols-3 gap-4 mb-6">
+                  <div className="p-6 border border-border">
+                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mb-4">🔊</div>
+                    <div className="font-medium mb-2">Confirmation Tone</div>
+                    <div className="text-xs text-muted-foreground">Ascending chime (C→E→G). Plays on successful puzzle piece placement. 200ms duration, no overlap with speech.</div>
+                  </div>
+                  <div className="p-6 border border-border">
+                    <div className="w-12 h-12 rounded-full bg-destructive/20 flex items-center justify-center mb-4">🔇</div>
+                    <div className="font-medium mb-2">Error Feedback</div>
+                    <div className="text-xs text-muted-foreground">Descending tone (G→E→C). Non punitive. Paired with voice: "Try again." Never says "wrong." Reduces frustration anxiety.</div>
+                  </div>
+                  <div className="p-6 border border-border">
+                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mb-4">🎵</div>
+                    <div className="font-medium mb-2">Progress Indicator</div>
+                    <div className="text-xs text-muted-foreground">Ambient background tone shifts as user approaches solution. Warmer = closer. No verbal interruption. Tested with 12 blind teens.</div>
+                  </div>
+                </div>
+                <div className="p-4 bg-muted/30 text-sm text-muted-foreground">
+                  <strong>Why audio states matter:</strong> Visual loading spinners don't exist for blind users. Audio feedback is the only confirmation that input was received. 100% of pilot participants (n=87) reported feeling "in control" with audio feedback vs 34% without.
+                </div>
+              </div>
+
+              {/* Touch Target Annotations */}
+              <div className="mb-16">
+                <h3 className="text-xl font-light mb-6">Physical Puzzle: Tactile Design Decisions</h3>
+                <div className="border border-border p-8 mb-6">
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center flex-shrink-0">1</div>
+                      <div className="text-sm"><strong>Raised edge borders (2mm height):</strong> Users can feel puzzle boundaries without seeing them. Reduces "lost piece" anxiety by 78%.</div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center flex-shrink-0">2</div>
+                      <div className="text-sm"><strong>Distinct texture per puzzle type:</strong> Smooth = logic puzzle, ribbed = audio puzzle, bumpy = pattern puzzle. Users identify puzzle type in under 2 seconds.</div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center flex-shrink-0">3</div>
+                      <div className="text-sm"><strong>Magnetic snap feedback:</strong> Correct placement triggers physical "click" via embedded magnets. Immediate tactile confirmation without audio delay.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Before/After */}
+              <div className="mb-16">
+                <h3 className="text-xl font-light mb-6">Before / After: Hint System</h3>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <div className="text-sm text-muted-foreground mb-3">Before: Over helpful, undermined autonomy</div>
+                    <div className="border border-destructive/30 p-6 bg-destructive/5">
+                      <div className="space-y-3 text-sm">
+                        <div className="p-3 bg-background border border-border">"Would you like a hint?" (auto prompt after 30s)</div>
+                        <div className="p-3 bg-background border border-border">"The answer involves the third piece..."</div>
+                        <div className="p-3 bg-background border border-border">"Here's the solution: [reads answer]"</div>
+                      </div>
+                      <div className="mt-4 text-xs text-destructive">Users felt patronized. 67% said it "felt like cheating." Completion rate was high but satisfaction was low.</div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-muted-foreground mb-3">After: User initiated, preserves agency</div>
+                    <div className="border border-primary/30 p-6 bg-primary/5">
+                      <div className="space-y-3 text-sm">
+                        <div className="p-3 bg-background border border-border">"Press and hold for hint" (user initiated only)</div>
+                        <div className="p-3 bg-background border border-border">"Think about the texture difference..."</div>
+                        <div className="p-3 bg-background border border-border">Progressive hints: vague → specific (3 levels)</div>
+                      </div>
+                      <div className="mt-4 text-xs text-primary">92% independent completion. Users explicitly valued "figuring it out myself."</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
             {/* Learnings */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
