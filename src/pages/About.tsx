@@ -88,7 +88,7 @@ export default function About() {
               delay: 0.2
             }} className="relative">
                 <div className="aspect-square max-w-lg mx-auto overflow-hidden rounded-2xl border-4 border-border">
-                  <img alt="Shanze Fatima Javed" className="w-full h-full object-cover" src="/lovable-uploads/4f26b035-ab79-4573-89b6-95f52ae94d1e.jpg" />
+                  <img alt="Shanze Fatima Javed" className="w-full h-full object-cover" src="/lovable-uploads/b4cd620c-cf14-4ecc-9f4d-13b9ff4b6afb.png" />
                 </div>
               </motion.div>
             </div>
