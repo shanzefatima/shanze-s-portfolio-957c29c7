@@ -2,65 +2,45 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import profilePhoto from "@/assets/profile-photo.png";
 import { Navigation } from "@/components/Navigation";
-
 export default function About() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
+  const {
+    scrollYProgress
+  } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"]
   });
-
   const [activeSection, setActiveSection] = useState(0);
   const sections = ["Intro", "Philosophy", "Skills", "Education", "Process", "FAQ"];
-
   useEffect(() => {
-    const unsubscribe = scrollYProgress.on("change", (latest) => {
+    const unsubscribe = scrollYProgress.on("change", latest => {
       const sectionIndex = Math.min(Math.floor(latest * sections.length), sections.length - 1);
       setActiveSection(sectionIndex);
     });
     return () => unsubscribe();
   }, [scrollYProgress, sections.length]);
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Fixed Sidebar Progress Indicator */}
       <div className="fixed left-8 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
         <div className="flex flex-col gap-6">
-          {sections.map((section, index) => (
-            <div key={section} className="flex items-center gap-4">
+          {sections.map((section, index) => <div key={section} className="flex items-center gap-4">
               <div className="flex flex-col items-end gap-1">
-                <motion.div
-                  className="h-12 w-1 bg-border rounded-full overflow-hidden"
-                  initial={{ opacity: 0.3 }}
-                  animate={{ 
-                    opacity: index === activeSection ? 1 : 0.3,
-                  }}
-                >
-                  <motion.div
-                    className="w-full bg-foreground origin-top"
-                    style={{
-                      height: index === activeSection ? 
-                        useTransform(scrollYProgress, 
-                          [index / sections.length, (index + 1) / sections.length],
-                          ["0%", "100%"]
-                        ) : index < activeSection ? "100%" : "0%"
-                    }}
-                  />
+                <motion.div className="h-12 w-1 bg-border rounded-full overflow-hidden" initial={{
+              opacity: 0.3
+            }} animate={{
+              opacity: index === activeSection ? 1 : 0.3
+            }}>
+                  <motion.div className="w-full bg-foreground origin-top" style={{
+                height: index === activeSection ? useTransform(scrollYProgress, [index / sections.length, (index + 1) / sections.length], ["0%", "100%"]) : index < activeSection ? "100%" : "0%"
+              }} />
                 </motion.div>
-                <span 
-                  className={`text-xs transition-all duration-300 ${
-                    index === activeSection 
-                      ? "text-foreground font-medium" 
-                      : "text-muted-foreground"
-                  }`}
-                >
+                <span className={`text-xs transition-all duration-300 ${index === activeSection ? "text-foreground font-medium" : "text-muted-foreground"}`}>
                   {section}
                 </span>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
 
@@ -69,12 +49,15 @@ export default function About() {
         <section className="min-h-screen flex items-center px-6 lg:px-16">
           <div className="max-w-7xl mx-auto w-full">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="space-y-8"
-              >
+              <motion.div initial={{
+              opacity: 0,
+              y: 20
+            }} animate={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.8
+            }} className="space-y-8">
                 <h1 className="text-5xl lg:text-7xl font-light tracking-tight">
                   About Me
                 </h1>
@@ -94,18 +77,18 @@ export default function About() {
                 </div>
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="relative"
-              >
+              <motion.div initial={{
+              opacity: 0,
+              scale: 0.95
+            }} animate={{
+              opacity: 1,
+              scale: 1
+            }} transition={{
+              duration: 0.8,
+              delay: 0.2
+            }} className="relative">
                 <div className="aspect-square max-w-lg mx-auto overflow-hidden rounded-2xl border-4 border-border">
-                  <img 
-                    src={profilePhoto} 
-                    alt="Shanze Fatima Javed" 
-                    className="w-full h-full object-cover"
-                  />
+                  <img alt="Shanze Fatima Javed" className="w-full h-full object-cover" src="/lovable-uploads/4f26b035-ab79-4573-89b6-95f52ae94d1e.jpg" />
                 </div>
               </motion.div>
             </div>
@@ -115,13 +98,17 @@ export default function About() {
         {/* Design Philosophy Section */}
         <section className="min-h-screen flex items-center px-6 lg:px-16 bg-muted/30">
           <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="space-y-12"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.8
+          }} className="space-y-12">
               <h2 className="text-4xl lg:text-5xl font-light tracking-tight">
                 Design Philosophy
               </h2>
@@ -158,13 +145,17 @@ export default function About() {
         {/* Skills Section */}
         <section className="min-h-screen flex items-center px-6 lg:px-16">
           <div className="max-w-4xl mx-auto w-full">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="space-y-12"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.8
+          }} className="space-y-12">
               <h2 className="text-4xl lg:text-5xl font-light tracking-tight">
                 Skills
               </h2>
@@ -209,13 +200,17 @@ export default function About() {
         {/* Education Section */}
         <section className="min-h-screen flex items-center px-6 lg:px-16 bg-muted/30">
           <div className="max-w-4xl mx-auto w-full">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="space-y-12"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.8
+          }} className="space-y-12">
               <h2 className="text-4xl lg:text-5xl font-light tracking-tight">
                 Education
               </h2>
@@ -266,13 +261,17 @@ export default function About() {
         {/* Process Section */}
         <section className="min-h-screen flex items-center px-6 lg:px-16">
           <div className="max-w-4xl mx-auto w-full">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="space-y-12"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.8
+          }} className="space-y-12">
               <h2 className="text-4xl lg:text-5xl font-light tracking-tight">
                 How I Work
               </h2>
@@ -325,13 +324,17 @@ export default function About() {
         {/* FAQ Section */}
         <section className="min-h-screen flex items-center px-6 lg:px-16 bg-muted/30">
           <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="space-y-12"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.8
+          }} className="space-y-12">
               <h2 className="text-4xl lg:text-5xl font-light tracking-tight">
                 Frequently Asked
               </h2>
@@ -381,6 +384,5 @@ export default function About() {
           </div>
         </section>
       </div>
-    </div>
-  );
+    </div>;
 }
