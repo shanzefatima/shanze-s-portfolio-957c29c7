@@ -47,7 +47,6 @@ export const Navigation = () => {
 
   const navItems = [
     { label: "Work", href: "#work", type: "scroll" },
-    { label: "Expertise", href: "#expertise", type: "scroll" },
     { label: "About", href: "/about", type: "link" },
     { label: "Contact", href: "#contact", type: "scroll" }
   ];
