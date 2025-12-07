@@ -21,8 +21,7 @@ export const Hero = () => {
             duration: 0.8,
             delay: 0.2
           }} className="text-sm tracking-[0.2em] uppercase text-muted-foreground font-medium">
-              Product Designer
-            </motion.p>
+          </motion.p>
             
             <h1 className="font-sans text-[clamp(2.8rem,8vw,6rem)] leading-[1.05] tracking-tight font-light text-foreground">Hi, I'm Shanze. I design products that actually work for people.</h1>
           </div>
