@@ -97,15 +97,24 @@ export const ChatWidget = () => {
         duration: 0.2
       }} className="fixed inset-4 md:bottom-24 md:right-6 md:left-auto md:top-auto z-50 md:w-96 md:h-[600px] bg-background border-2 border-border rounded-3xl shadow-2xl flex flex-col overflow-hidden">
             {/* Header */}
-            <div className="bg-muted px-6 py-4 border-b border-border">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-border">
-                  <img alt="Shanze Fatima Javed" className="w-full h-full object-cover" src="/lovable-uploads/82325907-1f6a-4a88-b31f-b291c91844dd.jpg" />
+            <div className="bg-muted px-4 py-3 md:px-6 md:py-4 border-b border-border">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-border">
+                    <img alt="Shanze Fatima Javed" className="w-full h-full object-cover" src="/lovable-uploads/82325907-1f6a-4a88-b31f-b291c91844dd.jpg" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">Shanze's AI</p>
+                    <p className="text-xs text-muted-foreground">Usually replies instantly</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-semibold text-foreground">Shanze's AI</p>
-                  <p className="text-xs text-muted-foreground">Usually replies instantly</p>
-                </div>
+                {/* Mobile close button */}
+                <button 
+                  onClick={() => setIsOpen(false)}
+                  className="md:hidden w-8 h-8 rounded-full bg-background border border-border flex items-center justify-center hover:bg-muted transition-colors"
+                >
+                  <X className="w-4 h-4 text-foreground" />
+                </button>
               </div>
             </div>
 
